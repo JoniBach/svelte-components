@@ -2,485 +2,485 @@
     "layout": {
         "grid": {
             "grid": {
-                "grid.scss": true,
-                "grid.ts": true,
-                "Grid.svelte": true
+                "grid.scss": "scss_template",
+                "grid.ts": "ts_template",
+                "Grid.svelte": "svelte_template"
             },
             "gridColumn": {
-                "gridColumn.scss": true,
-                "gridColumn.ts": true,
-                "GridColumn.svelte": true
+                "gridColumn.scss": "scss_template",
+                "gridColumn.ts": "ts_template",
+                "GridColumn.svelte": "svelte_template"
             },
             "gridRow": {
-                "gridRow.scss": true,
-                "gridRow.ts": true,
-                "GridRow.svelte": true
+                "gridRow.scss": "scss_template",
+                "gridRow.ts": "ts_template",
+                "GridRow.svelte": "svelte_template"
             }
         },
         "container": {
             "container": {
-                "container.scss": true,
-                "container.ts": true,
-                "Container.svelte": true
+                "container.scss": "scss_template",
+                "container.ts": "ts_template",
+                "Container.svelte": "svelte_template"
             }
         },
         "navigation": {
             "navbar": {
-                "navbar.scss": true,
-                "navbar.ts": true,
-                "Navbar.svelte": true
+                "navbar.scss": "scss_template",
+                "navbar.ts": "ts_template",
+                "Navbar.svelte": "svelte_template"
             },
             "sidebar": {
-                "sidebar.scss": true,
-                "sidebar.ts": true,
-                "Sidebar.svelte": true
+                "sidebar.scss": "scss_template",
+                "sidebar.ts": "ts_template",
+                "Sidebar.svelte": "svelte_template"
             },
             "footer": {
-                "footer.scss": true,
-                "footer.ts": true,
-                "Footer.svelte": true
+                "footer.scss": "scss_template",
+                "footer.ts": "ts_template",
+                "Footer.svelte": "svelte_template"
             }
         },
         "contentDisplay": {
             "card": {
-                "card.scss": true,
-                "card.ts": true,
-                "Card.svelte": true
+                "card.scss": "scss_template",
+                "card.ts": "ts_template",
+                "Card.svelte": "svelte_template"
             },
             "tabs": {
                 "tabs": {
-                    "tabs.scss": true,
-                    "tabs.ts": true,
-                    "Tabs.svelte": true
+                    "tabs.scss": "scss_template",
+                    "tabs.ts": "ts_template",
+                    "Tabs.svelte": "svelte_template"
                 },
                 "tab": {
-                    "tab.scss": true,
-                    "tab.ts": true,
-                    "Tab.svelte": true
+                    "tab.scss": "scss_template",
+                    "tab.ts": "ts_template",
+                    "Tab.svelte": "svelte_template"
                 }
             },
             "accordion": {
-                "accordion.scss": true,
-                "accordion.ts": true,
-                "Accordion.svelte": true
+                "accordion.scss": "scss_template",
+                "accordion.ts": "ts_template",
+                "Accordion.svelte": "svelte_template"
             }
         },
         "sections": {
             "heroSection": {
-                "heroSection.scss": true,
-                "heroSection.ts": true,
-                "HeroSection.svelte": true
+                "heroSection.scss": "scss_template",
+                "heroSection.ts": "ts_template",
+                "HeroSection.svelte": "svelte_template"
             },
             "modal": {
-                "modal.scss": true,
-                "modal.ts": true,
-                "Modal.svelte": true
+                "modal.scss": "scss_template",
+                "modal.ts": "ts_template",
+                "Modal.svelte": "svelte_template"
             },
             "panel": {
-                "panel.scss": true,
-                "panel.ts": true,
-                "Panel.svelte": true
+                "panel.scss": "scss_template",
+                "panel.ts": "ts_template",
+                "Panel.svelte": "svelte_template"
             }
         }
     },
     "forms": {
         "inputElements": {
             "input": {
-                "input.scss": true,
-                "input.ts": true,
-                "Input.svelte": true
+                "input.scss": "scss_template",
+                "input.ts": "ts_template",
+                "Input.svelte": "svelte_template"
             },
             "textarea": {
-                "textarea.scss": true,
-                "textarea.ts": true,
-                "Textarea.svelte": true
+                "textarea.scss": "scss_template",
+                "textarea.ts": "ts_template",
+                "Textarea.svelte": "svelte_template"
             },
             "checkbox": {
-                "checkbox.scss": true,
-                "checkbox.ts": true,
-                "Checkbox.svelte": true
+                "checkbox.scss": "scss_template",
+                "checkbox.ts": "ts_template",
+                "Checkbox.svelte": "svelte_template"
             },
             "radioButton": {
-                "radioButton.scss": true,
-                "radioButton.ts": true,
-                "RadioButton.svelte": true
+                "radioButton.scss": "scss_template",
+                "radioButton.ts": "ts_template",
+                "RadioButton.svelte": "svelte_template"
             }
         },
         "buttonElements": {
             "button": {
-                "button.scss": true,
-                "button.ts": true,
-                "Button.svelte": true
+                "button.scss": "scss_template",
+                "button.ts": "ts_template",
+                "Button.svelte": "svelte_template"
             },
             "buttonGroup": {
-                "buttonGroup.scss": true,
-                "buttonGroup.ts": true,
-                "ButtonGroup.svelte": true
+                "buttonGroup.scss": "scss_template",
+                "buttonGroup.ts": "ts_template",
+                "ButtonGroup.svelte": "svelte_template"
             }
         },
         "specializedInputs": {
             "datePicker": {
-                "datePicker.scss": true,
-                "datePicker.ts": true,
-                "DatePicker.svelte": true
+                "datePicker.scss": "scss_template",
+                "datePicker.ts": "ts_template",
+                "DatePicker.svelte": "svelte_template"
             },
             "fileUpload": {
-                "fileUpload.scss": true,
-                "fileUpload.ts": true,
-                "FileUpload.svelte": true
+                "fileUpload.scss": "scss_template",
+                "fileUpload.ts": "ts_template",
+                "FileUpload.svelte": "svelte_template"
             },
             "slider": {
-                "slider.scss": true,
-                "slider.ts": true,
-                "Slider.svelte": true
+                "slider.scss": "scss_template",
+                "slider.ts": "ts_template",
+                "Slider.svelte": "svelte_template"
             }
         },
         "validation": {
             "formValidation": {
-                "formValidation.scss": true,
-                "formValidation.ts": true,
-                "FormValidation.svelte": true
+                "formValidation.scss": "scss_template",
+                "formValidation.ts": "ts_template",
+                "FormValidation.svelte": "svelte_template"
             }
         }
     },
     "display": {
         "typography": {
             "heading": {
-                "heading.scss": true,
-                "heading.ts": true,
-                "Heading.svelte": true
+                "heading.scss": "scss_template",
+                "heading.ts": "ts_template",
+                "Heading.svelte": "svelte_template"
             },
             "paragraph": {
-                "paragraph.scss": true,
-                "paragraph.ts": true,
-                "Paragraph.svelte": true
+                "paragraph.scss": "scss_template",
+                "paragraph.ts": "ts_template",
+                "Paragraph.svelte": "svelte_template"
             }
         },
         "visualElements": {
             "avatar": {
-                "avatar.scss": true,
-                "avatar.ts": true,
-                "Avatar.svelte": true
+                "avatar.scss": "scss_template",
+                "avatar.ts": "ts_template",
+                "Avatar.svelte": "svelte_template"
             },
             "badge": {
-                "badge.scss": true,
-                "badge.ts": true,
-                "Badge.svelte": true
+                "badge.scss": "scss_template",
+                "badge.ts": "ts_template",
+                "Badge.svelte": "svelte_template"
             },
             "tooltip": {
-                "tooltip.scss": true,
-                "tooltip.ts": true,
-                "Tooltip.svelte": true
+                "tooltip.scss": "scss_template",
+                "tooltip.ts": "ts_template",
+                "Tooltip.svelte": "svelte_template"
             }
         },
         "dataDisplay": {
             "table": {
-                "table.scss": true,
-                "table.ts": true,
-                "Table.svelte": true
+                "table.scss": "scss_template",
+                "table.ts": "ts_template",
+                "Table.svelte": "svelte_template"
             },
             "progressBar": {
-                "progressBar.scss": true,
-                "progressBar.ts": true,
-                "ProgressBar.svelte": true
+                "progressBar.scss": "scss_template",
+                "progressBar.ts": "ts_template",
+                "ProgressBar.svelte": "svelte_template"
             },
             "carousel": {
-                "carousel.scss": true,
-                "carousel.ts": true,
-                "Carousel.svelte": true
+                "carousel.scss": "scss_template",
+                "carousel.ts": "ts_template",
+                "Carousel.svelte": "svelte_template"
             },
             "alert": {
-                "alert.scss": true,
-                "alert.ts": true,
-                "Alert.svelte": true
+                "alert.scss": "scss_template",
+                "alert.ts": "ts_template",
+                "Alert.svelte": "svelte_template"
             },
             "chip": {
-                "chip.scss": true,
-                "chip.ts": true,
-                "Chip.svelte": true
+                "chip.scss": "scss_template",
+                "chip.ts": "ts_template",
+                "Chip.svelte": "svelte_template"
             },
             "spinner": {
-                "spinner.scss": true,
-                "spinner.ts": true,
-                "Spinner.svelte": true
+                "spinner.scss": "scss_template",
+                "spinner.ts": "ts_template",
+                "Spinner.svelte": "svelte_template"
             }
         }
     },
     "navigation": {
         "navbar": {
             "navbar": {
-                "navbar.scss": true,
-                "navbar.ts": true,
-                "Navbar.svelte": true
+                "navbar.scss": "scss_template",
+                "navbar.ts": "ts_template",
+                "Navbar.svelte": "svelte_template"
             }
         },
         "tabs": {
             "tabs": {
-                "tabs.scss": true,
-                "tabs.ts": true,
-                "Tabs.svelte": true
+                "tabs.scss": "scss_template",
+                "tabs.ts": "ts_template",
+                "Tabs.svelte": "svelte_template"
             },
             "tab": {
-                "tab.scss": true,
-                "tab.ts": true,
-                "Tab.svelte": true
+                "tab.scss": "scss_template",
+                "tab.ts": "ts_template",
+                "Tab.svelte": "svelte_template"
             }
         },
         "sidebarDrawer": {
             "sidebar": {
-                "sidebar.scss": true,
-                "sidebar.ts": true,
-                "Sidebar.svelte": true
+                "sidebar.scss": "scss_template",
+                "sidebar.ts": "ts_template",
+                "Sidebar.svelte": "svelte_template"
             },
             "drawer": {
-                "drawer.scss": true,
-                "drawer.ts": true,
-                "Drawer.svelte": true
+                "drawer.scss": "scss_template",
+                "drawer.ts": "ts_template",
+                "Drawer.svelte": "svelte_template"
             }
         },
         "breadcrumbs": {
-            "breadcrumbs.scss": true,
-            "breadcrumbs.ts": true,
-            "Breadcrumbs.svelte": true
+            "breadcrumbs.scss": "scss_template",
+            "breadcrumbs.ts": "ts_template",
+            "Breadcrumbs.svelte": "svelte_template"
         },
         "pagination": {
-            "pagination.scss": true,
-            "pagination.ts": true,
-            "Pagination.svelte": true
+            "pagination.scss": "scss_template",
+            "pagination.ts": "ts_template",
+            "Pagination.svelte": "svelte_template"
         },
         "menuDropdown": {
             "menu": {
-                "menu.scss": true,
-                "menu.ts": true,
-                "Menu.svelte": true
+                "menu.scss": "scss_template",
+                "menu.ts": "ts_template",
+                "Menu.svelte": "svelte_template"
             },
             "dropdown": {
-                "dropdown.scss": true,
-                "dropdown.ts": true,
-                "Dropdown.svelte": true
+                "dropdown.scss": "scss_template",
+                "dropdown.ts": "ts_template",
+                "Dropdown.svelte": "svelte_template"
             }
         },
         "stepper": {
-            "stepper.scss": true,
-            "stepper.ts": true,
-            "Stepper.svelte": true
+            "stepper.scss": "scss_template",
+            "stepper.ts": "ts_template",
+            "Stepper.svelte": "svelte_template"
         }
     },
     "feedback": {
         "toast": {
-            "toast.scss": true,
-            "toast.ts": true,
-            "Toast.svelte": true
+            "toast.scss": "scss_template",
+            "toast.ts": "ts_template",
+            "Toast.svelte": "svelte_template"
         },
         "modal": {
-            "modal.scss": true,
-            "modal.ts": true,
-            "Modal.svelte": true
+            "modal.scss": "scss_template",
+            "modal.ts": "ts_template",
+            "Modal.svelte": "svelte_template"
         },
         "snackbar": {
-            "snackbar.scss": true,
-            "snackbar.ts": true,
-            "Snackbar.svelte": true
+            "snackbar.scss": "scss_template",
+            "snackbar.ts": "ts_template",
+            "Snackbar.svelte": "svelte_template"
         },
         "skeletonLoader": {
-            "skeletonLoader.scss": true,
-            "skeletonLoader.ts": true,
-            "SkeletonLoader.svelte": true
+            "skeletonLoader.scss": "scss_template",
+            "skeletonLoader.ts": "ts_template",
+            "SkeletonLoader.svelte": "svelte_template"
         },
         "confirmDialog": {
-            "confirmDialog.scss": true,
-            "confirmDialog.ts": true,
-            "ConfirmDialog.svelte": true
+            "confirmDialog.scss": "scss_template",
+            "confirmDialog.ts": "ts_template",
+            "ConfirmDialog.svelte": "svelte_template"
         }
     },
     "media": {
         "image": {
-            "image.scss": true,
-            "image.ts": true,
-            "Image.svelte": true
+            "image.scss": "scss_template",
+            "image.ts": "ts_template",
+            "Image.svelte": "svelte_template"
         },
         "video": {
-            "video.scss": true,
-            "video.ts": true,
-            "Video.svelte": true
+            "video.scss": "scss_template",
+            "video.ts": "ts_template",
+            "Video.svelte": "svelte_template"
         },
         "audio": {
-            "audio.scss": true,
-            "audio.ts": true,
-            "Audio.svelte": true
+            "audio.scss": "scss_template",
+            "audio.ts": "ts_template",
+            "Audio.svelte": "svelte_template"
         },
         "carousel": {
-            "carousel.scss": true,
-            "carousel.ts": true,
-            "Carousel.svelte": true
+            "carousel.scss": "scss_template",
+            "carousel.ts": "ts_template",
+            "Carousel.svelte": "svelte_template"
         },
         "lightbox": {
-            "lightbox.scss": true,
-            "lightbox.ts": true,
-            "Lightbox.svelte": true
+            "lightbox.scss": "scss_template",
+            "lightbox.ts": "ts_template",
+            "Lightbox.svelte": "svelte_template"
         }
     },
     "utility": {
         "portal": {
-            "portal.scss": true,
-            "portal.ts": true,
-            "Portal.svelte": true
+            "portal.scss": "scss_template",
+            "portal.ts": "ts_template",
+            "Portal.svelte": "svelte_template"
         },
         "tooltip": {
-            "tooltip.scss": true,
-            "tooltip.ts": true,
-            "Tooltip.svelte": true
+            "tooltip.scss": "scss_template",
+            "tooltip.ts": "ts_template",
+            "Tooltip.svelte": "svelte_template"
         },
         "popover": {
-            "popover.scss": true,
-            "popover.ts": true,
-            "Popover.svelte": true
+            "popover.scss": "scss_template",
+            "popover.ts": "ts_template",
+            "Popover.svelte": "svelte_template"
         },
         "scrollspy": {
-            "scrollspy.scss": true,
-            "scrollspy.ts": true,
-            "Scrollspy.svelte": true
+            "scrollspy.scss": "scss_template",
+            "scrollspy.ts": "ts_template",
+            "Scrollspy.svelte": "svelte_template"
         },
         "backToTop": {
-            "backToTop.scss": true,
-            "backToTop.ts": true,
-            "BackToTop.svelte": true
+            "backToTop.scss": "scss_template",
+            "backToTop.ts": "ts_template",
+            "BackToTop.svelte": "svelte_template"
         },
         "clipboard": {
-            "clipboard.scss": true,
-            "clipboard.ts": true,
-            "Clipboard.svelte": true
+            "clipboard.scss": "scss_template",
+            "clipboard.ts": "ts_template",
+            "Clipboard.svelte": "svelte_template"
         }
     },
     "dataviz": {
         "charts": {
             "lineChart": {
-                "lineChart.scss": true,
-                "lineChart.ts": true,
-                "LineChart.svelte": true
+                "lineChart.scss": "scss_template",
+                "lineChart.ts": "ts_template",
+                "LineChart.svelte": "svelte_template"
             },
             "barChart": {
-                "barChart.scss": true,
-                "barChart.ts": true,
-                "BarChart.svelte": true
+                "barChart.scss": "scss_template",
+                "barChart.ts": "ts_template",
+                "BarChart.svelte": "svelte_template"
             },
             "pieChart": {
-                "pieChart.scss": true,
-                "pieChart.ts": true,
-                "PieChart.svelte": true
+                "pieChart.scss": "scss_template",
+                "pieChart.ts": "ts_template",
+                "PieChart.svelte": "svelte_template"
             }
         },
         "advancedVisuals": {
             "heatmap": {
-                "heatmap.scss": true,
-                "heatmap.ts": true,
-                "Heatmap.svelte": true
+                "heatmap.scss": "scss_template",
+                "heatmap.ts": "ts_template",
+                "Heatmap.svelte": "svelte_template"
             },
             "gauge": {
-                "gauge.scss": true,
-                "gauge.ts": true,
-                "Gauge.svelte": true
+                "gauge.scss": "scss_template",
+                "gauge.ts": "ts_template",
+                "Gauge.svelte": "svelte_template"
             },
             "map": {
-                "map.scss": true,
-                "map.ts": true,
-                "Map.svelte": true
+                "map.scss": "scss_template",
+                "map.ts": "ts_template",
+                "Map.svelte": "svelte_template"
             }
         },
         "treeView": {
-            "treeView.scss": true,
-            "treeView.ts": true,
-            "TreeView.svelte": true
+            "treeView.scss": "scss_template",
+            "treeView.ts": "ts_template",
+            "TreeView.svelte": "svelte_template"
         }
     },
     "accessibility": {
         "accessibleModal": {
-            "accessibleModal.scss": true,
-            "accessibleModal.ts": true,
-            "AccessibleModal.svelte": true
+            "accessibleModal.scss": "scss_template",
+            "accessibleModal.ts": "ts_template",
+            "AccessibleModal.svelte": "svelte_template"
         },
         "ariaAttributes": {
-            "ariaAttributes.scss": true,
-            "ariaAttributes.ts": true,
-            "AriaAttributes.svelte": true
+            "ariaAttributes.scss": "scss_template",
+            "ariaAttributes.ts": "ts_template",
+            "AriaAttributes.svelte": "svelte_template"
         },
         "localizationSupport": {
-            "localizationSupport.scss": true,
-            "localizationSupport.ts": true,
-            "LocalizationSupport.svelte": true
+            "localizationSupport.scss": "scss_template",
+            "localizationSupport.ts": "ts_template",
+            "LocalizationSupport.svelte": "svelte_template"
         }
     },
     "themes": {
         "themeProvider": {
-            "themeProvider.scss": true,
-            "themeProvider.ts": true,
-            "ThemeProvider.svelte": true
+            "themeProvider.scss": "scss_template",
+            "themeProvider.ts": "ts_template",
+            "ThemeProvider.svelte": "svelte_template"
         },
         "cssUtilityClasses": {
-            "cssUtilityClasses.scss": true,
-            "cssUtilityClasses.ts": true,
-            "CssUtilityClasses.svelte": true
+            "cssUtilityClasses.scss": "scss_template",
+            "cssUtilityClasses.ts": "ts_template",
+            "CssUtilityClasses.svelte": "svelte_template"
         },
         "globalVariables": {
-            "globalVariables.scss": true,
-            "globalVariables.ts": true,
-            "GlobalVariables.svelte": true
+            "globalVariables.scss": "scss_template",
+            "globalVariables.ts": "ts_template",
+            "GlobalVariables.svelte": "svelte_template"
         }
     },
     "advanced": {
         "virtualScroller": {
-            "virtualScroller.scss": true,
-            "virtualScroller.ts": true,
-            "VirtualScroller.svelte": true
+            "virtualScroller.scss": "scss_template",
+            "virtualScroller.ts": "ts_template",
+            "VirtualScroller.svelte": "svelte_template"
         },
         "dataTable": {
-            "dataTable.scss": true,
-            "dataTable.ts": true,
-            "DataTable.svelte": true
+            "dataTable.scss": "scss_template",
+            "dataTable.ts": "ts_template",
+            "DataTable.svelte": "svelte_template"
         },
         "calendar": {
-            "calendar.scss": true,
-            "calendar.ts": true,
-            "Calendar.svelte": true
+            "calendar.scss": "scss_template",
+            "calendar.ts": "ts_template",
+            "Calendar.svelte": "svelte_template"
         },
         "markdownRenderer": {
-            "markdownRenderer.scss": true,
-            "markdownRenderer.ts": true,
-            "MarkdownRenderer.svelte": true
+            "markdownRenderer.scss": "scss_template",
+            "markdownRenderer.ts": "ts_template",
+            "MarkdownRenderer.svelte": "svelte_template"
         },
         "dragAndDrop": {
-            "dragAndDrop.scss": true,
-            "dragAndDrop.ts": true,
-            "DragAndDrop.svelte": true
+            "dragAndDrop.scss": "scss_template",
+            "dragAndDrop.ts": "ts_template",
+            "DragAndDrop.svelte": "svelte_template"
         },
         "resizableDraggable": {
             "resizable": {
-                "resizable.scss": true,
-                "resizable.ts": true,
-                "Resizable.svelte": true
+                "resizable.scss": "scss_template",
+                "resizable.ts": "ts_template",
+                "Resizable.svelte": "svelte_template"
             },
             "draggable": {
-                "draggable.scss": true,
-                "draggable.ts": true,
-                "Draggable.svelte": true
+                "draggable.scss": "scss_template",
+                "draggable.ts": "ts_template",
+                "Draggable.svelte": "svelte_template"
             }
         }
     },
     "animations": {
         "transitions": {
-            "transitions.scss": true,
-            "transitions.ts": true,
-            "Transitions.svelte": true
+            "transitions.scss": "scss_template",
+            "transitions.ts": "ts_template",
+            "Transitions.svelte": "svelte_template"
         },
         "parallax": {
-            "parallax.scss": true,
-            "parallax.ts": true,
-            "Parallax.svelte": true
+            "parallax.scss": "scss_template",
+            "parallax.ts": "ts_template",
+            "Parallax.svelte": "svelte_template"
         },
         "scrollAnimations": {
-            "scrollAnimations.scss": true,
-            "scrollAnimations.ts": true,
-            "ScrollAnimations.svelte": true
+            "scrollAnimations.scss": "scss_template",
+            "scrollAnimations.ts": "ts_template",
+            "ScrollAnimations.svelte": "svelte_template"
         }
     }
 }

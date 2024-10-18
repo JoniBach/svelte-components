@@ -2,7 +2,7 @@ import os
 import json
 
 # File content templates
-SVELTE_TEMPLATE = """
+svelte_template = """
 <script lang="ts">
     import './{component_name}.scss';
     import handle{component_pascal} from './{component_name}';
@@ -13,38 +13,81 @@ SVELTE_TEMPLATE = """
 <div class="{component_name}-container">{component_pascal} Placeholder!</div>
 """
 
-TS_TEMPLATE = """
+ts_template = """
 export default function handle{component_pascal}() {{}}
 """
 
-SCSS_TEMPLATE = """
+scss_template = """
 .{component_name}-container {{
     font-style: normal;
 }}
 """
 
+# Template mapping dictionary
+TEMPLATE_MAPPING = {
+    "svelte_template": svelte_template,
+    "ts_template": ts_template,
+    "scss_template": scss_template
+}
+
+### Validation Functions ###
+
+def validate_json_structure(data: dict, component_name: str = "root"):
+    """
+    Validate the JSON structure to ensure it's properly formatted for component creation.
+    Handles nested dictionaries for directories and ensures template keys are valid.
+    """
+    if not isinstance(data, dict):
+        raise ValueError("Invalid JSON structure. Expected a dictionary at the top level.")
+    
+    def validate_component_entry(entry, key, parent_name):
+        if isinstance(entry, dict):
+            # Recurse if it's a nested dictionary (e.g., a directory or sub-component)
+            validate_json_structure(entry, key)
+        else:
+            if not isinstance(entry, str):
+                raise ValueError(f"Invalid template key for '{key}' in component '{parent_name}'. Expected a string but got {type(entry).__name__}.")
+            # Check if the template exists in the template mapping
+            if entry not in TEMPLATE_MAPPING:
+                raise ValueError(f"Unknown template '{entry}' for file '{key}' in component '{parent_name}'.")
+
+    # Recursively validate all components
+    for component_key, component_value in data.items():
+        validate_component_entry(component_value, component_key, component_name)
+
 def create_file(file_path: str, content: str):
     """
     Create a file at the given path and write the provided content into it.
     """
-    with open(file_path, 'w') as file:
-        file.write(content)
+    try:
+        with open(file_path, 'w') as file:
+            file.write(content)
+    except OSError as e:
+        raise OSError(f"Error creating file {file_path}: {e}")
 
-def create_files_for_component(component_name: str, component_pascal: str, root_directory: str):
+def get_template_content(template_key: str, component_name: str, component_pascal: str) -> str:
     """
-    Create all necessary files (Svelte, TypeScript, SCSS) for a component in the provided root directory.
+    Retrieve the correct template content based on the template key.
+    If the key matches one of the template mappings, return the corresponding template content.
     """
-    # Create .svelte file
-    svelte_file_path = os.path.join(root_directory, f"{component_name}.svelte")
-    create_file(svelte_file_path, SVELTE_TEMPLATE.format(component_name=component_name, component_pascal=component_pascal))
+    template = TEMPLATE_MAPPING.get(template_key)
+    if template:
+        return template.format(component_name=component_name, component_pascal=component_pascal)
+    else:
+        raise ValueError(f"Unknown template key: {template_key}")
 
-    # Create .ts file
-    ts_file_path = os.path.join(root_directory, f"{component_name}.ts")
-    create_file(ts_file_path, TS_TEMPLATE.format(component_name=component_name, component_pascal=component_pascal))
-
-    # Create .scss file
-    scss_file_path = os.path.join(root_directory, f"{component_name}.scss")
-    create_file(scss_file_path, SCSS_TEMPLATE.format(component_name=component_name))
+def create_files_for_component(component_structure: dict, component_name: str, component_pascal: str, root_directory: str):
+    """
+    Create all necessary files (Svelte, TypeScript, SCSS) for a component based on the component structure
+    in the provided root directory.
+    """
+    for file_name, template_key in component_structure.items():
+        file_path = os.path.join(root_directory, file_name)
+        try:
+            file_content = get_template_content(template_key, component_name, component_pascal)
+            create_file(file_path, file_content)
+        except ValueError as e:
+            print(f"Error processing file '{file_name}' for component '{component_name}': {e}")
 
 def process_component_structure(component_structure: dict, root_directory: str):
     """
@@ -54,14 +97,17 @@ def process_component_structure(component_structure: dict, root_directory: str):
         item_path = os.path.join(root_directory, item)
         
         if isinstance(value, dict):
-            # Create a directory if the value is a dictionary (nested structure)
-            os.makedirs(item_path, exist_ok=True)
+            try:
+                # Create a directory if the value is a dictionary (nested structure)
+                os.makedirs(item_path, exist_ok=True)
+            except OSError as e:
+                raise OSError(f"Error creating directory {item_path}: {e}")
+            
             process_component_structure(value, item_path)
-        elif isinstance(value, bool) and value:
-            # For each component, generate files
+        else:
             component_name = item.split('.')[0]  # Extract the component name without extension
             component_pascal = ''.join([part.capitalize() for part in component_name.split('_')])
-            create_files_for_component(component_name, component_pascal, root_directory)
+            create_files_for_component({item: value}, component_name, component_pascal, root_directory)
 
 def load_json_file(file_path: str) -> dict:
     """
@@ -72,14 +118,19 @@ def load_json_file(file_path: str) -> dict:
             return json.load(json_file)
     except FileNotFoundError:
         raise FileNotFoundError(f"Error: JSON file not found at {file_path}.")
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Error decoding JSON file at {file_path}: {e}")
 
 def parse_gitignore_patterns(gitignore_file_path: str = ".gitignore") -> list:
     """
     Read and parse patterns from a .gitignore file, ignoring comments and empty lines.
     """
     if os.path.exists(gitignore_file_path):
-        with open(gitignore_file_path, 'r') as f:
-            return [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+        try:
+            with open(gitignore_file_path, 'r') as f:
+                return [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
+        except OSError as e:
+            raise OSError(f"Error reading .gitignore file at {gitignore_file_path}: {e}")
     return []
 
 def is_path_ignored(path: str, ignore_patterns: list) -> bool:
@@ -161,14 +212,23 @@ def main():
     # Load the JSON component structure
     components_json_path = os.path.join(script_directory, 'components.json')
     component_data = load_json_file(components_json_path)
-    
+
+    # Validate the JSON structure
+    try:
+        validate_json_structure(component_data)
+    except ValueError as e:
+        print(f"Validation Error: {e}")
+        return
+
     # Get the target directory where components should be generated
     target_directory = select_target_directory(script_directory)
 
     # Create the component structure in the target directory
-    process_component_structure(component_data, target_directory)
-
-    print(f"Component structure created in {target_directory}")
+    try:
+        process_component_structure(component_data, target_directory)
+        print(f"Component structure created in {target_directory}")
+    except OSError as e:
+        print(f"Error during component creation: {e}")
 
 if __name__ == "__main__":
     main()
