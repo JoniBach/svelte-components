@@ -1,0 +1,486 @@
+{
+    "layout": {
+        "grid": {
+            "grid": {
+                "grid.scss": true,
+                "grid.ts": true,
+                "Grid.svelte": true
+            },
+            "gridColumn": {
+                "gridColumn.scss": true,
+                "gridColumn.ts": true,
+                "GridColumn.svelte": true
+            },
+            "gridRow": {
+                "gridRow.scss": true,
+                "gridRow.ts": true,
+                "GridRow.svelte": true
+            }
+        },
+        "container": {
+            "container": {
+                "container.scss": true,
+                "container.ts": true,
+                "Container.svelte": true
+            }
+        },
+        "navigation": {
+            "navbar": {
+                "navbar.scss": true,
+                "navbar.ts": true,
+                "Navbar.svelte": true
+            },
+            "sidebar": {
+                "sidebar.scss": true,
+                "sidebar.ts": true,
+                "Sidebar.svelte": true
+            },
+            "footer": {
+                "footer.scss": true,
+                "footer.ts": true,
+                "Footer.svelte": true
+            }
+        },
+        "contentDisplay": {
+            "card": {
+                "card.scss": true,
+                "card.ts": true,
+                "Card.svelte": true
+            },
+            "tabs": {
+                "tabs": {
+                    "tabs.scss": true,
+                    "tabs.ts": true,
+                    "Tabs.svelte": true
+                },
+                "tab": {
+                    "tab.scss": true,
+                    "tab.ts": true,
+                    "Tab.svelte": true
+                }
+            },
+            "accordion": {
+                "accordion.scss": true,
+                "accordion.ts": true,
+                "Accordion.svelte": true
+            }
+        },
+        "sections": {
+            "heroSection": {
+                "heroSection.scss": true,
+                "heroSection.ts": true,
+                "HeroSection.svelte": true
+            },
+            "modal": {
+                "modal.scss": true,
+                "modal.ts": true,
+                "Modal.svelte": true
+            },
+            "panel": {
+                "panel.scss": true,
+                "panel.ts": true,
+                "Panel.svelte": true
+            }
+        }
+    },
+    "forms": {
+        "inputElements": {
+            "input": {
+                "input.scss": true,
+                "input.ts": true,
+                "Input.svelte": true
+            },
+            "textarea": {
+                "textarea.scss": true,
+                "textarea.ts": true,
+                "Textarea.svelte": true
+            },
+            "checkbox": {
+                "checkbox.scss": true,
+                "checkbox.ts": true,
+                "Checkbox.svelte": true
+            },
+            "radioButton": {
+                "radioButton.scss": true,
+                "radioButton.ts": true,
+                "RadioButton.svelte": true
+            }
+        },
+        "buttonElements": {
+            "button": {
+                "button.scss": true,
+                "button.ts": true,
+                "Button.svelte": true
+            },
+            "buttonGroup": {
+                "buttonGroup.scss": true,
+                "buttonGroup.ts": true,
+                "ButtonGroup.svelte": true
+            }
+        },
+        "specializedInputs": {
+            "datePicker": {
+                "datePicker.scss": true,
+                "datePicker.ts": true,
+                "DatePicker.svelte": true
+            },
+            "fileUpload": {
+                "fileUpload.scss": true,
+                "fileUpload.ts": true,
+                "FileUpload.svelte": true
+            },
+            "slider": {
+                "slider.scss": true,
+                "slider.ts": true,
+                "Slider.svelte": true
+            }
+        },
+        "validation": {
+            "formValidation": {
+                "formValidation.scss": true,
+                "formValidation.ts": true,
+                "FormValidation.svelte": true
+            }
+        }
+    },
+    "display": {
+        "typography": {
+            "heading": {
+                "heading.scss": true,
+                "heading.ts": true,
+                "Heading.svelte": true
+            },
+            "paragraph": {
+                "paragraph.scss": true,
+                "paragraph.ts": true,
+                "Paragraph.svelte": true
+            }
+        },
+        "visualElements": {
+            "avatar": {
+                "avatar.scss": true,
+                "avatar.ts": true,
+                "Avatar.svelte": true
+            },
+            "badge": {
+                "badge.scss": true,
+                "badge.ts": true,
+                "Badge.svelte": true
+            },
+            "tooltip": {
+                "tooltip.scss": true,
+                "tooltip.ts": true,
+                "Tooltip.svelte": true
+            }
+        },
+        "dataDisplay": {
+            "table": {
+                "table.scss": true,
+                "table.ts": true,
+                "Table.svelte": true
+            },
+            "progressBar": {
+                "progressBar.scss": true,
+                "progressBar.ts": true,
+                "ProgressBar.svelte": true
+            },
+            "carousel": {
+                "carousel.scss": true,
+                "carousel.ts": true,
+                "Carousel.svelte": true
+            },
+            "alert": {
+                "alert.scss": true,
+                "alert.ts": true,
+                "Alert.svelte": true
+            },
+            "chip": {
+                "chip.scss": true,
+                "chip.ts": true,
+                "Chip.svelte": true
+            },
+            "spinner": {
+                "spinner.scss": true,
+                "spinner.ts": true,
+                "Spinner.svelte": true
+            }
+        }
+    },
+    "navigation": {
+        "navbar": {
+            "navbar": {
+                "navbar.scss": true,
+                "navbar.ts": true,
+                "Navbar.svelte": true
+            }
+        },
+        "tabs": {
+            "tabs": {
+                "tabs.scss": true,
+                "tabs.ts": true,
+                "Tabs.svelte": true
+            },
+            "tab": {
+                "tab.scss": true,
+                "tab.ts": true,
+                "Tab.svelte": true
+            }
+        },
+        "sidebarDrawer": {
+            "sidebar": {
+                "sidebar.scss": true,
+                "sidebar.ts": true,
+                "Sidebar.svelte": true
+            },
+            "drawer": {
+                "drawer.scss": true,
+                "drawer.ts": true,
+                "Drawer.svelte": true
+            }
+        },
+        "breadcrumbs": {
+            "breadcrumbs.scss": true,
+            "breadcrumbs.ts": true,
+            "Breadcrumbs.svelte": true
+        },
+        "pagination": {
+            "pagination.scss": true,
+            "pagination.ts": true,
+            "Pagination.svelte": true
+        },
+        "menuDropdown": {
+            "menu": {
+                "menu.scss": true,
+                "menu.ts": true,
+                "Menu.svelte": true
+            },
+            "dropdown": {
+                "dropdown.scss": true,
+                "dropdown.ts": true,
+                "Dropdown.svelte": true
+            }
+        },
+        "stepper": {
+            "stepper.scss": true,
+            "stepper.ts": true,
+            "Stepper.svelte": true
+        }
+    },
+    "feedback": {
+        "toast": {
+            "toast.scss": true,
+            "toast.ts": true,
+            "Toast.svelte": true
+        },
+        "modal": {
+            "modal.scss": true,
+            "modal.ts": true,
+            "Modal.svelte": true
+        },
+        "snackbar": {
+            "snackbar.scss": true,
+            "snackbar.ts": true,
+            "Snackbar.svelte": true
+        },
+        "skeletonLoader": {
+            "skeletonLoader.scss": true,
+            "skeletonLoader.ts": true,
+            "SkeletonLoader.svelte": true
+        },
+        "confirmDialog": {
+            "confirmDialog.scss": true,
+            "confirmDialog.ts": true,
+            "ConfirmDialog.svelte": true
+        }
+    },
+    "media": {
+        "image": {
+            "image.scss": true,
+            "image.ts": true,
+            "Image.svelte": true
+        },
+        "video": {
+            "video.scss": true,
+            "video.ts": true,
+            "Video.svelte": true
+        },
+        "audio": {
+            "audio.scss": true,
+            "audio.ts": true,
+            "Audio.svelte": true
+        },
+        "carousel": {
+            "carousel.scss": true,
+            "carousel.ts": true,
+            "Carousel.svelte": true
+        },
+        "lightbox": {
+            "lightbox.scss": true,
+            "lightbox.ts": true,
+            "Lightbox.svelte": true
+        }
+    },
+    "utility": {
+        "portal": {
+            "portal.scss": true,
+            "portal.ts": true,
+            "Portal.svelte": true
+        },
+        "tooltip": {
+            "tooltip.scss": true,
+            "tooltip.ts": true,
+            "Tooltip.svelte": true
+        },
+        "popover": {
+            "popover.scss": true,
+            "popover.ts": true,
+            "Popover.svelte": true
+        },
+        "scrollspy": {
+            "scrollspy.scss": true,
+            "scrollspy.ts": true,
+            "Scrollspy.svelte": true
+        },
+        "backToTop": {
+            "backToTop.scss": true,
+            "backToTop.ts": true,
+            "BackToTop.svelte": true
+        },
+        "clipboard": {
+            "clipboard.scss": true,
+            "clipboard.ts": true,
+            "Clipboard.svelte": true
+        }
+    },
+    "dataviz": {
+        "charts": {
+            "lineChart": {
+                "lineChart.scss": true,
+                "lineChart.ts": true,
+                "LineChart.svelte": true
+            },
+            "barChart": {
+                "barChart.scss": true,
+                "barChart.ts": true,
+                "BarChart.svelte": true
+            },
+            "pieChart": {
+                "pieChart.scss": true,
+                "pieChart.ts": true,
+                "PieChart.svelte": true
+            }
+        },
+        "advancedVisuals": {
+            "heatmap": {
+                "heatmap.scss": true,
+                "heatmap.ts": true,
+                "Heatmap.svelte": true
+            },
+            "gauge": {
+                "gauge.scss": true,
+                "gauge.ts": true,
+                "Gauge.svelte": true
+            },
+            "map": {
+                "map.scss": true,
+                "map.ts": true,
+                "Map.svelte": true
+            }
+        },
+        "treeView": {
+            "treeView.scss": true,
+            "treeView.ts": true,
+            "TreeView.svelte": true
+        }
+    },
+    "accessibility": {
+        "accessibleModal": {
+            "accessibleModal.scss": true,
+            "accessibleModal.ts": true,
+            "AccessibleModal.svelte": true
+        },
+        "ariaAttributes": {
+            "ariaAttributes.scss": true,
+            "ariaAttributes.ts": true,
+            "AriaAttributes.svelte": true
+        },
+        "localizationSupport": {
+            "localizationSupport.scss": true,
+            "localizationSupport.ts": true,
+            "LocalizationSupport.svelte": true
+        }
+    },
+    "themes": {
+        "themeProvider": {
+            "themeProvider.scss": true,
+            "themeProvider.ts": true,
+            "ThemeProvider.svelte": true
+        },
+        "cssUtilityClasses": {
+            "cssUtilityClasses.scss": true,
+            "cssUtilityClasses.ts": true,
+            "CssUtilityClasses.svelte": true
+        },
+        "globalVariables": {
+            "globalVariables.scss": true,
+            "globalVariables.ts": true,
+            "GlobalVariables.svelte": true
+        }
+    },
+    "advanced": {
+        "virtualScroller": {
+            "virtualScroller.scss": true,
+            "virtualScroller.ts": true,
+            "VirtualScroller.svelte": true
+        },
+        "dataTable": {
+            "dataTable.scss": true,
+            "dataTable.ts": true,
+            "DataTable.svelte": true
+        },
+        "calendar": {
+            "calendar.scss": true,
+            "calendar.ts": true,
+            "Calendar.svelte": true
+        },
+        "markdownRenderer": {
+            "markdownRenderer.scss": true,
+            "markdownRenderer.ts": true,
+            "MarkdownRenderer.svelte": true
+        },
+        "dragAndDrop": {
+            "dragAndDrop.scss": true,
+            "dragAndDrop.ts": true,
+            "DragAndDrop.svelte": true
+        },
+        "resizableDraggable": {
+            "resizable": {
+                "resizable.scss": true,
+                "resizable.ts": true,
+                "Resizable.svelte": true
+            },
+            "draggable": {
+                "draggable.scss": true,
+                "draggable.ts": true,
+                "Draggable.svelte": true
+            }
+        }
+    },
+    "animations": {
+        "transitions": {
+            "transitions.scss": true,
+            "transitions.ts": true,
+            "Transitions.svelte": true
+        },
+        "parallax": {
+            "parallax.scss": true,
+            "parallax.ts": true,
+            "Parallax.svelte": true
+        },
+        "scrollAnimations": {
+            "scrollAnimations.scss": true,
+            "scrollAnimations.ts": true,
+            "ScrollAnimations.svelte": true
+        }
+    }
+}
