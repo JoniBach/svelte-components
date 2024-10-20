@@ -7,6 +7,4 @@
 	initTheme();
 </script>
 
-<main>
-	<Demo />
-</main>
+<Demo />

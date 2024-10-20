@@ -5,12 +5,13 @@ import json
 svelte_template = """
 <script lang="ts">
     import './{component_name}.scss';
-    import handle{component_pascal} from './{component_name}';
+    import handle{component_pascal} from './{component_name}.js';
+    export let label: string = '';
 
     handle{component_pascal}();
 </script>
 
-<div class="{component_name}-container">{component_pascal} Placeholder!</div>
+<div class="{component_name}-container">{component_pascal} Placeholder{{label}}</div>
 """
 
 ts_template = """
@@ -23,11 +24,55 @@ scss_template = """
 }}
 """
 
+
+storybook_template = """
+import type {{ Meta, StoryObj }} from '@storybook/svelte';
+import  {component_pascal} from './{component_name}.svelte';
+
+const meta: Meta = {{
+    title: '{component_title_path}',
+    component: {component_pascal},
+    tags: ['autodocs'],
+    argTypes: {{
+        label: {{
+            control: 'text',
+            description: 'A simple string to decorate the component output',
+        }}
+    }}
+    
+}} satisfies Meta<{component_pascal}>;
+
+export default meta;
+
+export const Generic: StoryObj =  {{
+    args: {{
+        label: '!!!',  // Default value for the label
+    }}
+}};
+"""
+
+guide_template = """
+<script lang="ts">
+    import  {component_pascal} from './{component_name}.svelte';
+
+    const props = {{
+        label: '!!!',
+    }};
+
+</script>
+
+<{component_pascal} {{...props}} />
+
+"""
+
+
 # Template mapping dictionary
 TEMPLATE_MAPPING = {
     "svelte_template": svelte_template,
     "ts_template": ts_template,
-    "scss_template": scss_template
+    "scss_template": scss_template,
+    "storybook_template": storybook_template,
+    "guide_template": guide_template,
 }
 
 ### Validation Functions ###
@@ -65,26 +110,42 @@ def create_file(file_path: str, content: str):
     except OSError as e:
         raise OSError(f"Error creating file {file_path}: {e}")
 
-def get_template_content(template_key: str, component_name: str, component_pascal: str) -> str:
+def get_template_content(template_key: str, component_name: str, component_pascal: str, component_title_path: str) -> str:
     """
     Retrieve the correct template content based on the template key.
     If the key matches one of the template mappings, return the corresponding template content.
     """
     template = TEMPLATE_MAPPING.get(template_key)
     if template:
-        return template.format(component_name=component_name, component_pascal=component_pascal)
+        return template.format(component_name=component_name, component_pascal=component_pascal, component_title_path=component_title_path)
     else:
         raise ValueError(f"Unknown template key: {template_key}")
+
 
 def create_files_for_component(component_structure: dict, component_name: str, component_pascal: str, root_directory: str):
     """
     Create all necessary files (Svelte, TypeScript, SCSS) for a component based on the component structure
     in the provided root directory.
     """
+    # Define the base path you want to exclude
+    base_path_to_exclude = os.path.join('src', 'lib', 'components')
+
     for file_name, template_key in component_structure.items():
         file_path = os.path.join(root_directory, file_name)
+
+        # Get the relative path from the script directory (where this script is located)
+        relative_path = os.path.relpath(root_directory, start=os.path.dirname(__file__))
+
+        # Ensure the relative path uses forward slashes for Storybook title
+        component_title_path = relative_path.replace("\\", "/")
+
+        # Remove the base path if it exists in the component_title_path
+        if component_title_path.startswith(base_path_to_exclude.replace("\\", "/")):
+            component_title_path = component_title_path[len(base_path_to_exclude) + 1:]
+
         try:
-            file_content = get_template_content(template_key, component_name, component_pascal)
+            # Pass the component_title_path to the template
+            file_content = get_template_content(template_key, component_name, component_pascal, component_title_path)
             create_file(file_path, file_content)
         except ValueError as e:
             print(f"Error processing file '{file_name}' for component '{component_name}': {e}")
