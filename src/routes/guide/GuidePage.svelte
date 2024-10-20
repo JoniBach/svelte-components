@@ -9,7 +9,9 @@
 	<GuideHeadder />
 	<div class="main-container">
 		<GuideSidebar {components} />
-		<GuideBody></GuideBody>
+		<GuideBody>
+			<slot />
+		</GuideBody>
 	</div>
 </div>
 
