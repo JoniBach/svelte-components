@@ -7,7 +7,7 @@
 	{#if component}
 		{#if component.title}
 			{#if component.component}
-				<a href={component.path}>{component.title}</a>
+				<a href="/guide/{component.component.path}">{component.component.title}</a>
 			{:else}
 				<span>{component.title}</span>
 			{/if}
