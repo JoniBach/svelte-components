@@ -21,10 +21,11 @@
 <style>
 	.sidebar {
 		height: 100%;
-		width: 250px;
+		width: 280px;
 		background-color: #333;
 		color: white;
 		overflow-y: scroll;
+		flex-shrink: 0;
 	}
 
 	.sidebar ul {
