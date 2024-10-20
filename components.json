@@ -1,5 +1,55 @@
 {
     "layout": {
+        "styleguide": {
+            "GuidePage": {
+                "guidePage.scss": "scss_template",
+                "guidePage.ts": "ts_template",
+                "GuidePage.guide.svelte": "guide_template",
+                "GuidePage.svelte": "svelte_template"
+            },
+            "GuideBody": {
+                "guideBody.scss": "scss_template",
+                "guideBody.ts": "ts_template",
+                "GuideBody.guide.svelte": "guide_template",
+                "GuideBody.svelte": "svelte_template"
+            },
+            "GuideHeader": {
+                "guideHeader.scss": "scss_template",
+                "guideHeader.ts": "ts_template",
+                "GuideHeader.guide.svelte": "guide_template",
+                "GuideHeader.svelte": "svelte_template"
+            },
+            "GuideSidebar": {
+                "guideSidebar.scss": "scss_template",
+                "guideSidebar.ts": "ts_template",
+                "GuideSidebar.guide.svelte": "guide_template",
+                "GuideSidebar.svelte": "svelte_template"
+            },
+            "GuideSidebarItem": {
+                "guideSidebarItem.scss": "scss_template",
+                "guideSidebarItem.ts": "ts_template",
+                "GuideSidebarItem.guide.svelte": "guide_template",
+                "GuideSidebarItem.svelte": "svelte_template"
+            },
+            "GuideDemo": {
+                "guideDemo.scss": "scss_template",
+                "guideDemo.ts": "ts_template",
+                "GuideDemo.guide.svelte": "guide_template",
+                "GuideDemo.svelte": "svelte_template"
+            },
+            "GuideCode": {
+                "guideCode.scss": "scss_template",
+                "guideCode.ts": "ts_template",
+                "GuideCode.guide.svelte": "guide_template",
+                "GuideCode.svelte": "svelte_template"
+            },
+            "GuidePropTable": {
+                "guidePropTable.scss": "scss_template",
+                "guidePropTable.ts": "ts_template",
+                "GuidePropTable.guide.svelte": "guide_template",
+                "GuidePropTable.svelte": "svelte_template"
+            }
+        },
         "grid": {
             "grid": {
                 "grid.scss": "scss_template",
