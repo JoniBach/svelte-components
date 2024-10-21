@@ -1,12 +1,18 @@
-
 <script lang="ts">
-    import  Breadcrumbs from './Breadcrumbs.svelte';
+	import Breadcrumbs from './Breadcrumbs.svelte';
 
-    const props = {
-        label: '!!!',
-    };
-
+	const props = {
+		group: [
+			{ label: 'Home', href: '/' },
+			{ label: 'Guide', href: '/guide' },
+			{ label: 'Navigation', href: '/guide/navigation' },
+			{ label: 'Breadcrumbs', href: '/guide/navigation/breadcrumbs' }
+		]
+	};
 </script>
 
-<Breadcrumbs {...props} />
-
+<div class="demo-contaner">
+	<div class="demo-variant">
+		<Breadcrumbs {...props} />
+	</div>
+</div>
