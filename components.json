@@ -128,6 +128,12 @@
         }
     },
     "forms": {
+        "form": {
+            "form.scss": "scss_template",
+            "form.ts": "ts_template",
+            "Form.guide.svelte": "guide_template",
+            "Form.svelte": "svelte_template"
+        },
         "inputs": {
             "input": {
                 "input.scss": "scss_template",
