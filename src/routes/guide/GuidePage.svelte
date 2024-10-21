@@ -6,7 +6,7 @@
 </script>
 
 <div class="guide-body">
-	<GuideHeadder />
+	<GuideHeadder on:click />
 	<div class="main-container">
 		<GuideSidebar {components} />
 		<GuideBody>

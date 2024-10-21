@@ -5,7 +5,8 @@
 <style>
 	.guide-body {
 		width: 100%;
-		background: #eee;
 		height: 100%;
+		padding: 20px;
+		overflow-y: scroll;
 	}
 </style>

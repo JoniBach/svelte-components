@@ -31,10 +31,7 @@
 	.display-item-container {
 		padding-left: 10px;
 	}
-	a {
-		color: #eee;
-		text-decoration: none;
-	}
+
 	a:hover {
 		background: #444;
 	}
@@ -46,10 +43,5 @@
 	span {
 		font-weight: bold;
 		margin-top: 10px;
-	}
-
-	ul {
-		list-style-type: none;
-		padding-left: 20px;
 	}
 </style>

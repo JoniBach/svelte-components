@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import GuidePage from './GuidePage.svelte';
-
+	import { changeTheme } from '$lib';
 	// Import all .svelte files in the components folder, including subdirectories
 	const componentModules = import.meta.glob('/src/lib/components/**/*.guide.svelte');
 	let components = [];
@@ -71,13 +71,10 @@
 		components = elevateSingleComponent(components); // Apply the promotion logic
 		console.log(components); // For debugging purposes
 	});
-
-	// Debug the component list when it changes
-	$: console.log(components);
 </script>
 
 <body>
-	<GuidePage {components}>
+	<GuidePage on:click={changeTheme} {components}>
 		<slot />
 	</GuidePage>
 </body>
@@ -92,10 +89,6 @@
 	}
 
 	body {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		height: 100%;
 		font-family: 'Roboto', sans-serif;
 	}
 </style>
