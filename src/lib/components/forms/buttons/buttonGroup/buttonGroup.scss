@@ -1,4 +1,48 @@
-
-.buttonGroup-container {
-    font-style: normal;
+.button-group {
+	display: flex;
+	&.gap-small {
+		gap: var(--spacing-small);
+	}
+	&.gap-medium {
+		gap: var(--spacing-medium);
+	}
+	&.gap-large {
+		gap: var(--spacing-large);
+	}
+	&.default {
+		flex-direction: row;
+	}
+	&.row {
+		flex-direction: row;
+	}
+	&.column {
+		flex-direction: column;
+	}
+	&.row-reverse {
+		flex-direction: row-reverse;
+	}
+	&.column-reverse {
+		flex-direction: column-reverse;
+	}
+	&.center {
+		justify-content: center;
+	}
+	&.right {
+		justify-content: flex-end;
+	}
+	&.left {
+		justify-content: flex-start;
+	}
+	&.space-between {
+		justify-content: space-between;
+	}
+	&.space-around {
+		justify-content: space-around;
+	}
+	&.space-evenly {
+		justify-content: space-evenly;
+	}
+	&.wrap {
+		flex-wrap: wrap;
+	}
 }
