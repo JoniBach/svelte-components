@@ -9,10 +9,13 @@
 	export let index = 0;
 
 	const dispatch = createEventDispatcher();
+	$: params = { buttonId: id, buttonIndex: index };
 </script>
 
 <button
-	on:click={(event) => dispatch('click', { buttonId: id, buttonIndex: index })}
+	on:click={(event) => dispatch('click', params)}
+	on:mouseenter={(event) => dispatch('mouseenter', params)}
+	on:mouseleave={(event) => dispatch('mouseleave', params)}
 	{id}
 	class="button {variant} {color}"
 	data-itemIndex={index}
