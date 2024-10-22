@@ -1,4 +1,36 @@
-
-.navbar-container {
-    font-style: normal;
+.navbar {
+	background: var(--color-pannel);
+	padding: var(--spacing-small);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.navbar-title {
+		font-size: var(--typography-large);
+		color: var(--color-text);
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+	.navbar-menu {
+		display: flex;
+		.navbar-link {
+			font-size: var(--typography-small);
+			color: var(--color-text);
+			text-decoration: none;
+			cursor: pointer;
+			&:hover {
+				color: var(--color-accent);
+			}
+		}
+		&.gap-small {
+			gap: var(--spacing-small);
+		}
+		&.gap-medium {
+			gap: var(--spacing-medium);
+		}
+		&.gap-large {
+			gap: var(--spacing-large);
+		}
+	}
 }
