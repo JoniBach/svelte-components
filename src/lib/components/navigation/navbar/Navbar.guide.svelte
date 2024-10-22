@@ -86,9 +86,25 @@
 		}
 	];
 
+	const sidebarGroup = [
+		{ label: 'Home', href: '/' },
+		{ label: 'Guide', href: '/guide' },
+		{ label: 'Navigation', href: '/navigation' },
+		{ label: 'Sidebar', href: '/sidebar' }
+	];
+
+	const sidebarProps = {
+		label: 'Hidden Menu',
+		group: sidebarGroup,
+		variant: 'over',
+		direction: 'left',
+		id: 'left-menu'
+	};
+
 	const props = {
 		label: 'Pretty Good Services',
-		group
+		group,
+		sidebar: sidebarProps
 	};
 </script>
 
