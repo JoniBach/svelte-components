@@ -10,7 +10,7 @@
 	export let id = '';
 	export let variant: string = 'over';
 
-	$: isOpen = active || activeId === id;
+	$: isOpen = (id && activeId === id) || active;
 
 	$: openClass = isOpen ? 'open' : 'closed';
 
