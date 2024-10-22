@@ -6,7 +6,8 @@
 		{ label: 'Home', href: '/' },
 		{ label: 'Guide', href: '/guide' },
 		{ label: 'Navigation', href: '/guide/navigation' },
-		{ label: 'Dropdown', href: '/guide/navigation/dropdown' }
+		{ label: 'Dropdown', href: '/guide/navigation/dropdown' },
+		{ label: 'Supercalifragilistic', href: '/super/cali/fragi/listic' }
 	];
 
 	const props = [
@@ -86,4 +87,10 @@
 <div class="demo-variant">
 	<Dropdown {...props[0][0]} />
 	<Dropdown {...props[1][1]} />
+</div>
+
+<div class="demo-variant">
+	<Dropdown {group} label="Anchor left" anchor="left" />
+	<Dropdown {group} label="Anchor Center" anchor="center" />
+	<Dropdown {group} label="Anchor Right" anchor="right" />
 </div>
