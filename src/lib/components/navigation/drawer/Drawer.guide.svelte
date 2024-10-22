@@ -2,8 +2,12 @@
 	import Drawer from './Drawer.svelte';
 
 	const props = {
-		label: '!!!'
+		label: 'drawer'
 	};
 </script>
 
-<Drawer {...props} />
+<div class="demo-variant">
+	<Drawer {...props}>
+		<div>Drawer Placeholder</div>
+	</Drawer>
+</div>
