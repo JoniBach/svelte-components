@@ -11,7 +11,7 @@
 	export let variant: string = 'column';
 	export let anchor: string = 'center';
 
-	$: isOpen = id ? activeId === id : active;
+	$: isOpen = (id && activeId === id) || active;
 
 	$: openClass = isOpen ? 'open' : 'closed';
 
