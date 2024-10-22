@@ -3,8 +3,8 @@
 	export let components = null;
 </script>
 
-<div class="sidebar">
-	<p class="heading">
+<div class="guide-sidebar">
+	<p class="guide-heading">
 		<strong>Components</strong>
 	</p>
 	{#if components}
@@ -19,7 +19,7 @@
 </div>
 
 <style>
-	.sidebar {
+	.guide-sidebar {
 		height: 100%;
 		width: 280px;
 		background-color: #333;
@@ -28,17 +28,17 @@
 		flex-shrink: 0;
 	}
 
-	.sidebar ul {
+	.guide-sidebar ul {
 		list-style: none;
 		padding: 0;
 	}
 
-	.heading {
+	.guide-heading {
 		margin-left: 10px;
 	}
 
 	@media (max-width: 768px) {
-		.sidebar {
+		.guide-sidebar {
 			width: 200px;
 		}
 	}

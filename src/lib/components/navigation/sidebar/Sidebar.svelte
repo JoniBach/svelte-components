@@ -1,10 +1,37 @@
-
 <script lang="ts">
-    import './Sidebar.scss';
-    import handleSidebar from './Sidebar.js';
-    export let label: string = '';
+	import ButtonGroup from './../../forms/buttons/buttonGroup/ButtonGroup.svelte';
+	import Button from './../../forms/buttons/button/Button.svelte';
+	import './Sidebar.scss';
+	export let label: string = '';
+	export let group: any[] = [];
+	export let direction: string = 'left';
+	export let activeId = '';
+	export let active = false;
+	export let id = '';
+	export let variant: string = 'over';
 
-    handleSidebar();
+	$: isOpen = active || activeId === id;
+
+	$: openClass = isOpen ? 'open' : 'closed';
+
+	$: buttonVariant = direction === 'left' || direction === 'right' ? 'column' : 'row';
+
+	const handleClose = () => {
+		active = false;
+		activeId = '';
+	};
 </script>
 
-<div class="Sidebar-container">Sidebar Placeholder{label}</div>
+<div {id} class="sidebar {direction} {openClass} {variant}">
+	<div class="sidebar-headder">
+		{#if label}
+			<h2 class="sidebar-label">{label}</h2>
+		{/if}
+		<Button label="Close" on:click={() => handleClose()} />
+	</div>
+	{#if group.length > 0}
+		<ButtonGroup {group} variant={buttonVariant} />
+	{:else}
+		<slot />
+	{/if}
+</div>
