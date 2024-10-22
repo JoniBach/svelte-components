@@ -1,4 +1,18 @@
-
-.footer-container {
-    font-style: normal;
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	background: var(--color-pannel);
+	padding: var(--spacing-large) var(--spacing-small);
+	.footer-column {
+		display: flex;
+		flex-direction: column;
+		.footer-link {
+			font-size: var(--typography-tiny);
+			cursor: pointer;
+		}
+		.footer-column-label {
+			font-size: var(--typography-small);
+		}
+	}
 }

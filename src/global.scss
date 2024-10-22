@@ -6,18 +6,20 @@
 	--color-background: #ffffff;
 	--color-neutral: #ccc;
 	--color-text: #000000;
-	--color-primary: #50a4fe;
+	--color-primary: #007bff;
 	--color-secondary: #ffb277;
 	--color-accent: #e74c3c;
 	--color-border: #dddddd;
 	--color-pannel: #ddd;
 
-	// Light Theme Spacing
 	--spacing-small: 8px;
 	--spacing-medium: 16px;
 	--spacing-large: 24px;
 
-	// Light Theme Typography
+	--typography-small: 0.875rem;
+	--typography-medium: 1rem;
+	--typography-large: 1.25rem;
+
 	--typography-font-family: 'Roboto', sans-serif;
 	--typography-font-size: 16px;
 	--typography-heading-size: 2em;
@@ -40,6 +42,11 @@
 	--spacing-small: 8px;
 	--spacing-medium: 16px;
 	--spacing-large: 24px;
+
+	--typography-tiny: 0.6rem;
+	--typography-small: 0.875rem;
+	--typography-medium: 1rem;
+	--typography-large: 1.25rem;
 
 	--typography-font-family: 'Roboto', sans-serif;
 	--typography-font-size: 16px;
@@ -104,6 +111,8 @@ a {
 	&:hover {
 		color: var(--color-accent);
 	}
+}
+.text {
 }
 
 // Button Styles
