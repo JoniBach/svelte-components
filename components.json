@@ -306,12 +306,6 @@
             "Pagination.guide.svelte": "guide_template",
             "Pagination.svelte": "svelte_template"
         },
-        "menu": {
-            "menu.scss": "scss_template",
-            "menu.ts": "ts_template",
-            "Menu.guide.svelte": "guide_template",
-            "Menu.svelte": "svelte_template"
-        },
         "dropdown": {
             "dropdown.scss": "scss_template",
             "dropdown.ts": "ts_template",
