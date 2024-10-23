@@ -7,17 +7,22 @@
 	export let color: string = '';
 	export let id = '';
 	export let index = 0;
+	export let size: string = 'small';
 
 	const dispatch = createEventDispatcher();
-	$: params = { buttonId: id, buttonIndex: index };
+	const handleClick = (event, type) => {
+		event.preventDefault();
+		event.stopPropagation();
+		dispatch(type, { buttonId: id, buttonIndex: index });
+	};
 </script>
 
 <button
-	on:click={(event) => dispatch('click', params)}
-	on:mouseenter={(event) => dispatch('mouseenter', params)}
-	on:mouseleave={(event) => dispatch('mouseleave', params)}
+	on:click={(event) => handleClick(event, 'click')}
+	on:mouseenter={(event) => handleClick(event, 'mouseenter')}
+	on:mouseleave={(event) => handleClick(event, 'mouseleave')}
 	{id}
-	class="button {variant} {color}"
+	class="button {variant} {color} size-{size}"
 	data-itemIndex={index}
 >
 	{#if label}

@@ -10,6 +10,7 @@
 	export let id = '';
 	export let variant: string = 'column';
 	export let anchor: string = 'center';
+	export let size: string = 'small';
 
 	$: isOpen = (id && activeId === id) || active;
 
@@ -27,12 +28,12 @@
 </script>
 
 <div on:mouseleave={() => handleClose()} class="dropdown-wrapper">
-	<Button on:click={() => handleClick()}>{label}</Button>
+	<Button {size} on:click={() => handleClick()}>{label}</Button>
 	<div {id} class="dropdown {direction} {openClass} {variant} anchor-{anchor}">
 		{#if group.length > 0}
-			<ButtonGroup {group} {variant} />
+			<ButtonGroup {size} {group} {variant} />
 		{:else if 'label'}
-			<Button label="Close" on:click={() => handleClose()} />
+			<Button {size} label="Close" on:click={() => handleClose()} />
 		{:else}
 			<slot />
 		{/if}

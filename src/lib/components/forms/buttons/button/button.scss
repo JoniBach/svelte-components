@@ -1,4 +1,20 @@
 .button {
+	&.size-tiny {
+		padding: var(--spacing-tiny) var(--spacing-small);
+		font-size: var(--typography-tiny);
+	}
+	&.size-small {
+		padding: var(--spacing-small) var(--spacing-medium);
+		font-size: var(--typography-small);
+	}
+	&.size-medium {
+		padding: var(--spacing-medium) var(--spacing-large);
+		font-size: var(--typography-medium);
+	}
+	&.size-large {
+		padding: var(--spacing-large) var(--spacing-extra-large);
+		font-size: var(--typography-large);
+	}
 	&.default {
 		background: transparent;
 		&.primary {
@@ -6,6 +22,18 @@
 		}
 		&.secondary {
 			color: var(--color-secondary);
+		}
+		&.accent {
+			color: var(--color-accent);
+		}
+		&.success {
+			color: var(--color-success);
+		}
+		&.warning {
+			color: var(--color-warning);
+		}
+		&.danger {
+			color: var(--color-danger);
 		}
 		&:hover {
 			background-color: var(--color-accent);
@@ -21,6 +49,18 @@
 		}
 		&.secondary {
 			background-color: var(--color-secondary);
+		}
+		&.accent {
+			background-color: var(--color-accent);
+		}
+		&.success {
+			background-color: var(--color-success);
+		}
+		&.warning {
+			background-color: var(--color-warning);
+		}
+		&.danger {
+			background-color: var(--color-danger);
 		}
 		&:hover {
 			background-color: var(--color-accent);
@@ -38,6 +78,18 @@
 		}
 		&.secondary {
 			border: var(--border-width) solid var(--color-secondary);
+		}
+		&.accent {
+			border: var(--border-width) solid var(--color-accent);
+		}
+		&.success {
+			border: var(--border-width) solid var(--color-success);
+		}
+		&.warning {
+			border: var(--border-width) solid var(--color-warning);
+		}
+		&.danger {
+			border: var(--border-width) solid var(--color-danger);
 		}
 		&:hover {
 			border: var(--border-width) solid transparent;

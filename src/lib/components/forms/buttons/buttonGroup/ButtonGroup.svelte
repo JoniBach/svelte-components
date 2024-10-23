@@ -10,6 +10,7 @@
 	export let gap: string = 'small';
 	import { createEventDispatcher } from 'svelte';
 	export let index = 0;
+	export let size: string = 'small';
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -17,10 +18,11 @@
 <div class="button-group {variant} gap-{gap}">
 	{#each group as prop, buttonIndex}
 		<Button
+			{size}
 			{...prop}
 			on:click={(event) =>
 				dispatch('click', {
-					buttonId: event.detail.id,
+					buttonId: event.detail.buttonId,
 					buttonGroupId: id,
 					buttonIndex: event.detail.buttonIndex,
 					buttonGroupIndex: index
