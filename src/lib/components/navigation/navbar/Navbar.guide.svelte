@@ -97,7 +97,7 @@
 		label: 'Hidden Menu',
 		group: sidebarGroup,
 		variant: 'over',
-		direction: 'left',
+		direction: 'right',
 		id: 'left-menu'
 	};
 

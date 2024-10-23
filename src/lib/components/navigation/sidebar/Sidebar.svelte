@@ -2,11 +2,12 @@
 	import ButtonGroup from './../../forms/buttons/buttonGroup/ButtonGroup.svelte';
 	import Button from './../../forms/buttons/button/Button.svelte';
 	import './Sidebar.scss';
+	import { fade } from 'svelte/transition';
 	export let label: string = '';
 	export let group: any[] = [];
 	export let direction: string = 'left';
-	export let activeId = '';
-	export let active = false;
+	export let activeId = ''; // Bound to parent
+	export let active = false; // Bound to parent
 	export let id = '';
 	export let variant: string = 'over';
 
@@ -18,7 +19,7 @@
 
 	const handleClose = () => {
 		active = false;
-		activeId = '';
+		activeId = ''; // Updating active and activeId, which will reflect in the parent
 	};
 </script>
 

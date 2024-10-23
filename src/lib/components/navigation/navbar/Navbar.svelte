@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import Button from '$lib/components/forms/buttons/button/Button.svelte';
 	import Sidebar from '../sidebar/Sidebar.svelte';
 	import Dropdown from './../dropdown/Dropdown.svelte';
@@ -23,10 +24,11 @@
 		<slot />
 
 		{#each group as item}
-			<!-- <a class="navbar-link" href={item.href} target={item.target} rel={item.rel}>
-				{item.label}
-			</a> -->
-			<Dropdown group={item.group} label={item.label} anchor="right" />
+			{#if !active}
+				<div transition:fade>
+					<Dropdown group={item.group} label={item.label} anchor="right" />
+				</div>
+			{/if}
 		{/each}
 		<Button
 			on:click={() => {
@@ -46,5 +48,5 @@
 	</div>
 </nav>
 {#if sidebar}
-	<Sidebar {...sidebar} {active} />
+	<Sidebar {...sidebar} bind:active />
 {/if}
