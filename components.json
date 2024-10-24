@@ -440,25 +440,5 @@
             "Draggable.guide.svelte": "guide_template",
             "Draggable.svelte": "svelte_template"
         }
-    },
-    "animations": {
-        "transitions": {
-            "transitions.scss": "scss_template",
-            "transitions.ts": "ts_template",
-            "Transitions.guide.svelte": "guide_template",
-            "Transitions.svelte": "svelte_template"
-        },
-        "parallax": {
-            "parallax.scss": "scss_template",
-            "parallax.ts": "ts_template",
-            "Parallax.guide.svelte": "guide_template",
-            "Parallax.svelte": "svelte_template"
-        },
-        "scrollAnimations": {
-            "scrollAnimations.scss": "scss_template",
-            "scrollAnimations.ts": "ts_template",
-            "ScrollAnimations.guide.svelte": "guide_template",
-            "ScrollAnimations.svelte": "svelte_template"
-        }
     }
 }
