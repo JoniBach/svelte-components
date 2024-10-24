@@ -243,12 +243,6 @@
                 "Carousel.guide.svelte": "guide_template",
                 "Carousel.svelte": "svelte_template"
             },
-            "alert": {
-                "alert.scss": "scss_template",
-                "alert.ts": "ts_template",
-                "Alert.guide.svelte": "guide_template",
-                "Alert.svelte": "svelte_template"
-            },
             "chip": {
                 "chip.scss": "scss_template",
                 "chip.ts": "ts_template",
@@ -302,6 +296,12 @@
         }
     },
     "feedback": {
+        "alert": {
+            "alert.scss": "scss_template",
+            "alert.ts": "ts_template",
+            "Alert.guide.svelte": "guide_template",
+            "Alert.svelte": "svelte_template"
+        },
         "toast": {
             "toast.scss": "scss_template",
             "toast.ts": "ts_template",
