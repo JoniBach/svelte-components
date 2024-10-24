@@ -233,12 +233,6 @@
                 "Carousel.guide.svelte": "guide_template",
                 "Carousel.svelte": "svelte_template"
             },
-            "chip": {
-                "chip.scss": "scss_template",
-                "chip.ts": "ts_template",
-                "Chip.guide.svelte": "guide_template",
-                "Chip.svelte": "svelte_template"
-            },
             "spinner": {
                 "spinner.scss": "scss_template",
                 "spinner.ts": "ts_template",
