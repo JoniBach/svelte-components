@@ -192,13 +192,11 @@
                 "ButtonGroup.svelte": "svelte_template"
             }
         },
-        "validation": {
-            "formValidation": {
-                "formValidation.scss": "scss_template",
-                "formValidation.ts": "ts_template",
-                "FormValidation.guide.svelte": "guide_template",
-                "FormValidation.svelte": "svelte_template"
-            }
+        "formValidation": {
+            "formValidation.scss": "scss_template",
+            "formValidation.ts": "ts_template",
+            "FormValidation.guide.svelte": "guide_template",
+            "FormValidation.svelte": "svelte_template"
         }
     },
     "display": {
