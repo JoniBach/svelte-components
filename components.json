@@ -231,12 +231,6 @@
             }
         },
         "data": {
-            "table": {
-                "table.scss": "scss_template",
-                "table.ts": "ts_template",
-                "Table.guide.svelte": "guide_template",
-                "Table.svelte": "svelte_template"
-            },
             "progressBar": {
                 "progressBar.scss": "scss_template",
                 "progressBar.ts": "ts_template",
@@ -415,12 +409,6 @@
             "virtualScroller.ts": "ts_template",
             "VirtualScroller.guide.svelte": "guide_template",
             "VirtualScroller.svelte": "svelte_template"
-        },
-        "dataTable": {
-            "dataTable.scss": "scss_template",
-            "dataTable.ts": "ts_template",
-            "DataTable.guide.svelte": "guide_template",
-            "DataTable.svelte": "svelte_template"
         },
         "calendar": {
             "calendar.scss": "scss_template",
