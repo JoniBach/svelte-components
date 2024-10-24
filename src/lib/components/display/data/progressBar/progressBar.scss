@@ -1,4 +1,53 @@
+.progress-bar {
+	width: 100%;
+	height: var(--spacing-medium);
+	background-color: var(--color-neutral);
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: width 0.3s;
 
-.progressBar-container {
-    font-style: normal;
+	// Dynamic progress fill classes
+	@for $i from 0 through 100 {
+		.progress-fill-#{$i} {
+			background-color: var(--color-accent);
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.progress-label {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		color: var(--color-text);
+		font-size: var(--typography-small);
+	}
+
+	// Variant: Inset - label inside the bar
+	&.variant-inset {
+		.progress-label {
+			color: var(--color-text);
+			font-size: var(--typography-small);
+		}
+	}
+
+	// Variant: Separated - label above the bar
+	&.variant-separated {
+		height: var(--spacing-small);
+		.progress-label {
+			position: static;
+			transform: none;
+			margin-bottom: var(--spacing-tiny);
+			color: var(--color-text);
+			font-size: var(--typography-small);
+		}
+		display: block;
+		text-align: center;
+	}
 }
