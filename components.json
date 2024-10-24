@@ -78,18 +78,16 @@
                 "Card.svelte": "svelte_template"
             },
             "tabs": {
-                "tabs": {
-                    "tabs.scss": "scss_template",
-                    "tabs.ts": "ts_template",
-                    "Tabs.guide.svelte": "guide_template",
-                    "Tabs.svelte": "svelte_template"
-                },
-                "tab": {
-                    "tab.scss": "scss_template",
-                    "tab.ts": "ts_template",
-                    "Tab.guide.svelte": "guide_template",
-                    "Tab.svelte": "svelte_template"
-                }
+                "tabs.scss": "scss_template",
+                "tabs.ts": "ts_template",
+                "Tabs.guide.svelte": "guide_template",
+                "Tabs.svelte": "svelte_template"
+            },
+            "tab": {
+                "tab.scss": "scss_template",
+                "tab.ts": "ts_template",
+                "Tab.guide.svelte": "guide_template",
+                "Tab.svelte": "svelte_template"
             },
             "accordion": {
                 "accordion.scss": "scss_template",
