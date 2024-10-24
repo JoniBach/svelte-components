@@ -70,14 +70,6 @@
                 "GridRow.svelte": "svelte_template"
             }
         },
-        "container": {
-            "container": {
-                "container.scss": "scss_template",
-                "container.ts": "ts_template",
-                "Container.guide.svelte": "guide_template",
-                "Container.svelte": "svelte_template"
-            }
-        },
         "content": {
             "card": {
                 "card.scss": "scss_template",
