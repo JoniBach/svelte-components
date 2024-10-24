@@ -19,11 +19,13 @@
 	--spacing-small: 8px;
 	--spacing-medium: 16px;
 	--spacing-large: 24px;
+	--spacing-xl: 32px;
 
 	--typography-tiny: 0.6rem;
 	--typography-small: 0.875rem;
 	--typography-medium: 1rem;
 	--typography-large: 1.25rem;
+	--typography-xl: 1.5rem;
 
 	--typography-font-family: 'Roboto', sans-serif;
 	--typography-font-size: 16px;
@@ -51,11 +53,13 @@
 	--spacing-small: 8px;
 	--spacing-medium: 16px;
 	--spacing-large: 24px;
+	--spacing-xl: 32px;
 
 	--typography-tiny: 0.6rem;
 	--typography-small: 0.875rem;
 	--typography-medium: 1rem;
 	--typography-large: 1.25rem;
+	--typography-xl: 1.5rem;
 
 	--typography-font-family: 'Roboto', sans-serif;
 	--typography-font-size: 16px;
@@ -254,4 +258,8 @@ textarea {
 	padding: 20px;
 	border-radius: 4px;
 	margin-bottom: 10px;
+	&.flex {
+		display: flex;
+		gap: 10px;
+	}
 }
