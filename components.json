@@ -359,44 +359,6 @@
             "Lightbox.svelte": "svelte_template"
         }
     },
-    "utility": {
-        "portal": {
-            "portal.scss": "scss_template",
-            "portal.ts": "ts_template",
-            "Portal.guide.svelte": "guide_template",
-            "Portal.svelte": "svelte_template"
-        },
-        "tooltip": {
-            "tooltip.scss": "scss_template",
-            "tooltip.ts": "ts_template",
-            "Tooltip.guide.svelte": "guide_template",
-            "Tooltip.svelte": "svelte_template"
-        },
-        "popover": {
-            "popover.scss": "scss_template",
-            "popover.ts": "ts_template",
-            "Popover.guide.svelte": "guide_template",
-            "Popover.svelte": "svelte_template"
-        },
-        "scrollspy": {
-            "scrollspy.scss": "scss_template",
-            "scrollspy.ts": "ts_template",
-            "Scrollspy.guide.svelte": "guide_template",
-            "Scrollspy.svelte": "svelte_template"
-        },
-        "backToTop": {
-            "backToTop.scss": "scss_template",
-            "backToTop.ts": "ts_template",
-            "BackToTop.guide.svelte": "guide_template",
-            "BackToTop.svelte": "svelte_template"
-        },
-        "clipboard": {
-            "clipboard.scss": "scss_template",
-            "clipboard.ts": "ts_template",
-            "Clipboard.guide.svelte": "guide_template",
-            "Clipboard.svelte": "svelte_template"
-        }
-    },
     "charts": {
         "lineChart": {
             "lineChart.scss": "scss_template",
@@ -441,7 +403,13 @@
             "TreeView.svelte": "svelte_template"
         }
     },
-    "advanced": {
+    "utility": {
+        "tooltip": {
+            "tooltip.scss": "scss_template",
+            "tooltip.ts": "ts_template",
+            "Tooltip.guide.svelte": "guide_template",
+            "Tooltip.svelte": "svelte_template"
+        },
         "virtualScroller": {
             "virtualScroller.scss": "scss_template",
             "virtualScroller.ts": "ts_template",
