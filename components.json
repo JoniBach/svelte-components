@@ -216,9 +216,7 @@
                 "badge.ts": "ts_template",
                 "Badge.guide.svelte": "guide_template",
                 "Badge.svelte": "svelte_template"
-            }
-        },
-        "data": {
+            },
             "progressBar": {
                 "progressBar.scss": "scss_template",
                 "progressBar.ts": "ts_template",
