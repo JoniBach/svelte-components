@@ -1,10 +1,35 @@
-
 <script lang="ts">
-    import './PieChart.scss';
-    import handlePiechart from './PieChart.js';
-    export let label: string = '';
+	import { onMount } from 'svelte';
+	import { createPieChart } from './pieChart';
 
-    handlePiechart();
+	export let data = [];
+	export let title = '';
+	export let accessor = { value: '', label: '' };
+	export let width = 400;
+	export let height = 400;
+
+	let chartRef;
+
+	const margin = { top: 40, right: 40, bottom: 40, left: 40 };
+
+	// Create the pie chart on mount
+	onMount(() => {
+		createPieChart(chartRef, {
+			data,
+			width,
+			height,
+			margin,
+			accessor,
+			title
+		});
+	});
 </script>
 
-<div class="PieChart-container">Piechart Placeholder{label}</div>
+<div bind:this={chartRef} style="width: {width}px; height: {height}px;"></div>
+
+<style>
+	.slice:hover {
+		opacity: 0.8;
+		cursor: pointer;
+	}
+</style>
