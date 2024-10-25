@@ -225,12 +225,6 @@
                 "ProgressBar.guide.svelte": "guide_template",
                 "ProgressBar.svelte": "svelte_template"
             },
-            "carousel": {
-                "carousel.scss": "scss_template",
-                "carousel.ts": "ts_template",
-                "Carousel.guide.svelte": "guide_template",
-                "Carousel.svelte": "svelte_template"
-            },
             "spinner": {
                 "spinner.scss": "scss_template",
                 "spinner.ts": "ts_template",
@@ -327,6 +321,12 @@
             "lightbox.ts": "ts_template",
             "Lightbox.guide.svelte": "guide_template",
             "Lightbox.svelte": "svelte_template"
+        },
+        "carousel": {
+            "carousel.scss": "scss_template",
+            "carousel.ts": "ts_template",
+            "Carousel.guide.svelte": "guide_template",
+            "Carousel.svelte": "svelte_template"
         }
     },
     "charts": {
