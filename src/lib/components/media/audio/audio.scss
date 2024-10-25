@@ -1,4 +1,39 @@
+.pill-container {
+	display: flex;
+	align-items: center;
+	border-radius: 50px;
+	margin: var(--spacing-small) 0;
+	background-color: var(--color-pannel);
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
 
-.audio-container {
-    font-style: normal;
+.play-pause-button {
+	border-radius: 50%;
+	background-color: var(--color-accent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--typography-large);
+	color: var(--color-text);
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.waveform-container {
+	flex-grow: 1;
+	position: relative;
+}
+
+svg.waveform {
+	width: 100%;
+}
+
+.progress-line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: var(--color-accent);
+	width: 2px;
 }
