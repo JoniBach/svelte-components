@@ -316,12 +316,6 @@
             "Image.guide.svelte": "guide_template",
             "Image.svelte": "svelte_template"
         },
-        "video": {
-            "video.scss": "scss_template",
-            "video.ts": "ts_template",
-            "Video.guide.svelte": "guide_template",
-            "Video.svelte": "svelte_template"
-        },
         "audio": {
             "audio.scss": "scss_template",
             "audio.ts": "ts_template",
