@@ -190,45 +190,29 @@
         }
     },
     "display": {
-        "typography": {
-            "heading": {
-                "heading.scss": "scss_template",
-                "heading.ts": "ts_template",
-                "Heading.guide.svelte": "guide_template",
-                "Heading.svelte": "svelte_template"
-            },
-            "paragraph": {
-                "paragraph.scss": "scss_template",
-                "paragraph.ts": "ts_template",
-                "Paragraph.guide.svelte": "guide_template",
-                "Paragraph.svelte": "svelte_template"
-            }
+        "avatar": {
+            "avatar.scss": "scss_template",
+            "avatar.ts": "ts_template",
+            "Avatar.guide.svelte": "guide_template",
+            "Avatar.svelte": "svelte_template"
         },
-        "visuals": {
-            "avatar": {
-                "avatar.scss": "scss_template",
-                "avatar.ts": "ts_template",
-                "Avatar.guide.svelte": "guide_template",
-                "Avatar.svelte": "svelte_template"
-            },
-            "badge": {
-                "badge.scss": "scss_template",
-                "badge.ts": "ts_template",
-                "Badge.guide.svelte": "guide_template",
-                "Badge.svelte": "svelte_template"
-            },
-            "progressBar": {
-                "progressBar.scss": "scss_template",
-                "progressBar.ts": "ts_template",
-                "ProgressBar.guide.svelte": "guide_template",
-                "ProgressBar.svelte": "svelte_template"
-            },
-            "spinner": {
-                "spinner.scss": "scss_template",
-                "spinner.ts": "ts_template",
-                "Spinner.guide.svelte": "guide_template",
-                "Spinner.svelte": "svelte_template"
-            }
+        "badge": {
+            "badge.scss": "scss_template",
+            "badge.ts": "ts_template",
+            "Badge.guide.svelte": "guide_template",
+            "Badge.svelte": "svelte_template"
+        },
+        "progressBar": {
+            "progressBar.scss": "scss_template",
+            "progressBar.ts": "ts_template",
+            "ProgressBar.guide.svelte": "guide_template",
+            "ProgressBar.svelte": "svelte_template"
+        },
+        "spinner": {
+            "spinner.scss": "scss_template",
+            "spinner.ts": "ts_template",
+            "Spinner.guide.svelte": "guide_template",
+            "Spinner.svelte": "svelte_template"
         }
     },
     "navigation": {
