@@ -37,7 +37,7 @@ export function createSvg(
 		.append('svg')
 		.attr('width', width)
 		.attr('height', height)
-		.style('background-color', 'var(--color-pannel)')
+		.style('background-color', 'var(--color-panel)')
 		.style('border', `1px solid var(--color-border)`)
 		.style('border-radius', '4px');
 }

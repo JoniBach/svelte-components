@@ -33,7 +33,7 @@ export function createSvg(
 		.attr('width', '100%')
 		.attr('height', 'auto')
 		.attr('viewBox', `0 0 ${width} ${height}`) // Sets responsive viewBox
-		.style('background-color', 'var(--color-pannel)')
+		.style('background-color', 'var(--color-panel)')
 		.style('border', `1px solid var(--color-border)`)
 		.style('border-radius', '4px');
 }
