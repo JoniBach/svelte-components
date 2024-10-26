@@ -13,11 +13,11 @@
 	const props = [
 		[
 			{
-				label: 'Drawer Column Bottom',
+				label: 'Drawer Column Down',
 				group,
 				variant: 'column',
-				direction: 'bottom',
-				id: 'pop-over-bottom'
+				direction: 'down',
+				id: 'pop-over-down'
 			},
 			{
 				label: 'Drawer Column Right',
@@ -34,20 +34,20 @@
 				id: 'pop-over-left'
 			},
 			{
-				label: 'Drawer Column Top',
+				label: 'Drawer Column Up',
 				group,
 				variant: 'column',
-				direction: 'top',
-				id: 'pop-over-top'
+				direction: 'up',
+				id: 'pop-over-up'
 			}
 		],
 		[
 			{
-				label: 'Drawer row Bottom',
+				label: 'Drawer row Down',
 				group,
 				variant: 'row',
-				direction: 'bottom',
-				id: 'pop-row-bottom'
+				direction: 'down',
+				id: 'pop-row-down'
 			},
 			{
 				label: 'Drawer row Right',
@@ -64,11 +64,11 @@
 				id: 'pop-row-left'
 			},
 			{
-				label: 'Drawer row Top',
+				label: 'Drawer row Up',
 				group,
 				variant: 'row',
-				direction: 'top',
-				id: 'pop-row-top'
+				direction: 'up',
+				id: 'pop-row-up'
 			}
 		]
 	];

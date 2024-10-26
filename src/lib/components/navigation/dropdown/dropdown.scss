@@ -1,10 +1,12 @@
 .dropdown-wrapper {
 	position: relative;
-	display: inline-block;
-	display: flex;
+	display: inline-flex; // Keeps the wrapper only as wide as its content
+	flex-grow: 0;
 
 	.dropdown {
 		position: absolute;
+		display: flex; // Display items in a row
+		flex-wrap: nowrap; // Prevent wrapping to a new line
 		visibility: hidden;
 		opacity: 0;
 		transform: scale(0.95);
@@ -21,7 +23,24 @@
 
 		// Direction controls (down, up, left, right)
 		&.down {
-			top: 100%;
+			top: 100%; // Position dropdown directly below button
+			
+			&.anchor-left {
+				left: 0; // Align dropdown's left edge with the button's left edge
+			}
+
+			&.anchor-right {
+				right: 0; // Align dropdown's right edge with the button's right edge
+			}
+
+			&.anchor-center {
+				left: 50%;
+				transform: translateX(-50%); // Center the dropdown horizontally
+			}
+		}
+
+		&.up {
+			bottom: 100%; // Position dropdown directly above button
 
 			&.anchor-left {
 				left: 0; // Align dropdown's left edge with the button's left edge
@@ -33,29 +52,12 @@
 
 			&.anchor-center {
 				left: 50%;
-				transform: translateX(-50%); // Center the dropdown
-			}
-		}
-
-		&.up {
-			bottom: 100%;
-
-			&.anchor-left {
-				left: 0;
-			}
-
-			&.anchor-right {
-				right: 0;
-			}
-
-			&.anchor-center {
-				left: 50%;
-				transform: translateX(-50%);
+				transform: translateX(-50%); // Center the dropdown horizontally
 			}
 		}
 
 		&.left {
-			right: 100%;
+			right: 100%; // Position dropdown to the left of the button
 
 			&.anchor-left {
 				top: 0; // Align dropdown's top edge with the button's top edge
@@ -72,19 +74,19 @@
 		}
 
 		&.right {
-			left: 100%;
+			left: 100%; // Position dropdown to the right of the button
 
 			&.anchor-left {
-				top: 0;
+				top: 0; // Align dropdown's top edge with the button's top edge
 			}
 
 			&.anchor-right {
-				bottom: 0;
+				bottom: 0; // Align dropdown's bottom edge with the button's bottom edge
 			}
 
 			&.anchor-center {
 				top: 50%;
-				transform: translateY(-50%);
+				transform: translateY(-50%); // Center the dropdown vertically
 			}
 		}
 	}
