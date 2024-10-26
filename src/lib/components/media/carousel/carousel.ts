@@ -1,76 +1,55 @@
-// carousel.js (or .ts, but keeping it .js for simplicity)
-
-export function nextSlide(currentIndex: number, groupLength: number) {
+export function nextSlide(currentIndex, groupLength) {
+	if (groupLength === 0) return 0; // Handle empty group
 	return (currentIndex + 1) % groupLength;
 }
 
-export function prevSlide(currentIndex: number, groupLength: number) {
+export function prevSlide(currentIndex, groupLength) {
+	if (groupLength === 0) return 0; // Handle empty group
 	return (currentIndex - 1 + groupLength) % groupLength;
 }
 
-export function startAutoSlide(
-	auto: boolean,
-	interval: number,
-	updateCurrentIndex: (indexUpdater: (currentIndex: number) => number) => void,
-	setIntervalId: (id: number) => void,
-	groupLength: number
-) {
-	if (auto) {
+export function startAutoSlide(auto, interval, updateCurrentIndex, setIntervalId, groupLength) {
+	if (auto && groupLength > 0) {
 		const id = setInterval(() => {
-			updateCurrentIndex((currentIndex: number) => nextSlide(currentIndex, groupLength));
+			updateCurrentIndex((currentIndex) => nextSlide(currentIndex, groupLength));
 		}, interval);
 		setIntervalId(id);
 	}
 }
 
-export function stopAutoSlide(intervalId: any) {
+export function stopAutoSlide(intervalId) {
 	clearInterval(intervalId);
 }
 
-export function handleTouchStart(
-	event: TouchEvent,
-	setStartX: (x: number) => void,
-	setIsDragging: (isDragging: boolean) => void,
-	stopAutoSlide: () => void
-) {
+export function handleTouchStart(event, setStartX, setIsDragging, stopAutoSlide) {
 	setStartX(event.touches[0].clientX);
 	setIsDragging(true);
 	stopAutoSlide();
 }
 
-export function handleTouchMove(
-	event: TouchEvent,
-	isDragging: boolean,
-	setEndX: (x: number) => void
-) {
+export function handleTouchMove(event, isDragging, setEndX) {
 	if (!isDragging) return;
 	setEndX(event.touches[0].clientX);
 }
 
 export function handleTouchEnd(
-	startX: number,
-	endX: number,
-	isDragging: boolean,
-	auto: boolean,
-	interval: number,
-	groupLength: number,
-	currentIndex: number,
-	nextSlideFn: (currentIndex: number, groupLength: number) => number,
-	prevSlideFn: (currentIndex: number, groupLength: number) => number,
-	startAutoSlideFn: (
-		auto: boolean,
-		interval: number,
-		updateCurrentIndex: (indexUpdater: (currentIndex: number) => number) => void,
-		setIntervalId: (id: number) => void,
-		groupLength: number
-	) => void,
-	stopAutoSlideFn: () => void
+	startX,
+	endX,
+	isDragging,
+	auto,
+	interval,
+	groupLength,
+	currentIndex,
+	nextSlideFn,
+	prevSlideFn,
+	startAutoSlideFn,
+	stopAutoSlideFn
 ) {
-	if (!isDragging) return;
+	if (!isDragging) return currentIndex;
 
 	const distance = endX - startX;
-
 	let newIndex = currentIndex;
+
 	if (distance > 50) {
 		newIndex = prevSlideFn(currentIndex, groupLength);
 	} else if (distance < -50) {
@@ -90,50 +69,35 @@ export function handleTouchEnd(
 	return newIndex;
 }
 
-export function handleMouseDown(
-	event: MouseEvent,
-	setStartX: (x: number) => void,
-	setIsDragging: (isDragging: boolean) => void,
-	stopAutoSlide: () => void
-) {
+export function handleMouseDown(event, setStartX, setIsDragging, stopAutoSlide) {
 	setStartX(event.clientX);
 	setIsDragging(true);
 	stopAutoSlide();
 }
 
-export function handleMouseMove(
-	event: MouseEvent,
-	isDragging: boolean,
-	setEndX: (x: number) => void
-) {
+export function handleMouseMove(event, isDragging, setEndX) {
 	if (!isDragging) return;
 	setEndX(event.clientX);
 }
 
 export function handleMouseUp(
-	startX: number,
-	endX: number,
-	isDragging: boolean,
-	auto: boolean,
-	interval: number,
-	groupLength: number,
-	currentIndex: number,
-	nextSlideFn: (currentIndex: number, groupLength: number) => number,
-	prevSlideFn: (currentIndex: number, groupLength: number) => number,
-	startAutoSlideFn: (
-		auto: boolean,
-		interval: number,
-		updateCurrentIndex: (indexUpdater: (currentIndex: number) => number) => void,
-		setIntervalId: (id: number) => void,
-		groupLength: number
-	) => void,
-	stopAutoSlideFn: () => void
+	startX,
+	endX,
+	isDragging,
+	auto,
+	interval,
+	groupLength,
+	currentIndex,
+	nextSlideFn,
+	prevSlideFn,
+	startAutoSlideFn,
+	stopAutoSlideFn
 ) {
-	if (!isDragging) return;
+	if (!isDragging) return currentIndex;
 
 	const distance = endX - startX;
-
 	let newIndex = currentIndex;
+
 	if (distance > 50) {
 		newIndex = prevSlideFn(currentIndex, groupLength);
 	} else if (distance < -50) {
