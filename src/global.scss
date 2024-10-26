@@ -167,43 +167,6 @@ textarea {
 	}
 }
 
-// Utility Classes
-.mt-small {
-	margin-top: var(--spacing-small);
-}
-
-.mt-medium {
-	margin-top: var(--spacing-medium);
-}
-
-.mt-large {
-	margin-top: var(--spacing-large);
-}
-
-.mb-small {
-	margin-bottom: var(--spacing-small);
-}
-
-.mb-medium {
-	margin-bottom: var(--spacing-medium);
-}
-
-.mb-large {
-	margin-bottom: var(--spacing-large);
-}
-
-.p-small {
-	padding: var(--spacing-small);
-}
-
-.p-medium {
-	padding: var(--spacing-medium);
-}
-
-.p-large {
-	padding: var(--spacing-large);
-}
-
 // Card Component
 .card {
 	background-color: var(--color-background);
