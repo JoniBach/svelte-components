@@ -196,12 +196,6 @@
             "Avatar.guide.svelte": "guide_template",
             "Avatar.svelte": "svelte_template"
         },
-        "badge": {
-            "badge.scss": "scss_template",
-            "badge.ts": "ts_template",
-            "Badge.guide.svelte": "guide_template",
-            "Badge.svelte": "svelte_template"
-        },
         "progressBar": {
             "progressBar.scss": "scss_template",
             "progressBar.ts": "ts_template",
