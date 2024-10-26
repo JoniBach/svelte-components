@@ -33,10 +33,3 @@
 </script>
 
 <div bind:this={chartRef} style="width: {width}; height: {height}px;"></div>
-
-<style>
-	.point:hover {
-		fill: var(--color-accent);
-		cursor: pointer;
-	}
-</style>

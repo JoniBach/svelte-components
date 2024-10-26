@@ -42,16 +42,4 @@
 	});
 </script>
 
-<div
-	bind:this={chartRef}
-	aria-label={label}
-	role="img"
-	style="width: {width}; height: auto;" 
-></div>
-
-<style lang="scss">
-	:global(svg) {
-		width: 100%;
-		height: auto;
-	}
-</style>
+<div bind:this={chartRef} aria-label={label} role="img" style="width: {width}; height: auto;"></div>

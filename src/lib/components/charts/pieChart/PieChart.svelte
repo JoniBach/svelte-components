@@ -26,10 +26,3 @@
 </script>
 
 <div bind:this={chartRef} style="width: {width}px; height: {height}px;"></div>
-
-<style>
-	.slice:hover {
-		opacity: 0.8;
-		cursor: pointer;
-	}
-</style>

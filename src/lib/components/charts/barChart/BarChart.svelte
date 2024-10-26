@@ -31,9 +31,3 @@
 </script>
 
 <div bind:this={chartRef} style="width: {width}; height: {height}px;"></div>
-
-<style>
-	.bar:hover {
-		fill: var(--color-accent);
-	}
-</style>
