@@ -1,16 +1,20 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import { checkObjectConditions } from '@jonibach/transform';
+	import Input from '../inputs/input/Input.svelte';
 
 	export let group = [];
 	export let value = {};
-	export let columns: number | undefined; // Optional columns prop
-	export let rows: number | undefined; // Optional rows prop
+	export let columns: number | undefined;
+	export let rows: number | undefined;
 
 	const dispatch = createEventDispatcher();
 
+	let errors = {}; // Track errors for each field with custom messages
+
 	function handleInput(name, event) {
 		value[name] = event.target.value;
+		validateField(name);
 		dispatch('input', { name, value: value[name], allValues: { ...value } });
 	}
 
@@ -21,6 +25,39 @@
 	}
 
 	$: groupFilteredByFieldConditions = handleFormatValueObjectToArray(value, group);
+
+	function validateField(name) {
+		const field = group.find((f) => f.name === name);
+		const fieldValue = value[name];
+		let fieldErrors = [];
+
+		if (field?.valid) {
+			field.valid.forEach(({ rule, message }) => {
+				const [fieldName, ruleType, criteria] = rule;
+
+				switch (ruleType) {
+					case 'regex':
+						if (!criteria.test(fieldValue)) {
+							fieldErrors.push(message);
+						}
+						break;
+					case 'anyMatch':
+						if (!criteria.includes(fieldValue)) {
+							fieldErrors.push(message);
+						}
+						break;
+					default:
+						break;
+				}
+			});
+		}
+
+		errors = { ...errors, [name]: fieldErrors };
+	}
+
+	$: {
+		groupFilteredByFieldConditions.forEach((field) => validateField(field.name));
+	}
 </script>
 
 <div
@@ -34,27 +71,17 @@
 		<div class="form-group">
 			<label for={field.name}>{field.label}</label>
 
-			{#if field.type === 'text'}
-				<input
-					type="text"
-					id={field.name}
-					placeholder={field.placeholder}
-					bind:value={value[field.name]}
-					on:input={(e) => handleInput(field.name, e)}
-				/>
-			{/if}
-
-			{#if field.type === 'option'}
-				<select
-					id={field.name}
-					bind:value={value[field.name]}
-					on:input={(e) => handleInput(field.name, e)}
-				>
-					{#each field.options as option}
-						<option value={option.value}>{option.label}</option>
-					{/each}
-				</select>
-			{/if}
+			<!-- Use the Input component here -->
+			<Input
+				type={field.type}
+				name={field.name}
+				label={field.label}
+				placeholder={field.placeholder}
+				bind:value={value[field.name]}
+				options={field.options}
+				errors={errors[field.name] || []}
+				on:input={(e) => handleInput(field.name, e)}
+			/>
 		</div>
 	{/each}
 </div>
@@ -71,11 +98,5 @@
 		display: block;
 		margin-bottom: 0.5rem;
 		font-weight: bold;
-	}
-	input,
-	select {
-		padding: 0.5rem;
-		font-size: 1rem;
-		width: 100%;
 	}
 </style>
