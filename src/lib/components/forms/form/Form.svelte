@@ -69,16 +69,9 @@
 >
 	{#each groupFilteredByFieldConditions as field}
 		<div class="form-group">
-			<label for={field.name}>{field.label}</label>
-
-			<!-- Use the Input component here -->
 			<Input
-				type={field.type}
-				name={field.name}
-				label={field.label}
-				placeholder={field.placeholder}
+				{field}
 				bind:value={value[field.name]}
-				options={field.options}
 				errors={errors[field.name] || []}
 				on:input={(e) => handleInput(field.name, e)}
 			/>
