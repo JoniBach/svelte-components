@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import './Drawer.scss';
-	import handleDrawer from './Drawer.js';
 	import Button from '$lib/components/forms/buttons/button/Button.svelte';
 
 	export let label: string = '';
@@ -16,9 +15,13 @@
 			css: (t) => `${slideTrans.css(t)} opacity: ${t};`
 		};
 	}
+
+	const SLOTS = $$props.$$slots;
 </script>
 
-{#if label}
+{#if SLOTS.handle}
+	<slot name="handle" />
+{:else if label}
 	<Button on:click={() => (active = !active)}>{buttonLabel}</Button>
 {/if}
 

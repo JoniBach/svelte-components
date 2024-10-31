@@ -89,6 +89,12 @@
                 "Tab.guide.svelte": "guide_template",
                 "Tab.svelte": "svelte_template"
             },
+            "drawer": {
+                "drawer.scss": "scss_template",
+                "drawer.ts": "ts_template",
+                "Drawer.guide.svelte": "guide_template",
+                "Drawer.svelte": "svelte_template"
+            },
             "accordion": {
                 "accordion.scss": "scss_template",
                 "accordion.ts": "ts_template",
@@ -190,12 +196,6 @@
             "Sidebar.guide.svelte": "guide_template",
             "Sidebar.svelte": "svelte_template"
         },
-        "drawer": {
-            "drawer.scss": "scss_template",
-            "drawer.ts": "ts_template",
-            "Drawer.guide.svelte": "guide_template",
-            "Drawer.svelte": "svelte_template"
-        },
         "breadcrumbs": {
             "breadcrumbs.scss": "scss_template",
             "breadcrumbs.ts": "ts_template",
@@ -221,18 +221,6 @@
             "toast.ts": "ts_template",
             "Toast.guide.svelte": "guide_template",
             "Toast.svelte": "svelte_template"
-        },
-        "snackbar": {
-            "snackbar.scss": "scss_template",
-            "snackbar.ts": "ts_template",
-            "Snackbar.guide.svelte": "guide_template",
-            "Snackbar.svelte": "svelte_template"
-        },
-        "skeletonLoader": {
-            "skeletonLoader.scss": "scss_template",
-            "skeletonLoader.ts": "ts_template",
-            "SkeletonLoader.guide.svelte": "guide_template",
-            "SkeletonLoader.svelte": "svelte_template"
         },
         "confirmDialog": {
             "confirmDialog.scss": "scss_template",

@@ -6,6 +6,7 @@
 	export let variant: string = 'default';
 	export let color: string = '';
 	export let id = '';
+	export let slot;
 	export let index = 0;
 	export let size: string = 'small';
 
@@ -18,6 +19,7 @@
 </script>
 
 <button
+	{...slot ? { slot } : {}}
 	on:click={(event) => handleClick(event, 'click')}
 	on:mouseenter={(event) => handleClick(event, 'mouseenter')}
 	on:mouseleave={(event) => handleClick(event, 'mouseleave')}
