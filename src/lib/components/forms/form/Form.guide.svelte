@@ -240,7 +240,7 @@
 			]
 		},
 		{
-			label: '!!!',
+			label: 'demo',
 			group: [
 				{
 					variant: 'text',

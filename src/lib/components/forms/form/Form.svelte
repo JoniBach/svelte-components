@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import { checkObjectConditions } from '@jonibach/transform';
 	import Input from '../inputs/input/Input.svelte';
+	import Drawer from '$lib/components/navigation/drawer/Drawer.svelte';
 
 	export let group = [];
 	export let value = {};

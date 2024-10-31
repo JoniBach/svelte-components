@@ -18,7 +18,9 @@
 	}
 </script>
 
-<Button on:click={() => (active = !active)}>{buttonLabel}</Button>
+{#if label}
+	<Button on:click={() => (active = !active)}>{buttonLabel}</Button>
+{/if}
 
 {#if active}
 	<div class="drawer {active ? 'open' : 'closed'}" transition:slide={{ duration: 100 }}>
