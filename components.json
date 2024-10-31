@@ -130,50 +130,6 @@
             "Table.guide.svelte": "guide_template",
             "Table.svelte": "svelte_template"
         },
-        "inputs": {
-            "input": {
-                "input.scss": "scss_template",
-                "input.ts": "ts_template",
-                "Input.guide.svelte": "guide_template",
-                "Input.svelte": "svelte_template"
-            },
-            "textarea": {
-                "textarea.scss": "scss_template",
-                "textarea.ts": "ts_template",
-                "Textarea.guide.svelte": "guide_template",
-                "Textarea.svelte": "svelte_template"
-            },
-            "checkbox": {
-                "checkbox.scss": "scss_template",
-                "checkbox.ts": "ts_template",
-                "Checkbox.guide.svelte": "guide_template",
-                "Checkbox.svelte": "svelte_template"
-            },
-            "radioButton": {
-                "radioButton.scss": "scss_template",
-                "radioButton.ts": "ts_template",
-                "RadioButton.guide.svelte": "guide_template",
-                "RadioButton.svelte": "svelte_template"
-            },
-            "datePicker": {
-                "datePicker.scss": "scss_template",
-                "datePicker.ts": "ts_template",
-                "DatePicker.guide.svelte": "guide_template",
-                "DatePicker.svelte": "svelte_template"
-            },
-            "fileUpload": {
-                "fileUpload.scss": "scss_template",
-                "fileUpload.ts": "ts_template",
-                "FileUpload.guide.svelte": "guide_template",
-                "FileUpload.svelte": "svelte_template"
-            },
-            "slider": {
-                "slider.scss": "scss_template",
-                "slider.ts": "ts_template",
-                "Slider.guide.svelte": "guide_template",
-                "Slider.svelte": "svelte_template"
-            }
-        },
         "buttons": {
             "button": {
                 "button.scss": "scss_template",
