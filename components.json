@@ -100,26 +100,12 @@
                 "accordion.ts": "ts_template",
                 "Accordion.guide.svelte": "guide_template",
                 "Accordion.svelte": "svelte_template"
-            }
-        },
-        "sections": {
-            "heroSection": {
-                "heroSection.scss": "scss_template",
-                "heroSection.ts": "ts_template",
-                "HeroSection.guide.svelte": "guide_template",
-                "HeroSection.svelte": "svelte_template"
             },
             "modal": {
                 "modal.scss": "scss_template",
                 "modal.ts": "ts_template",
                 "Modal.guide.svelte": "guide_template",
                 "Modal.svelte": "svelte_template"
-            },
-            "panel": {
-                "panel.scss": "scss_template",
-                "panel.ts": "ts_template",
-                "Panel.guide.svelte": "guide_template",
-                "Panel.svelte": "svelte_template"
             }
         }
     },
