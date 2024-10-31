@@ -124,6 +124,12 @@
             "Form.guide.svelte": "guide_template",
             "Form.svelte": "svelte_template"
         },
+        "table": {
+            "table.scss": "scss_template",
+            "table.ts": "ts_template",
+            "Table.guide.svelte": "guide_template",
+            "Table.svelte": "svelte_template"
+        },
         "inputs": {
             "input": {
                 "input.scss": "scss_template",
