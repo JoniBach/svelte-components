@@ -1,21 +1,38 @@
 <script lang="ts">
 	import Drawer from '$lib/components/navigation/drawer/Drawer.svelte';
 	import Form from '../form/Form.svelte';
-	import { createTable } from './table.js';
 
 	export let label;
 	export let value = [];
 	export let group;
 	export let form = false;
 
-	const table = createTable({ data: value, group });
-
+	let sortedRows = [...value];
 	let selectedRowIndex = null;
 	let selectedRow = {};
 	let isDrawerOpen = false;
+	let sortColumn = null;
+	let sortOrder = 'reset'; // 'reset' as the initial state
+
+	// Reactive sorting
+	$: sortedRows =
+		sortOrder === 'reset'
+			? [...value]
+			: [...value].sort((a, b) => {
+					if (!sortColumn) return 0;
+					if (a[sortColumn] < b[sortColumn]) return sortOrder === 'asc' ? -1 : 1;
+					if (a[sortColumn] > b[sortColumn]) return sortOrder === 'asc' ? 1 : -1;
+					return 0;
+				});
 
 	function handleSort(columnName) {
-		table.sortBy(columnName);
+		// Cycle sorting order through 'asc' -> 'desc' -> 'reset'
+		if (sortColumn === columnName) {
+			sortOrder = sortOrder === 'asc' ? 'desc' : sortOrder === 'desc' ? 'reset' : 'asc';
+		} else {
+			sortOrder = 'asc';
+			sortColumn = columnName;
+		}
 	}
 
 	function openDrawerForRow(row, index) {
@@ -53,12 +70,34 @@
 	<table>
 		<thead>
 			<tr>
-				{#each table.group as column}
+				{#each group as column}
 					<th on:click={() => handleSort(column.name)}>
 						{column.label}
-						{#if table.sortColumn === column.name}
-							{table.sortOrder === 'asc' ? ' 🔼' : ' 🔽'}
-						{/if}
+						<!-- Always show the SVG with both up and down arrows -->
+						<svg
+							width="1em"
+							height="1em"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<!-- Up arrow -->
+							<path
+								d="M12 8l-4 4h8l-4-4z"
+								stroke={sortColumn === column.name && sortOrder === 'asc'
+									? 'var(--color-text)'
+									: 'var(--color-neutral)'}
+							></path>
+							<!-- Down arrow -->
+							<path
+								d="M12 16l4-4H8l4 4z"
+								stroke={sortColumn === column.name && sortOrder === 'desc'
+									? 'var(--color-text)'
+									: 'var(--color-neutral)'}
+							></path>
+						</svg>
 					</th>
 				{/each}
 				{#if showEditColumn}
@@ -67,9 +106,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each table.getRows() as row, index}
+			{#each sortedRows as row, index}
 				<tr>
-					{#each table.group as column}
+					{#each group as column}
 						<td>{row[column.name] || 'N/A'}</td>
 					{/each}
 					{#if showEditColumn}
@@ -120,7 +159,7 @@
 				</tr>
 				{#if isDrawerVisible(index)}
 					<tr>
-						<td colspan={table.group.length + 1}>
+						<td colspan={group.length + 1}>
 							<Drawer active={isDrawerOpen} on:close={closeDrawer}>
 								<Form {group} bind:value={selectedRow} on:input={handleFormSubmit} />
 							</Drawer>
