@@ -10,7 +10,7 @@
 		visibility: hidden;
 		opacity: 0;
 		transform: scale(0.95);
-		z-index: 100;
+		z-index: 2;
 		transition: all 0.3s ease;
 
 		&.open {
@@ -24,7 +24,7 @@
 		// Direction controls (down, up, left, right)
 		&.down {
 			top: 100%; // Position dropdown directly below button
-			
+
 			&.anchor-left {
 				left: 0; // Align dropdown's left edge with the button's left edge
 			}
