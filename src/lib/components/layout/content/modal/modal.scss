@@ -17,120 +17,126 @@
 	padding: var(--spacing-large);
 	border-radius: var(--spacing-small);
 	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	max-height: 100vh;
 	text-align: center;
-	position: relative;
-	overflow: hidden;
+	width: auto;
 }
 
-/* Modal header styling */
 .modal-header {
-	position: relative;
-	display: flex;
-	align-items: center;
 	padding: var(--spacing-small);
 	border-bottom: 1px solid var(--color-border);
+	position: relative;
+	height: 40px;
+
+	.grab-handle {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		cursor: grab;
+		width: 16px;
+		height: 16px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: var(--color-text);
+		}
+	}
+
+	.close-button {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		width: 16px;
+		height: 16px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			stroke: var(--color-text);
+			stroke-width: 2;
+		}
+	}
 }
 
-/* Grab handle styling */
-.grab-handle {
-	cursor: grab;
-	display: flex;
-	align-items: center;
-	padding: 5px;
-	border-radius: 4px;
-}
-
-.grab-handle:active {
-	cursor: grabbing;
-}
-
-/* Close button styling */
-.close-button {
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 5px;
-	display: flex;
-	align-items: center;
-	margin-left: auto;
-}
-
-.close-button svg {
-	fill: var(--color-text);
-	width: 16px;
-	height: 16px;
-}
-
-/* Centered title styling */
 .modal-title {
 	position: absolute;
 	left: 50%;
-	transform: translateX(-50%);
+	top: 50%;
+	transform: translate(-50%, -50%);
 	font-size: var(--font-size-large);
 	margin: 0;
 }
 
-/* Resize handle styling */
+.modal-content {
+	flex: 1;
+	overflow-y: auto;
+	padding: var(--spacing-medium);
+}
+
+.modal-footer {
+	border-top: 1px solid var(--color-border);
+	padding: var(--spacing-small);
+}
+
 .resize-handle {
-	width: 10px; /* Make handles large enough to grab */
+	width: 10px;
 	height: 10px;
-	background-color: var(--color-border); /* Make handles visible */
+	background-color: var(--color-border);
 	position: absolute;
 }
 
-/* Corners */
 .resize-handle.top-left {
 	top: 0;
 	left: 0;
 	cursor: nw-resize;
 }
-
 .resize-handle.top-right {
 	top: 0;
 	right: 0;
 	cursor: ne-resize;
 }
-
 .resize-handle.bottom-left {
 	bottom: 0;
 	left: 0;
 	cursor: sw-resize;
 }
-
 .resize-handle.bottom-right {
 	bottom: 0;
 	right: 0;
 	cursor: se-resize;
 }
-
-/* Sides */
 .resize-handle.top {
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	cursor: n-resize;
-	width: 100%; /* Extend to full width */
-	height: 5px; /* Thin handle */
+	height: 5px;
+	width: 100%;
 }
-
 .resize-handle.bottom {
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	cursor: s-resize;
-	width: 100%;
 	height: 5px;
+	width: 100%;
 }
-
 .resize-handle.left {
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
 	cursor: w-resize;
-	width: 5px; /* Thin handle */
-	height: 100%; /* Extend to full height */
+	width: 5px;
+	height: 100%;
 }
-
 .resize-handle.right {
 	top: 50%;
 	right: 0;
