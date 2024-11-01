@@ -10,7 +10,7 @@
 
 <Button on:click={() => (props.active = true)} color="primary" variant="solid">Open Modal</Button>
 
-<Modal {...props}>
+<Modal on:close={() => (props.active = false)} {...props}>
 	test
 
 	<div slot="footer">
