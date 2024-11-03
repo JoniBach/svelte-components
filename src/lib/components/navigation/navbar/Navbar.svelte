@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import Button from '$lib/components/forms/button/Button.svelte';
-	import Sidebar from '../sidebar/Sidebar.svelte';
 	import Dropdown from './../dropdown/Dropdown.svelte';
 	import './Navbar.scss';
+	import Sidebar from '../sidebar/Sidebar.svelte';
 	export let label: string = '';
 	export let href: string = '/';
 	export let group: any[] = [];

@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Button from '$lib/components/forms/button/Button.svelte';
 	import Drawer from '../drawer/Drawer.svelte';
-	import Button from './../../../forms/button/Button.svelte';
 	import { writable } from 'svelte/store';
 
 	// Array of accordion sections with labels and content

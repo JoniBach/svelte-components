@@ -1,8 +1,7 @@
 <script lang="ts">
-	import ButtonGroup from './../../forms/buttonGroup/ButtonGroup.svelte';
-	import Button from './../../forms/button/Button.svelte';
+	import Button from '$lib/components/forms/button/Button.svelte';
+	import ButtonGroup from '$lib/components/forms/buttonGroup/ButtonGroup.svelte';
 	import './Sidebar.scss';
-	import { fade } from 'svelte/transition';
 	export let label: string = '';
 	export let group: any[] = [];
 	export let direction: string = 'left';

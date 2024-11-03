@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from './../../../forms/button/Button.svelte';
+	import Button from '$lib/components/forms/button/Button.svelte';
 	import Modal from './Modal.svelte';
 
 	$: props = {
