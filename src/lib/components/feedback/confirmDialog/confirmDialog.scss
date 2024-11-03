@@ -1,4 +1,77 @@
+.confirm-dialog {
+	position: fixed;
+	opacity: 0;
+	transition:
+		transform 0.3s ease-in-out,
+		opacity 0.3s ease-in-out;
 
-.confirmDialog-container {
-    font-style: normal;
+	&.active {
+		opacity: 1;
+	}
+
+	.dialog-content {
+		background: var(--color-panel);
+		padding: var(--spacing-small);
+		border-radius: var(--spacing-small);
+		box-shadow: var(--shadow-medium);
+
+		.dialog-title {
+			font-size: var(--typography-large);
+			justify-self: center;
+		}
+		.dialog-description {
+			font-size: var(--typography-small);
+			justify-self: center;
+		}
+	}
+
+	&.dialog-top {
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -100%);
+
+		&.active {
+			transform: translate(-50%, 0);
+		}
+	}
+
+	&.dialog-middle {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0.9);
+
+		&.active {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&.dialog-left {
+		top: 50%;
+		left: 0;
+		transform: translate(-100%, -50%);
+
+		&.active {
+			transform: translate(0, -50%);
+		}
+	}
+
+	&.dialog-right {
+		top: 50%;
+		right: 0;
+		transform: translate(100%, -50%);
+
+		&.active {
+			transform: translate(0, -50%);
+		}
+	}
+
+	&.dialog-bottom {
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 100%);
+
+		&.active {
+			transform: translate(-50%, 0);
+		}
+	}
 }

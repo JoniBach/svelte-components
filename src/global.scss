@@ -32,6 +32,10 @@
 	--typography-heading-size: 2em;
 	--typography-subheading-size: 1.5em;
 
+	--shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+	--shadow-large: 0 8px 16px rgba(0, 0, 0, 0.1);
+
 	--border-width: 2px;
 }
 
@@ -60,6 +64,10 @@
 	--typography-medium: 1rem;
 	--typography-large: 1.25rem;
 	--typography-xl: 1.5rem;
+
+	--shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+	--shadow-large: 0 8px 16px rgba(0, 0, 0, 0.1);
 
 	--typography-font-family: 'Roboto', sans-serif;
 	--typography-font-size: 16px;
