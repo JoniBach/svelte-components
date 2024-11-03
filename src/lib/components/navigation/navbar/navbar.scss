@@ -1,17 +1,39 @@
 .navbar {
 	background: var(--color-panel);
 	padding: var(--spacing-small);
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
+	overflow: hidden;
+	.drawer-button {
+		position: absolute;
+		right: 0;
+		background: var(--color-panel);
+		width: 50px;
+		box-shadow: -10px 0 10px var(--color-panel);
+	}
+
+	.nav-buttons {
+		display: flex;
+		margin-right: 50px;
+		/* flex-wrap: wrap; */ /* Uncomment if you want wrapping behavior */
+	}
+
+	.nav-buttons > * {
+		flex-shrink: 1; /* Allow child elements to shrink */
+		min-width: 0; /* Prevent child elements from maintaining large minimum sizes */
+	}
+
 	.navbar-title {
 		font-size: var(--typography-large);
 		color: var(--color-text);
 		&:hover {
 			color: var(--color-accent);
 		}
+		flex-shrink: 0; /* Prevent shrinking of title */
 	}
+
 	.navbar-menu {
 		display: flex;
 		align-items: center;

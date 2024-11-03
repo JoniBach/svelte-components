@@ -8,11 +8,10 @@
 	export let href: string = '/';
 	export let group: any[] = [];
 	export let gap: string = 'small';
-	export let sidebar = null;
+	export let variant: string = 'over';
+	export let direction: string = 'right';
 
 	let active = false;
-
-	$: console.log(sidebar);
 </script>
 
 <nav class="navbar">
@@ -23,30 +22,32 @@
 	<div class="navbar-menu gap-{gap}">
 		<slot />
 
-		{#each group as item}
-			{#if !active}
-				<div transition:fade>
-					<Dropdown group={item.group} label={item.label} anchor="right" />
-				</div>
-			{/if}
-		{/each}
-		<Button
-			on:click={() => {
-				active = !active;
-			}}
-		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 24 24"
-				width="24"
-				height="24"
-				fill="currentColor"
+		<div class="nav-buttons">
+			{#each group as item}
+				{#if !active}
+					<div transition:fade>
+						<Dropdown group={item.group} label={item.label} anchor="right" />
+					</div>
+				{/if}
+			{/each}
+		</div>
+		<div class="drawer-button">
+			<Button
+				on:click={() => {
+					active = !active;
+				}}
 			>
-				<path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
-			</svg>
-		</Button>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					width="24"
+					height="24"
+					fill="currentColor"
+				>
+					<path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+				</svg>
+			</Button>
+		</div>
 	</div>
 </nav>
-{#if sidebar}
-	<Sidebar {...sidebar} bind:active />
-{/if}
+<Sidebar {direction} {variant} {group} {label} bind:active />

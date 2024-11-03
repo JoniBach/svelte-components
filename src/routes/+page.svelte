@@ -1,6 +1,13 @@
-<script lang="ts">
-	import Demo from './Demo.svelte';
-	import './page.scss';
+<script>
+	import Navbar from '$lib/components/navigation/navbar/Navbar.svelte';
+
+	const label = 'Component Library',
+		group = [
+			{ label: 'Home', href: '/' },
+			{ label: 'Guide', href: '/guide' },
+			{ label: 'Navigation', href: '/navigation' },
+			{ label: 'Sidebar', href: '/sidebar' }
+		];
 </script>
 
-<Demo />
+<Navbar {label} {group} />
