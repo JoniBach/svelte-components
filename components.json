@@ -83,12 +83,6 @@
                 "Tabs.guide.svelte": "guide_template",
                 "Tabs.svelte": "svelte_template"
             },
-            "tab": {
-                "tab.scss": "scss_template",
-                "tab.ts": "ts_template",
-                "Tab.guide.svelte": "guide_template",
-                "Tab.svelte": "svelte_template"
-            },
             "drawer": {
                 "drawer.scss": "scss_template",
                 "drawer.ts": "ts_template",
@@ -207,6 +201,12 @@
             "toast.ts": "ts_template",
             "Toast.guide.svelte": "guide_template",
             "Toast.svelte": "svelte_template"
+        },
+        "dialog": {
+            "dialog.scss": "scss_template",
+            "dialog.ts": "ts_template",
+            "Dialog.guide.svelte": "guide_template",
+            "Dialog.svelte": "svelte_template"
         },
         "confirmDialog": {
             "confirmDialog.scss": "scss_template",
