@@ -17,7 +17,7 @@
 					placeholder: 'Enter your name',
 					valid: [
 						{
-							rule: ['new_user', 'regex', /^[a-zA-Z]+$/],
+							rule: ['name', 'regex', /^[a-zA-Z]+$/],
 							message: 'Name must contain only letters'
 						}
 					]

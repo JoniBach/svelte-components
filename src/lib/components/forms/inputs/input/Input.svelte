@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	export let field = {};
 	export let value = ''; // Input value
 	export let errors = []; // Validation errors array
-	export let checked = false; // Checkbox/radio checked state
 
 	let DynamicComponent;
 	$: dynamicUrl = `./variants/${field.variant.charAt(0).toUpperCase() + field.variant.slice(1)}.input.svelte`;
@@ -13,8 +11,6 @@
 			DynamicComponent = res.default;
 		}
 	});
-
-	const dispatch = createEventDispatcher();
 </script>
 
 <div class="input-group">
