@@ -1,4 +1,7 @@
-
-.card-container {
-    font-style: normal;
+.card {
+	background-color: var(--color-panel);
+	border-radius: var(--spacing-medium);
+	box-shadow: var(--shadow-medium);
+	transition: box-shadow 0.3s ease;
+	padding: var(--spacing-medium);
 }
