@@ -15,7 +15,7 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<div class="button-group {variant} gap-{gap}">
+<div class="button-group {variant} gap-{gap} ">
 	{#each group as prop, buttonIndex}
 		<Button
 			{size}
