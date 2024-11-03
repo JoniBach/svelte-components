@@ -1,6 +1,18 @@
 import * as d3 from 'd3';
-import type { FeatureCollection } from 'geojson';
 
+interface Feature {
+	type: 'Feature';
+	properties: Record<string, unknown>;
+	geometry: {
+		type: string;
+		coordinates: number[][][];
+	};
+}
+
+interface FeatureCollection {
+	type: 'FeatureCollection';
+	features: Feature[];
+}
 interface Margin {
 	top: number;
 	right: number;

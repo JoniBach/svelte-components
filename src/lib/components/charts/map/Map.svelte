@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { createGeoMap } from './map';
 	import * as d3 from 'd3';
-	import type { FeatureCollection } from 'geojson';
 
 	export let label: string = 'Map';
 	export let data: string = ''; // URL to GeoJSON data file
@@ -10,7 +9,7 @@
 	export let height: number = 600;
 
 	let chartRef: HTMLElement;
-	let geoData: FeatureCollection | null = null;
+	let geoData: any | null = null;
 
 	const margin = { top: 40, right: 20, bottom: 30, left: 20 };
 
@@ -21,7 +20,7 @@
 		}
 
 		try {
-			const response = await d3.json<FeatureCollection>(data);
+			const response = await d3.json<any>(data);
 			if (response && response.features) {
 				geoData = response; // Assign loaded data to geoData
 				createGeoMap(chartRef, {
