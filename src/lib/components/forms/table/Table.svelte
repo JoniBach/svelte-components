@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Drawer from '$lib/components/navigation/drawer/Drawer.svelte';
+	import Drawer from '$lib/components/layout/content/drawer/Drawer.svelte';
 	import Form from '../form/Form.svelte';
 
 	export let label;
