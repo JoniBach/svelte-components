@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './Dropdown.scss';
-	import Button from '$lib/components/forms/buttons/button/Button.svelte';
-	import ButtonGroup from '$lib/components/forms/buttons/buttonGroup/ButtonGroup.svelte';
+	import Button from '$lib/components/forms/button/Button.svelte';
+	import ButtonGroup from '$lib/components/forms/buttonGroup/ButtonGroup.svelte';
 	export let label: string = '';
 	export let group: any[] = [];
 	export let direction: string = 'down';

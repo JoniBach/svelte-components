@@ -116,19 +116,17 @@
             "Table.guide.svelte": "guide_template",
             "Table.svelte": "svelte_template"
         },
-        "buttons": {
-            "button": {
-                "button.scss": "scss_template",
-                "button.ts": "ts_template",
-                "Button.guide.svelte": "guide_template",
-                "Button.svelte": "svelte_template"
-            },
-            "buttonGroup": {
-                "buttonGroup.scss": "scss_template",
-                "buttonGroup.ts": "ts_template",
-                "ButtonGroup.guide.svelte": "guide_template",
-                "ButtonGroup.svelte": "svelte_template"
-            }
+        "button": {
+            "button.scss": "scss_template",
+            "button.ts": "ts_template",
+            "Button.guide.svelte": "guide_template",
+            "Button.svelte": "svelte_template"
+        },
+        "buttonGroup": {
+            "buttonGroup.scss": "scss_template",
+            "buttonGroup.ts": "ts_template",
+            "ButtonGroup.guide.svelte": "guide_template",
+            "ButtonGroup.svelte": "svelte_template"
         },
         "formValidation": {
             "formValidation.scss": "scss_template",

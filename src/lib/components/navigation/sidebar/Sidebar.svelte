@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ButtonGroup from './../../forms/buttons/buttonGroup/ButtonGroup.svelte';
-	import Button from './../../forms/buttons/button/Button.svelte';
+	import ButtonGroup from './../../forms/buttonGroup/ButtonGroup.svelte';
+	import Button from './../../forms/button/Button.svelte';
 	import './Sidebar.scss';
 	import { fade } from 'svelte/transition';
 	export let label: string = '';

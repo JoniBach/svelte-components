@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/forms/buttons/button/Button.svelte';
+	import Button from '$lib/components/forms/button/Button.svelte';
 	import { addToast } from './toast.js';
 	import Toast from './Toast.svelte';
 
