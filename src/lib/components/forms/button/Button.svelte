@@ -10,12 +10,13 @@
 	export let index = 0;
 	export let size: string = 'small';
 	export let align: 'left' | 'center' | 'right' = 'center';
+	export let href: string = '';
 
 	const dispatch = createEventDispatcher();
 	const handleClick = (event, type) => {
 		event.preventDefault();
 		event.stopPropagation();
-		dispatch(type, { buttonId: id, buttonIndex: index });
+		dispatch(type, { buttonId: id, buttonIndex: index, href });
 	};
 </script>
 

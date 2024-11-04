@@ -30,6 +30,7 @@
 				})}
 			index={buttonIndex}
 			{align}
+			href={prop.href}
 		/>
 	{/each}
 </div>

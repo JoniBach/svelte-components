@@ -4,14 +4,25 @@
 	import Dropdown from './../dropdown/Dropdown.svelte';
 	import './Navbar.scss';
 	import Sidebar from '../sidebar/Sidebar.svelte';
+	import { createEventDispatcher } from 'svelte';
 	export let label: string = '';
+	export let id: string = '';
 	export let href: string = '/';
 	export let group: any[] = [];
 	export let gap: string = 'small';
 	export let variant: string = 'over';
 	export let direction: string = 'right';
-
+	const customEvent = createEventDispatcher();
 	let active = false;
+
+	const handleClick = (e) => {
+		active = false;
+		if (e.detail.href) {
+			window.location.href = e.detail.href;
+		} else {
+			customEvent('click', e.detail);
+		}
+	};
 </script>
 
 <nav class="navbar">
@@ -26,7 +37,14 @@
 			{#each group as item}
 				{#if !active}
 					<div transition:fade>
-						<Dropdown group={item.group} label={item.label} anchor="right" />
+						<Dropdown
+							group={item.group}
+							label={item.label}
+							anchor="right"
+							on:click={(e) => handleClick(e)}
+							id={item.id}
+							href={item.href}
+						/>
 					</div>
 				{/if}
 			{/each}
