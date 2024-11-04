@@ -9,6 +9,7 @@
 	export let slot;
 	export let index = 0;
 	export let size: string = 'small';
+	export let align: 'left' | 'center' | 'right' = 'center';
 
 	const dispatch = createEventDispatcher();
 	const handleClick = (event, type) => {
@@ -24,7 +25,7 @@
 	on:mouseenter={(event) => handleClick(event, 'mouseenter')}
 	on:mouseleave={(event) => handleClick(event, 'mouseleave')}
 	{id}
-	class="button {variant} {color} size-{size}"
+	class="button {variant} {color} size-{size} align-{align}"
 	data-itemIndex={index}
 >
 	{#if label}

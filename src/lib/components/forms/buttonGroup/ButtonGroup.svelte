@@ -11,6 +11,7 @@
 	import { createEventDispatcher } from 'svelte';
 	export let index = 0;
 	export let size: string = 'small';
+	export let align: 'left' | 'center' | 'right' = 'center';
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -28,6 +29,7 @@
 					buttonGroupIndex: index
 				})}
 			index={buttonIndex}
+			{align}
 		/>
 	{/each}
 </div>

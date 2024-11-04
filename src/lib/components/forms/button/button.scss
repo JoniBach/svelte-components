@@ -1,4 +1,13 @@
 .button {
+	&.align-left {
+		text-align: left;
+	}
+	&.align-center {
+		text-align: center;
+	}
+	&.align-right {
+		text-align: right;
+	}
 	&.size-tiny {
 		padding: var(--spacing-tiny) var(--spacing-small);
 		font-size: var(--typography-tiny);
