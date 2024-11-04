@@ -1,6 +1,8 @@
 <script>
 	import Menu from './../lib/components/navigation/menu/Menu.svelte';
 	import Navbar from '$lib/components/navigation/navbar/Navbar.svelte';
+	import Button from '$lib/components/forms/button/Button.svelte';
+	import { changeTheme } from '$lib/index';
 
 	const label = 'Component Library',
 		group = [
@@ -19,7 +21,9 @@
 		menuAlign = 'left';
 </script>
 
-<Navbar {label} {group} />
+<Navbar {label} {group}>
+	<Button label="Theme" on:click={() => changeTheme()} />
+</Navbar>
 <div class="page">
 	<Menu label={menuLabel} group={menuGroup} align={menuAlign} />
 	<div class="page-body">
