@@ -3,37 +3,53 @@
 	import Navbar from '$lib/components/navigation/navbar/Navbar.svelte';
 	import Button from '$lib/components/forms/button/Button.svelte';
 	import { changeTheme } from '$lib/index';
+	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
-	const label = 'Component Library',
-		group = [
-			{ label: 'Home', id: 'Home', href: '/' },
-			{ label: 'Components', id: 'Components', href: '/components' }
-		],
-		menuLabel = 'Components',
-		menuGroup = [
-			{ label: 'Button', id: '/button' },
-			{ label: 'Button Group', id: '/button-group' },
-			{ label: 'Dropdown', id: '/dropdown' },
-			{ label: 'Menu', id: '/menu' },
-			{ label: 'Navbar', id: '/navbar' },
-			{ label: 'Sidebar', id: '/sidebar' }
-		],
-		menuAlign = 'left';
+	let components = { groups: [] };
+
+	onMount(() => {
+		fetch('/components.json')
+			.then((res) => res.json())
+			.then((data) => {
+				components = data;
+			})
+			.catch((error) => {
+				console.error('Error fetching components:', error);
+			});
+	});
+
+	function handleClick(e) {
+		goto(`/components/${e.detail.buttonGroupId}/${e.detail.buttonId}`);
+	}
+
+	$: label = components?.title;
+	$: group = components?.nav;
+	$: menuGroup = components?.groups;
+	$: menuAlign = 'left';
 </script>
 
-<Navbar {label} {group}>
-	<Button label="Theme" on:click={() => changeTheme()} />
-</Navbar>
-<div class="page">
-	<Menu label={menuLabel} group={menuGroup} align={menuAlign} />
-	<div class="page-body">
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-		voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+{#if menuGroup && menuGroup.length}
+	<Navbar {label} {group}>
+		<Button label="Theme" on:click={() => changeTheme()} />
+	</Navbar>
+	<div class="page">
+		{#each menuGroup as menu}
+			<Menu
+				id={menu.id}
+				label={menu.label}
+				group={menu.components.map((component) => ({
+					label: component.name,
+					id: component.name,
+					size: 'xs'
+				}))}
+				on:click={(e) => handleClick(e)}
+				align={menuAlign}
+			/>
+		{/each}
+		<div class="page-body">"Lorem ipsum dolor sit amet, consectetur adipiscing elit..."</div>
 	</div>
-</div>
+{/if}
 
 <style>
 	.page {

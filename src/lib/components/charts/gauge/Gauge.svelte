@@ -5,7 +5,7 @@
 	export let value: number = 75;
 	export let minValue: number = 0;
 	export let maxValue: number = 100;
-	export let size: number | string = 200; // can be a number (pixels) or '100%'
+	export let size: string = '200'; // can be a number (pixels) or '100%'
 	export let innerColor: string = 'accent';
 	export let outerColor: string = 'neutral';
 	export let textColor: string = 'text';

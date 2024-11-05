@@ -133,6 +133,12 @@
             "formValidation.ts": "ts_template",
             "FormValidation.guide.svelte": "guide_template",
             "FormValidation.svelte": "svelte_template"
+        },
+        "input": {
+            "input.scss": "scss_template",
+            "input.ts": "ts_template",
+            "Input.guide.svelte": "guide_template",
+            "Input.svelte": "svelte_template"
         }
     },
     "display": {

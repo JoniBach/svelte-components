@@ -5,8 +5,8 @@
 
 	export let label: string = 'Map';
 	export let data: string = ''; // URL to GeoJSON data file
-	export let width: number | string = 800; // Accepts both numbers and "100%"
-	export let height: number = 600;
+	export let width: string = '800'; // Accepts both numbers and "100%"
+	export let height: string = '600';
 
 	let chartRef: HTMLElement;
 	let geoData: any | null = null;

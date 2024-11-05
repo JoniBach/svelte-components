@@ -2,13 +2,13 @@
 	import { onMount } from 'svelte';
 	import { createBarChart } from './barChart';
 
-	export let data = [];
-	export let title = '';
-	export let xLabel = '';
-	export let yLabel = '';
-	export let accessor = { x: '', y: '' };
+	export let data: any[] = [];
+	export let title: string = '';
+	export let xLabel: string = '';
+	export let yLabel: stringl = '';
+	export let accessor: { x: string; y: string } = { x: '', y: '' };
 	export let width = '800';
-	export let height = 400;
+	export let height = '400';
 
 	let chartRef;
 

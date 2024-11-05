@@ -29,7 +29,7 @@
 		{/if}
 	</div>
 	{#if group.length > 0}
-		<ButtonGroup {group} variant={buttonVariant} {align} on:click />
+		<ButtonGroup {id} {group} variant={buttonVariant} {align} on:click />
 	{:else}
 		<slot />
 	{/if}

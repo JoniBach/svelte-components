@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 	import { createTreeView } from './treeView';
 
-	export let data = {}; // Root node of the hierarchical data
-	export let width = 800;
-	export let height = 600;
+	export let data: any = {}; // Root node of the hierarchical data
+	export let width: string = '800';
+	export let height: string = '600';
 
 	let chartRef;
 
