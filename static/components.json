@@ -968,6 +968,390 @@
                     ]
                 }
             ]
+        },
+        {
+            "label": "Media",
+            "id": "media",
+            "path": "/media",
+            "description": "Components for media playback and interactive visual media",
+            "components": [
+                {
+                    "name": "Audio",
+                    "props": [
+                        {
+                            "prop": "src",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "/759823__josefpres__guitar-loops-107-02-verison-02-101-bpm.wav"
+                        },
+                        {
+                            "prop": "width",
+                            "type": "string | number",
+                            "default": 800,
+                            "example": "600"
+                        },
+                        {
+                            "prop": "height",
+                            "type": "number",
+                            "default": 50,
+                            "example": 100
+                        }
+                    ]
+                },
+                {
+                    "name": "Carousel",
+                    "props": [
+                        {
+                            "prop": "group",
+                            "type": "array",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "id": "1",
+                                    "label": "lorem ipsum",
+                                    "url": "https://picsum.photos/600/400"
+                                },
+                                {
+                                    "id": "2",
+                                    "label": "dolor sit amet",
+                                    "url": "https://picsum.photos/600/400"
+                                },
+                                {
+                                    "id": "3",
+                                    "label": "consectetur",
+                                    "url": "https://picsum.photos/600/400"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "interval",
+                            "type": "number",
+                            "default": 3000,
+                            "example": 5000
+                        },
+                        {
+                            "prop": "auto",
+                            "type": "boolean",
+                            "default": true,
+                            "example": false
+                        },
+                        {
+                            "prop": "height",
+                            "type": "string",
+                            "default": "\"300px\"",
+                            "example": "\"400px\""
+                        },
+                        {
+                            "prop": "width",
+                            "type": "string",
+                            "default": "\"100%\"",
+                            "example": "\"80%\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Navigation",
+            "id": "navigation",
+            "path": "/navigation",
+            "description": "Components for navigation and interactive menus",
+            "components": [
+                {
+                    "name": "Breadcrumbs",
+                    "props": [
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[{ label: '', href: '/' }]",
+                            "example": [
+                                {
+                                    "label": "Home",
+                                    "href": "/"
+                                },
+                                {
+                                    "label": "About",
+                                    "href": "/about"
+                                },
+                                {
+                                    "label": "Contact",
+                                    "href": "/contact"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Dropdown",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Menu"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "label": "Profile",
+                                    "href": "/profile"
+                                },
+                                {
+                                    "label": "Settings",
+                                    "href": "/settings"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "direction",
+                            "type": "string",
+                            "default": "\"down\"",
+                            "example": "right"
+                        },
+                        {
+                            "prop": "activeId",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "menu1"
+                        },
+                        {
+                            "prop": "active",
+                            "type": "boolean",
+                            "default": false,
+                            "example": true
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"column\"",
+                            "example": "row"
+                        },
+                        {
+                            "prop": "anchor",
+                            "type": "string",
+                            "default": "\"center\"",
+                            "example": "left"
+                        },
+                        {
+                            "prop": "size",
+                            "type": "string",
+                            "default": "\"small\"",
+                            "example": "medium"
+                        }
+                    ]
+                },
+                {
+                    "name": "Footer",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Footer Label"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "id": "col1",
+                                    "label": "Column 1",
+                                    "group": [
+                                        {
+                                            "label": "Link 1",
+                                            "link": "/link1"
+                                        },
+                                        {
+                                            "label": "Link 2",
+                                            "link": "/link2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "col2",
+                                    "label": "Column 2",
+                                    "group": [
+                                        {
+                                            "label": "Link 3",
+                                            "link": "/link3"
+                                        },
+                                        {
+                                            "label": "Link 4",
+                                            "link": "/link4"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Menu",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Main Menu"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "label": "Home",
+                                    "href": "/"
+                                },
+                                {
+                                    "label": "About",
+                                    "href": "/about"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "activeId",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "menu1"
+                        },
+                        {
+                            "prop": "active",
+                            "type": "boolean",
+                            "default": false,
+                            "example": true
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"vertical\"",
+                            "example": "horizontal"
+                        },
+                        {
+                            "prop": "align",
+                            "type": "string",
+                            "default": "\"center\"",
+                            "example": "left"
+                        }
+                    ]
+                },
+                {
+                    "name": "Navbar",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Site Title"
+                        },
+                        {
+                            "prop": "id",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "navbar1"
+                        },
+                        {
+                            "prop": "href",
+                            "type": "string",
+                            "default": "\"/\"",
+                            "example": "/home"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "id": "nav1",
+                                    "label": "Profile",
+                                    "group": [
+                                        {
+                                            "label": "View Profile",
+                                            "href": "/profile"
+                                        },
+                                        {
+                                            "label": "Edit Profile",
+                                            "href": "/profile/edit"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "gap",
+                            "type": "string",
+                            "default": "\"small\"",
+                            "example": "large"
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"over\"",
+                            "example": "under"
+                        },
+                        {
+                            "prop": "direction",
+                            "type": "string",
+                            "default": "\"right\"",
+                            "example": "left"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sidebar",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Sidebar Menu"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "label": "Dashboard",
+                                    "href": "/dashboard"
+                                },
+                                {
+                                    "label": "Reports",
+                                    "href": "/reports"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "direction",
+                            "type": "string",
+                            "default": "\"left\"",
+                            "example": "right"
+                        },
+                        {
+                            "prop": "activeId",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "sidebar1"
+                        },
+                        {
+                            "prop": "active",
+                            "type": "boolean",
+                            "default": false,
+                            "example": true
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"over\"",
+                            "example": "under"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
