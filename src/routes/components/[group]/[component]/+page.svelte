@@ -114,17 +114,22 @@
 		<div class="component-body">
 			{#if DynamicComponent && !loading}
 				{#if component?.props}
-					<svelte:component this={DynamicComponent} {...props}>
-						{#if Array.isArray(component?.props)}
-							{#each component?.props as prop}
-								{#if prop.type === 'slot'}
-									{prop.example}
-								{/if}
-							{/each}
-						{/if}
-					</svelte:component>
+					<div class="component-demo">
+						<svelte:component this={DynamicComponent} {...props}>
+							{#if Array.isArray(component?.props)}
+								{#each component?.props as prop}
+									{#if prop.type === 'slot'}
+										{prop.example}
+									{/if}
+								{/each}
+							{/if}
+						</svelte:component>
+					</div>
 				{/if}
-				<Input field={{ variant: 'json', disabled: true }} value={demoCode} />
+				<Input
+					field={{ variant: 'json', disabled: true, label: 'Code snippet' }}
+					value={demoCode}
+				/>
 				<Table
 					form
 					label="{component.name} props"
@@ -144,6 +149,12 @@
 {/if}
 
 <style>
+	.component-demo {
+		padding: var(--spacing-large);
+		border: 1px solid var(--color-border);
+		border-radius: var(--spacing-small);
+		margin-bottom: var(--spacing-large);
+	}
 	.component-page {
 		display: flex;
 		height: 100vh;
