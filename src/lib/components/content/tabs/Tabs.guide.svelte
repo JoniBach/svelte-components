@@ -1,6 +1,6 @@
 <script>
 	import Tabs from './Tabs.svelte';
-	let active = '';
+	export let active = '';
 	const group = [
 		{ label: 'Tab 1', id: 'tab-1' },
 		{ label: 'Tab 2', id: 'tab-2' },

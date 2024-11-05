@@ -17,7 +17,7 @@
             "label": "Charts",
             "id": "charts",
             "path": "/charts",
-            "description": "A collection of visualisations",
+            "description": "A collection of visualizations",
             "components": [
                 {
                     "name": "BarChart",
@@ -257,7 +257,7 @@
                         },
                         {
                             "prop": "label",
-                            "type": "strMaping",
+                            "type": "string",
                             "default": "\"\"",
                             "example": "Locations"
                         },
@@ -352,6 +352,126 @@
                             "type": "string",
                             "default": "\"600\"",
                             "example": "600"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Content",
+            "id": "content",
+            "path": "/content",
+            "description": "A collection of UI components for content display and interaction",
+            "components": [
+                {
+                    "name": "Accordion",
+                    "props": [
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "label": "Section 1",
+                                    "content": "Content 1"
+                                },
+                                {
+                                    "label": "Section 2",
+                                    "content": "Content 2"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "'single' | 'multiple'",
+                            "default": "'single'",
+                            "example": "'single'"
+                        }
+                    ]
+                },
+                {
+                    "name": "Card",
+                    "props": [
+                        {
+                            "prop": "slot",
+                            "type": "slot",
+                            "example": "This is a card with slot content."
+                        }
+                    ]
+                },
+                {
+                    "name": "Drawer",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Menu"
+                        },
+                        {
+                            "prop": "active",
+                            "type": "boolean",
+                            "default": "false",
+                            "example": true
+                        },
+                        {
+                            "prop": "slot",
+                            "type": "slot",
+                            "example": "Drawer slot content goes here."
+                        }
+                    ]
+                },
+                {
+                    "name": "Modal",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Modal Title"
+                        },
+                        {
+                            "prop": "active",
+                            "type": "boolean",
+                            "default": "false",
+                            "example": true
+                        },
+                        {
+                            "prop": "slot",
+                            "type": "slot",
+                            "example": "Modal content goes here."
+                        }
+                    ]
+                },
+                {
+                    "name": "Tabs",
+                    "props": [
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "id": "tab1",
+                                    "label": "Tab 1"
+                                },
+                                {
+                                    "id": "tab2",
+                                    "label": "Tab 2"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "active",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "tab1"
+                        },
+                        {
+                            "prop": "slot",
+                            "type": "slot",
+                            "default": "content",
+                            "example": "content"
                         }
                     ]
                 }

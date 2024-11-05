@@ -35,6 +35,7 @@
 		import(/* @vite-ignore */ componentPath)
 			.then(({ default: loadedComponent }) => {
 				DynamicComponent = loadedComponent;
+				loading = false;
 			})
 			.catch((err) => {
 				console.error('Error loading component:', componentPath, err);
@@ -55,8 +56,10 @@
 		}, {});
 	}
 
-	function handleClick({ detail: { buttonGroupId, buttonId } }) {
-		goto(`/components/${buttonGroupId}/${buttonId}`);
+	let loading = true;
+	function handleClick(event) {
+		loading = true;
+		goto('/components/' + event.detail.buttonId);
 	}
 
 	$: {
@@ -72,18 +75,33 @@
 		<Button label="Theme" on:click={changeTheme} />
 	</Navbar>
 	<div class="component-page">
-		{#each menuGroup as { id, label, components }}
-			<Menu
-				{id}
-				{label}
-				group={components.map(({ name }) => ({ label: name, id: name, size: 'xs' }))}
-				align="left"
-				on:click={handleClick}
-			/>
-		{/each}
+		<Menu
+			id="components"
+			label="Components"
+			group={menuGroup.flatMap((group) =>
+				group.components.map(({ name }) => ({
+					label: name,
+					id: group.id + '/' + name,
+					size: 'xs',
+					groupId: group.id // Include groupId for correct routing
+				}))
+			)}
+			align="left"
+			on:click={handleClick}
+		/>
 		<div class="component-body">
-			{#if DynamicComponent}
-				<svelte:component this={DynamicComponent} {...props} />
+			{#if DynamicComponent && !loading}
+				{#if component?.props}
+					<svelte:component this={DynamicComponent} {...props}>
+						{#if Array.isArray(component?.props)}
+							{#each component?.props as prop}
+								{#if prop.type === 'slot'}
+									{prop.example}
+								{/if}
+							{/each}
+						{/if}
+					</svelte:component>
+				{/if}
 				<Table
 					form
 					label="{component.name} props"
@@ -96,7 +114,7 @@
 					]}
 				/>
 			{:else}
-				<p>Component not found.</p>
+				<p>Component loading.</p>
 			{/if}
 		</div>
 	</div>
