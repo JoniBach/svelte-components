@@ -42,7 +42,7 @@
 	// Function to transform the props array to an object
 	function mapPropsToDefaults(propsArray) {
 		if (!propsArray) return {};
-		return propsArray.reduce((acc, { prop, default: defaultValue }) => {
+		return propsArray.reduce((acc, { prop, example: defaultValue }) => {
 			acc[prop] = defaultValue;
 			return acc;
 		}, {});
@@ -59,6 +59,8 @@
 	$: component = components.groups
 		.flatMap((group) => group.components)
 		.find((comp) => comp.name === componentName);
+
+	$: console.log('component', component);
 </script>
 
 {#if menuGroup && menuGroup.length && component}
@@ -102,7 +104,13 @@
 						{
 							variant: 'text',
 							name: 'default',
-							label: 'default'
+							label: 'default',
+							disabled: true
+						},
+						{
+							variant: 'json',
+							name: 'example',
+							label: 'example'
 						}
 					]}
 				/>

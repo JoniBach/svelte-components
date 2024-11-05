@@ -9,7 +9,7 @@
 	let editorInstance: monaco.editor.IStandaloneCodeEditor;
 
 	onMount(() => {
-		const initialValue = typeof value === 'string' ? value : stringifyValue(value);
+		const initialValue = stringifyValue(value);
 		const language = detectLanguage(initialValue);
 
 		createEditor(initialValue, language);
@@ -31,7 +31,8 @@
 		});
 
 		editorInstance.onDidChangeModelContent(() => {
-			value = editorInstance.getValue();
+			const editorContent = editorInstance.getValue();
+			value = parseValue(editorContent);
 			updateLanguage();
 		});
 	}
@@ -55,6 +56,15 @@
 			}
 		}
 		return String(val);
+	}
+
+	function parseValue(content: string): any {
+		try {
+			return JSON.parse(content);
+		} catch (e) {
+			console.warn('Parsing as string due to invalid JSON:', content);
+			return content; // Return as string if not valid JSON
+		}
 	}
 
 	function updateLanguage() {

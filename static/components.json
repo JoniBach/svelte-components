@@ -25,40 +25,56 @@
                         {
                             "prop": "data",
                             "type": "any[]",
-                            "default": []
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "name": "A",
+                                    "value": 10
+                                },
+                                {
+                                    "name": "B",
+                                    "value": 20
+                                }
+                            ]
                         },
                         {
                             "prop": "title",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Bar Chart"
                         },
                         {
                             "prop": "xLabel",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "X Axis"
                         },
                         {
                             "prop": "yLabel",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Y Axis"
                         },
                         {
                             "prop": "accessor",
                             "type": "{ x: string, y: string }",
-                            "default": {
-                                "x": "",
-                                "y": ""
+                            "default": "{ \"x\": \"\", \"y\": \"\" }",
+                            "example": {
+                                "x": "name",
+                                "y": "value"
                             }
                         },
                         {
                             "prop": "width",
                             "type": "string",
-                            "default": "800"
+                            "default": "\"800\"",
+                            "example": "800"
                         },
                         {
                             "prop": "height",
                             "type": "string",
-                            "default": "400"
+                            "default": "\"400\"",
+                            "example": "400"
                         }
                     ]
                 },
@@ -68,42 +84,50 @@
                         {
                             "prop": "value",
                             "type": "number",
-                            "default": 71
+                            "default": "71",
+                            "example": 50
                         },
                         {
                             "prop": "minValue",
                             "type": "number",
-                            "default": 1
+                            "default": "1",
+                            "example": 0
                         },
                         {
                             "prop": "maxValue",
                             "type": "number",
-                            "default": 100
+                            "default": "100",
+                            "example": 100
                         },
                         {
                             "prop": "size",
                             "type": "string",
-                            "default": "200"
+                            "default": "\"200\"",
+                            "example": "300"
                         },
                         {
                             "prop": "innerColor",
                             "type": "string",
-                            "default": "accent"
+                            "default": "\"accent\"",
+                            "example": "accent"
                         },
                         {
                             "prop": "outerColor",
                             "type": "string",
-                            "default": "neutral"
+                            "default": "\"neutral\"",
+                            "example": "neutral"
                         },
                         {
                             "prop": "textColor",
                             "type": "string",
-                            "default": "text"
+                            "default": "\"text\"",
+                            "example": "text"
                         },
                         {
                             "prop": "label",
                             "type": "string",
-                            "default": "Gauge"
+                            "default": "\"Gauge\"",
+                            "example": "Performance"
                         }
                     ]
                 },
@@ -113,27 +137,53 @@
                         {
                             "prop": "data",
                             "type": "any[]",
-                            "default": []
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "x": "A",
+                                    "y": "1",
+                                    "value": 10
+                                },
+                                {
+                                    "x": "A",
+                                    "y": "2",
+                                    "value": 20
+                                },
+                                {
+                                    "x": "B",
+                                    "y": "1",
+                                    "value": 30
+                                },
+                                {
+                                    "x": "B",
+                                    "y": "2",
+                                    "value": 40
+                                }
+                            ]
                         },
                         {
                             "prop": "xLabel",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "X Axis"
                         },
                         {
                             "prop": "yLabel",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Y Axis"
                         },
                         {
                             "prop": "width",
                             "type": "string",
-                            "default": "800"
+                            "default": "\"800\"",
+                            "example": "800"
                         },
                         {
                             "prop": "height",
                             "type": "string",
-                            "default": "600"
+                            "default": "\"600\"",
+                            "example": "600"
                         }
                     ]
                 },
@@ -143,40 +193,56 @@
                         {
                             "prop": "data",
                             "type": "any[]",
-                            "default": []
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "time": "2021-01",
+                                    "value": 30
+                                },
+                                {
+                                    "time": "2021-02",
+                                    "value": 45
+                                }
+                            ]
                         },
                         {
                             "prop": "title",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Monthly Sales"
                         },
                         {
                             "prop": "xLabel",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Month"
                         },
                         {
                             "prop": "yLabel",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Sales"
                         },
                         {
                             "prop": "accessor",
                             "type": "{ x: string, y: string }",
-                            "default": {
-                                "x": "",
-                                "y": ""
+                            "default": "{ \"x\": \"\", \"y\": \"\" }",
+                            "example": {
+                                "x": "time",
+                                "y": "value"
                             }
                         },
                         {
                             "prop": "width",
                             "type": "string",
-                            "default": "800"
+                            "default": "\"800\"",
+                            "example": "800"
                         },
                         {
                             "prop": "height",
                             "type": "string",
-                            "default": "400"
+                            "default": "\"400\"",
+                            "example": "400"
                         }
                     ]
                 },
@@ -186,22 +252,26 @@
                         {
                             "prop": "data",
                             "type": "any[]",
-                            "default": []
+                            "default": "[]",
+                            "example": "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
                         },
                         {
                             "prop": "label",
                             "type": "strMaping",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Locations"
                         },
                         {
                             "prop": "width",
                             "type": "string",
-                            "default": "800"
+                            "default": "\"800\"",
+                            "example": "800"
                         },
                         {
                             "prop": "height",
                             "type": "string",
-                            "default": "600"
+                            "default": "\"600\"",
+                            "example": "600"
                         }
                     ]
                 },
@@ -211,30 +281,44 @@
                         {
                             "prop": "data",
                             "type": "any[]",
-                            "default": []
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "label": "Apples",
+                                    "value": 40
+                                },
+                                {
+                                    "label": "Oranges",
+                                    "value": 30
+                                }
+                            ]
                         },
                         {
                             "prop": "title",
                             "type": "string",
-                            "default": ""
+                            "default": "\"\"",
+                            "example": "Fruit Distribution"
                         },
                         {
                             "prop": "accessor",
                             "type": "{ value: string; label: string }",
-                            "default": {
-                                "value": "",
-                                "label": ""
+                            "default": "{ \"value\": \"\", \"label\": \"\" }",
+                            "example": {
+                                "value": "value",
+                                "label": "label"
                             }
                         },
                         {
                             "prop": "width",
                             "type": "string",
-                            "default": "400"
+                            "default": "\"400\"",
+                            "example": "400"
                         },
                         {
                             "prop": "height",
                             "type": "string",
-                            "default": "400"
+                            "default": "\"400\"",
+                            "example": "400"
                         }
                     ]
                 },
@@ -244,17 +328,30 @@
                         {
                             "prop": "data",
                             "type": "any",
-                            "default": {}
+                            "default": "{}",
+                            "example": {
+                                "name": "Root",
+                                "children": [
+                                    {
+                                        "name": "Child 1"
+                                    },
+                                    {
+                                        "name": "Child 2"
+                                    }
+                                ]
+                            }
                         },
                         {
                             "prop": "width",
                             "type": "string",
-                            "default": "800"
+                            "default": "\"800\"",
+                            "example": "800"
                         },
                         {
                             "prop": "height",
                             "type": "string",
-                            "default": "600"
+                            "default": "\"600\"",
+                            "example": "600"
                         }
                     ]
                 }

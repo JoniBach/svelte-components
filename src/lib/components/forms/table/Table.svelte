@@ -109,8 +109,15 @@
 			{#each sortedRows as row, index}
 				<tr>
 					{#each group as column}
-						<td>{row[column.name] || 'N/A'}</td>
+						<td>
+							{#if column.variant === 'json'}
+								{JSON.stringify(row[column.name] || {}, null, 2)}
+							{:else}
+								{row[column.name] || 'N/A'}
+							{/if}
+						</td>
 					{/each}
+
 					{#if showEditColumn}
 						<td>
 							{#if isDrawerVisible(index)}
@@ -161,7 +168,7 @@
 					<tr>
 						<td colspan={group.length + 1}>
 							<Drawer active={isDrawerOpen} on:close={closeDrawer}>
-								<Form {group} bind:value={selectedRow} on:input={handleFormSubmit} />
+								<Form {group} bind:value={value[selectedRowIndex]} on:input={handleFormSubmit} />
 							</Drawer>
 						</td>
 					</tr>
