@@ -2,6 +2,7 @@
 	// visibility: hidden;
 	display: flex;
 	background: var(--color-panel);
+	overflow-x: hidden;
 
 	&.vertical {
 		flex-direction: column;

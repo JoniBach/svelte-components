@@ -7,7 +7,7 @@
 	import Menu from '$lib/components/navigation/menu/Menu.svelte';
 	import Table from '$lib/components/forms/table/Table.svelte';
 	import { changeTheme } from '$lib/index';
-	import Input from '$lib/components/forms/inputs/input/Input.svelte';
+	import Input from '$lib/components/forms/input/Input.svelte';
 
 	let components = { groups: [] };
 	let DynamicComponent;

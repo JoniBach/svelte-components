@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import { checkObjectConditions } from '@jonibach/transform';
-	import Input from '../inputs/input/Input.svelte';
+	import Input from '../input/Input.svelte';
 
 	export let group = [];
 	export let value = {};

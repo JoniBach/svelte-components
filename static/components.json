@@ -578,6 +578,396 @@
                     ]
                 }
             ]
+        },
+        {
+            "label": "Feedback",
+            "id": "feedback",
+            "path": "/feedback",
+            "description": "Components for providing user feedback and interactive messages",
+            "components": [
+                {
+                    "name": "Alert",
+                    "props": [
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "label": "Network error",
+                                    "variant": "error"
+                                },
+                                {
+                                    "label": "Operation successful",
+                                    "variant": "success"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ConfirmDialog",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"Confirmation\"",
+                            "example": "Delete Item"
+                        },
+                        {
+                            "prop": "description",
+                            "type": "string",
+                            "default": "\"Are you sure?\"",
+                            "example": "Do you want to delete this item?"
+                        },
+                        {
+                            "prop": "id",
+                            "type": "string",
+                            "default": "\"confirm-dialog\"",
+                            "example": "delete-confirmation"
+                        },
+                        {
+                            "prop": "active",
+                            "type": "boolean",
+                            "default": false,
+                            "example": true
+                        },
+                        {
+                            "prop": "position",
+                            "type": "string",
+                            "default": "\"top\"",
+                            "example": "bottom"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[{ id: 'cancel', label: 'Cancel', variant: 'outlined', color: 'danger' }, { id: 'confirm', label: 'Confirm', variant: 'solid', color: 'success' }]",
+                            "example": [
+                                {
+                                    "id": "cancel",
+                                    "label": "Cancel",
+                                    "variant": "outlined",
+                                    "color": "danger"
+                                },
+                                {
+                                    "id": "confirm",
+                                    "label": "Confirm",
+                                    "variant": "solid",
+                                    "color": "success"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Dialog",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"Confirmation\"",
+                            "example": "Warning"
+                        },
+                        {
+                            "prop": "description",
+                            "type": "string",
+                            "default": "\"Are you sure?\"",
+                            "example": "This action cannot be undone."
+                        },
+                        {
+                            "prop": "id",
+                            "type": "string",
+                            "default": "\"confirm-dialog\"",
+                            "example": "warning-dialog"
+                        },
+                        {
+                            "prop": "active",
+                            "type": "boolean",
+                            "default": false,
+                            "example": true
+                        },
+                        {
+                            "prop": "position",
+                            "type": "string",
+                            "default": "\"top\"",
+                            "example": "top"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[{ id: 'clear', label: 'Ok', variant: 'outlined', size: 'small' }]",
+                            "example": [
+                                {
+                                    "id": "ok",
+                                    "label": "Ok",
+                                    "variant": "outlined",
+                                    "size": "small"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "color",
+                            "type": "string",
+                            "default": "\"panel\"",
+                            "example": "warning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Toast",
+                    "props": [
+                        {
+                            "prop": "toasts",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "id": 1,
+                                    "message": "Data saved successfully",
+                                    "type": "success"
+                                },
+                                {
+                                    "id": 2,
+                                    "message": "Error loading data",
+                                    "type": "error"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Forms",
+            "id": "forms",
+            "path": "/forms",
+            "description": "Components for form elements and user input handling",
+            "components": [
+                {
+                    "name": "Button",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Submit"
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"default\"",
+                            "example": "outlined"
+                        },
+                        {
+                            "prop": "color",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "primary"
+                        },
+                        {
+                            "prop": "id",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "submit-btn"
+                        },
+                        {
+                            "prop": "size",
+                            "type": "string",
+                            "default": "\"small\"",
+                            "example": "small"
+                        },
+                        {
+                            "prop": "align",
+                            "type": "'left' | 'center' | 'right'",
+                            "default": "\"center\"",
+                            "example": "left"
+                        },
+                        {
+                            "prop": "href",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "https://example.com"
+                        }
+                    ]
+                },
+                {
+                    "name": "ButtonGroup",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Action Group"
+                        },
+                        {
+                            "prop": "id",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "action-group"
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "label": "Save",
+                                    "variant": "solid",
+                                    "color": "success"
+                                },
+                                {
+                                    "label": "Cancel",
+                                    "variant": "outlined",
+                                    "color": "danger"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"default\"",
+                            "example": "outlined"
+                        },
+                        {
+                            "prop": "gap",
+                            "type": "string",
+                            "default": "\"small\"",
+                            "example": "medium"
+                        },
+                        {
+                            "prop": "size",
+                            "type": "string",
+                            "default": "\"small\"",
+                            "example": "medium"
+                        },
+                        {
+                            "prop": "align",
+                            "type": "'left' | 'center' | 'right'",
+                            "default": "\"center\"",
+                            "example": "right"
+                        }
+                    ]
+                },
+                {
+                    "name": "Form",
+                    "props": [
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "name": "username",
+                                    "label": "Username",
+                                    "variant": "text"
+                                },
+                                {
+                                    "name": "password",
+                                    "label": "Password",
+                                    "variant": "password"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "value",
+                            "type": "object",
+                            "default": "{}",
+                            "example": {
+                                "username": "johndoe",
+                                "password": "123456"
+                            }
+                        },
+                        {
+                            "prop": "columns",
+                            "type": "number",
+                            "default": "undefined",
+                            "example": 2
+                        },
+                        {
+                            "prop": "rows",
+                            "type": "number",
+                            "default": "undefined",
+                            "example": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "Input",
+                    "props": [
+                        {
+                            "prop": "field",
+                            "type": "object",
+                            "default": "{}",
+                            "example": {
+                                "name": "email",
+                                "label": "Email",
+                                "variant": "email"
+                            }
+                        },
+                        {
+                            "prop": "value",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "user@example.com"
+                        },
+                        {
+                            "prop": "errors",
+                            "type": "string[]",
+                            "default": "[]",
+                            "example": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Table",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "User Data"
+                        },
+                        {
+                            "prop": "value",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "name": "John Doe",
+                                    "email": "john@example.com"
+                                },
+                                {
+                                    "name": "Jane Doe",
+                                    "email": "jane@example.com"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "group",
+                            "type": "any[]",
+                            "default": "[]",
+                            "example": [
+                                {
+                                    "name": "name",
+                                    "label": "Name",
+                                    "variant": "text"
+                                },
+                                {
+                                    "name": "email",
+                                    "label": "Email",
+                                    "variant": "email"
+                                }
+                            ]
+                        },
+                        {
+                            "prop": "form",
+                            "type": "boolean",
+                            "default": false,
+                            "example": true
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
