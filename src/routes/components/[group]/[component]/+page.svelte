@@ -83,18 +83,21 @@
 			<div class="page-body">
 				<svelte:component this={DynamicComponent} {...props} />
 				<Table
+					form
 					label="{component.name} props"
 					bind:value={component.props}
 					group={[
 						{
 							variant: 'text',
 							name: 'prop',
-							label: 'prop'
+							label: 'prop',
+							disabled: true
 						},
 						{
 							variant: 'text',
 							name: 'type',
-							label: 'type'
+							label: 'type',
+							disabled: true
 						},
 						{
 							variant: 'text',

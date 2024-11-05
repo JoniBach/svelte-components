@@ -38,7 +38,7 @@
 <div on:mouseleave={() => handleClose()} class="dropdown-wrapper">
 	<Button {href} {id} {size} on:click={(e) => handleClick(e)}>{label}</Button>
 	<div {id} class="dropdown {direction} {openClass} {variant} anchor-{anchor}">
-		{#if group.length > 0}
+		{#if group?.length > 0}
 			<ButtonGroup {id} {size} {group} {variant} on:click={(e) => handleButtonClick(e)} />
 		{:else if 'label'}
 			<Button {id} {href} {size} label="Close" on:click={(e) => handleButtonClick(e)} />
