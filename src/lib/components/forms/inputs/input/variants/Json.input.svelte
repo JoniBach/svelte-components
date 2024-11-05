@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import * as monaco from 'monaco-editor';
 
-	export let field = { name: 'jsonField', placeholder: 'Edit JSON here...' };
+	export let field = { name: 'jsonField', placeholder: 'Edit JSON here...', disabled: false };
 	export let value: any = ''; // Allow any type but convert to string for the editor
 
 	let editorContainer: HTMLDivElement;
@@ -27,13 +27,17 @@
 			language: language,
 			theme: 'vs-light',
 			automaticLayout: true,
-			minimap: { enabled: false }
+			minimap: { enabled: false },
+			readOnly: field.disabled // Disable editing based on the disabled prop
 		});
 
 		editorInstance.onDidChangeModelContent(() => {
-			const editorContent = editorInstance.getValue();
-			value = parseValue(editorContent);
-			updateLanguage();
+			if (!field.disabled) {
+				// Prevent changes when disabled
+				const editorContent = editorInstance.getValue();
+				value = parseValue(editorContent);
+				updateLanguage();
+			}
 		});
 	}
 
@@ -86,5 +90,8 @@
 		height: 100px; /* Set height as needed */
 		border-radius: var(--spacing-small);
 		overflow: hidden;
+		position: relative;
 	}
+
+	/* No additional greying-out styles are applied */
 </style>

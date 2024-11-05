@@ -1,5 +1,6 @@
 {
     "label": "Components Library",
+    "library": "demo",
     "nav": [
         {
             "label": "Home",
