@@ -477,6 +477,107 @@
                     ]
                 }
             ]
+        },
+        {
+            "label": "Display",
+            "id": "display",
+            "path": "/display",
+            "description": "A collection of UI components for display elements",
+            "components": [
+                {
+                    "name": "Avatar",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "John Doe"
+                        },
+                        {
+                            "prop": "subtext",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Online"
+                        },
+                        {
+                            "prop": "src",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "https://i.pravatar.cc/300"
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "circle"
+                        },
+                        {
+                            "prop": "space",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "medium"
+                        }
+                    ]
+                },
+                {
+                    "name": "ProgressBar",
+                    "props": [
+                        {
+                            "prop": "label",
+                            "type": "string",
+                            "default": "\"\"",
+                            "example": "Loading..."
+                        },
+                        {
+                            "prop": "variant",
+                            "type": "string",
+                            "default": "\"separated\"",
+                            "example": "inset"
+                        },
+                        {
+                            "prop": "type",
+                            "type": "string",
+                            "default": "\"percentage\"",
+                            "example": "value"
+                        },
+                        {
+                            "prop": "value",
+                            "type": "number",
+                            "default": 0,
+                            "example": 70
+                        },
+                        {
+                            "prop": "total",
+                            "type": "number",
+                            "default": 0,
+                            "example": 100
+                        }
+                    ]
+                },
+                {
+                    "name": "Spinner",
+                    "props": [
+                        {
+                            "prop": "size",
+                            "type": "string",
+                            "default": "\"xl\"",
+                            "example": "xl"
+                        },
+                        {
+                            "prop": "color",
+                            "type": "string",
+                            "default": "\"accent\"",
+                            "example": "primary"
+                        },
+                        {
+                            "prop": "borderWidth",
+                            "type": "string",
+                            "default": "\"tiny\"",
+                            "example": "tiny"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
