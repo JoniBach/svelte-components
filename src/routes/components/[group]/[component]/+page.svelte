@@ -8,6 +8,7 @@
 	import Table from '$lib/components/forms/table/Table.svelte';
 	import { goto } from '$app/navigation';
 	let components = { groups: [] };
+	let DynamicComponent;
 
 	onMount(() => {
 		fetch('/components.json')
@@ -18,7 +19,14 @@
 			.catch((error) => {
 				console.error('Error fetching components:', error);
 			});
+	});
 
+	$: componentName = $page.params.component;
+	$: groupName = $page.params.group;
+
+	// Dynamically import the component whenever the URL parameters change
+	$: if (componentName && groupName) {
+		let componentFolderName = componentName.charAt(0).toLowerCase() + componentName.slice(1);
 		let componentPath = `../../../../lib/components/${groupName}/${componentFolderName}/${componentName}.svelte`;
 
 		import(componentPath)
@@ -29,17 +37,18 @@
 				console.error('Error loading component:', componentPath, err);
 				DynamicComponent = null;
 			});
-	});
+	}
 
 	function handleClick(e) {
 		goto(`/components/${e.detail.buttonGroupId}/${e.detail.buttonId}`);
 	}
 
-	let DynamicComponent;
+	$: component = components.groups
+		.flatMap((group) => group.components)
+		.find((comp) => comp.name === componentName);
 
 	$: props = component ? mapPropsToDefaults(component.props) : {};
 
-	// Function to transform the props array to an object
 	function mapPropsToDefaults(propsArray) {
 		if (!propsArray) return {};
 		return propsArray.reduce((acc, { prop, example: defaultValue }) => {
@@ -51,16 +60,6 @@
 	$: label = components?.title;
 	$: group = components?.nav;
 	$: menuGroup = components?.groups;
-	$: componentName = $page.params.component;
-	$: groupName = $page.params.group;
-	$: componentFolderName = componentName
-		? componentName.charAt(0).toLowerCase() + componentName.slice(1)
-		: '';
-	$: component = components.groups
-		.flatMap((group) => group.components)
-		.find((comp) => comp.name === componentName);
-
-	$: console.log('component', component);
 </script>
 
 {#if menuGroup && menuGroup.length && component}
