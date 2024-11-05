@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Form from './Form.svelte';
 
-	let value = {
-		name: 'test'
-	};
+	let value = {};
+
+	$: console.log(value);
 
 	const props = [
 		{
@@ -327,6 +327,13 @@
 					]
 				},
 				{
+					variant: 'json',
+					name: 'json',
+					label: 'Json',
+					placeholder: 'Enter your json',
+					valid: []
+				},
+				{
 					variant: 'checkbox',
 					name: 'checkbox',
 					label: 'Select Options',
@@ -492,6 +499,6 @@
 
 {#each props as props}
 	<div class="demo-variant">
-		<Form {...props} on:input />
+		<Form {...props} on:input bind:value />
 	</div>
 {/each}
