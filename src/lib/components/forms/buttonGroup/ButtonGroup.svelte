@@ -1,6 +1,5 @@
 <script lang="ts">
-	import './ButtonGroup.scss';
-	import handleButtongroup from './ButtonGroup.js';
+	import './buttonGroup.scss';
 	import Button from '../button/Button.svelte';
 
 	export let label: string = '';

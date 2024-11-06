@@ -1,10 +1,7 @@
 <script lang="ts">
-	import './Footer.scss';
-	import handleFooter from './Footer.js';
+	import './footer.scss';
 	export let label: string = '';
 	export let group: any[] = [];
-
-	handleFooter();
 </script>
 
 <div class="footer">

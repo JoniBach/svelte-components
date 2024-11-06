@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    import './Lightbox.scss';
-    import handleLightbox from './Lightbox.js';
-    export let label: string = '';
-
-    handleLightbox();
+	import './lightbox.scss';
+	export let label: string = '';
 </script>
 
 <div class="Lightbox-container">Lightbox Placeholder{label}</div>

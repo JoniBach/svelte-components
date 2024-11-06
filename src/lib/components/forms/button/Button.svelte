@@ -1,6 +1,5 @@
 <script lang="ts">
-	import './Button.scss';
-	import handleButton from './Button.js';
+	import './button.scss';
 	import { createEventDispatcher } from 'svelte';
 	export let label: string = '';
 	export let variant: string = 'default';

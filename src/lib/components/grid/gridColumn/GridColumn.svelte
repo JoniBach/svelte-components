@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    import './GridColumn.scss';
-    import handleGridcolumn from './GridColumn.js';
-    export let label: string = '';
-
-    handleGridcolumn();
+	import './gridColumn.scss';
+	export let label: string = '';
 </script>
 
 <div class="GridColumn-container">Gridcolumn Placeholder{label}</div>

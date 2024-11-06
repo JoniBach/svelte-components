@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './ProgressBar.scss';
+	import './progressBar.scss';
 
 	export let label: string = '';
 	export let variant = 'separated';

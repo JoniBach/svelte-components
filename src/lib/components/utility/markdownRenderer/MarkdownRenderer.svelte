@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    import './MarkdownRenderer.scss';
-    import handleMarkdownrenderer from './MarkdownRenderer.js';
-    export let label: string = '';
-
-    handleMarkdownrenderer();
+	import './markdownRenderer.scss';
+	export let label: string = '';
 </script>
 
 <div class="MarkdownRenderer-container">Markdownrenderer Placeholder{label}</div>

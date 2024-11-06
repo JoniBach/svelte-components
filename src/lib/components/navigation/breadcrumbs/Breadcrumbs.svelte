@@ -1,9 +1,6 @@
 <script lang="ts">
-	import './Breadcrumbs.scss';
-	import handleBreadcrumbs from './Breadcrumbs.js';
+	import './breadcrumbs.scss';
 	export let group: any[] = [{ label: '', href: '/' }];
-
-	handleBreadcrumbs();
 </script>
 
 <ul class="breadcrumbs">
@@ -13,8 +10,5 @@
 				{crumb.label}
 			</a>
 		</li>
-		<!-- {#if index < group.length - 1}
-			<span class="separator">/</span>
-		{/if} -->
 	{/each}
 </ul>

@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    import './VirtualScroller.scss';
-    import handleVirtualscroller from './VirtualScroller.js';
-    export let label: string = '';
-
-    handleVirtualscroller();
+	import './virtualScroller.scss';
+	export let label: string = '';
 </script>
 
 <div class="VirtualScroller-container">Virtualscroller Placeholder{label}</div>

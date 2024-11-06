@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './Dropdown.scss';
+	import './dropdown.scss';
 	import Button from '$lib/components/forms/button/Button.svelte';
 	import ButtonGroup from '$lib/components/forms/buttonGroup/ButtonGroup.svelte';
 	import { createEventDispatcher } from 'svelte';

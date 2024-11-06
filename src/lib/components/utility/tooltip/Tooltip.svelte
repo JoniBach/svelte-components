@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    import './Tooltip.scss';
-    import handleTooltip from './Tooltip.js';
-    export let label: string = '';
-
-    handleTooltip();
+	import './tooltip.scss';
+	export let label: string = '';
 </script>
 
 <div class="Tooltip-container">Tooltip Placeholder{label}</div>

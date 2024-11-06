@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
-	import './ConfirmDialog.scss';
+	import './confirmDialog.scss';
 	import ButtonGroup from '$lib/components/forms/buttonGroup/ButtonGroup.svelte';
 
 	export let label: string = 'Confirmation';

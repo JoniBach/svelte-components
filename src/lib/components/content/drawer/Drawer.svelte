@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import './Drawer.scss';
+	import './drawer.scss';
 	import Button from '$lib/components/forms/button/Button.svelte';
 
 	export let label: string = '';

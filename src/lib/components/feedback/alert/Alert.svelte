@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import './Alert.scss';
+	import './alert.scss';
 	import Dropdown from '$lib/components/navigation/dropdown/Dropdown.svelte';
 	export let group: any[] = [];
 

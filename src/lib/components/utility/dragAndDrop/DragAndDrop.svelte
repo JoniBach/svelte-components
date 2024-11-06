@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    import './DragAndDrop.scss';
-    import handleDraganddrop from './DragAndDrop.js';
-    export let label: string = '';
-
-    handleDraganddrop();
+	import './dragAndDrop.scss';
+	export let label: string = '';
 </script>
 
 <div class="DragAndDrop-container">Draganddrop Placeholder{label}</div>

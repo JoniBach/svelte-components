@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './FormValidation.scss';
+	import './formValidation.scss';
 	import handleFormvalidation from './formValidation.js';
 	export let label: string = '';
 

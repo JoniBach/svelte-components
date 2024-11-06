@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import Button from '$lib/components/forms/button/Button.svelte';
 	import Dropdown from './../dropdown/Dropdown.svelte';
-	import './Navbar.scss';
+	import './navbar.scss';
 	import Sidebar from '../sidebar/Sidebar.svelte';
 	import { createEventDispatcher } from 'svelte';
 	export let label: string = '';

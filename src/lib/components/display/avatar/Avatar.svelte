@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './Avatar.scss';
+	import './avatar.scss';
 	import handleAvatar from './avatar.js';
 
 	export let label: string = '';

@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    import './Grid.scss';
-    import handleGrid from './Grid.js';
-    export let label: string = '';
-
-    handleGrid();
+	import './grid.scss';
+	export let label: string = '';
 </script>
 
 <div class="Grid-container">Grid Placeholder{label}</div>
