@@ -1,10 +1,9 @@
-
 <script lang="ts">
-    import './Image.scss';
-    import handleImage from './Image.js';
-    export let label: string = '';
+	import './image.scss';
+	import handleImage from './Image.js';
+	export let label: string = '';
 
-    handleImage();
+	handleImage();
 </script>
 
 <div class="Image-container">Image Placeholder{label}</div>
