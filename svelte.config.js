@@ -1,18 +1,19 @@
-import adapter from '@sveltejs/adapter-auto';
 import { sveltePreprocess } from 'svelte-preprocess';
+import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sveltePreprocess({
 		scss: {
 			// Remove `sass` import and ensure this section is configured correctly
+			api: 'modern-compiler'
 		},
 		// Optionally, enable sourceMap if you need debugging information for styles
 		sourceMap: true
 	}),
 
 	kit: {
-		adapter: adapter()
+		adapter: vercel()
 	}
 };
 
