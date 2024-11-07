@@ -7,13 +7,7 @@ const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
 	preprocess: sveltePreprocess({
-		scss: {
-			includePaths: ['src']
-		},
-		// Ensure 'sass' is used correctly
-		sass: {
-			implementation: sass
-		}
+		scss: true
 	}),
 
 	kit: {
