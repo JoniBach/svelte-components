@@ -1,6 +1,7 @@
 {
-	"name": "svelte-components",
-	"version": "0.0.1",
+	"name": "konui-svelte",
+	"version": "0.0.5",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -49,7 +50,7 @@
 		"prettier-plugin-svelte": "^3.1.2",
 		"publint": "^0.2.0",
 		"sass": "^1.80.6",
-		"svelte": "^4.2.7",
+		"svelte": ">=4.0.0 <6.0.0",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^6.0.3",
 		"typescript": "^5.0.0",

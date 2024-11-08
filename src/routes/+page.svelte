@@ -19,14 +19,9 @@
 			});
 	});
 
-	function handleClick(e) {
-		goto(`/components/${e.detail.buttonGroupId}/${e.detail.buttonId}`);
-	}
-
 	$: label = components?.title;
 	$: group = components?.nav;
 	$: menuGroup = components?.groups;
-	$: menuAlign = 'left';
 </script>
 
 {#if menuGroup && menuGroup.length}
@@ -34,27 +29,12 @@
 		<Button label="Theme" on:click={() => changeTheme()} />
 	</Navbar>
 	<div class="page">
-		{#each menuGroup as menu}
-			<Menu
-				id={menu.id}
-				label={menu.label}
-				group={menu.components.map((component) => ({
-					label: component.name,
-					id: component.name,
-					size: 'xs'
-				}))}
-				on:click={(e) => handleClick(e)}
-				align={menuAlign}
-			/>
-		{/each}
 		<div class="page-body">"Lorem ipsum dolor sit amet, consectetur adipiscing elit..."</div>
 	</div>
 {/if}
 
 <style>
 	.page {
-		display: flex;
-		height: 100vh;
 	}
 	.page-body {
 		margin: var(--spacing-large);
