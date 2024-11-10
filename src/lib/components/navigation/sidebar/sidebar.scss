@@ -1,5 +1,6 @@
 .sidebar {
 	visibility: hidden;
+	flex-shrink: 0;
 	&.over {
 		position: fixed;
 

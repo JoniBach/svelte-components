@@ -3,7 +3,7 @@
 	display: flex;
 	background: var(--color-panel);
 	overflow-x: hidden;
-
+	flex-shrink: 0;
 	&.vertical {
 		flex-direction: column;
 	}
