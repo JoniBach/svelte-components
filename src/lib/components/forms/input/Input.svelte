@@ -38,11 +38,11 @@
 
 <style>
 	.input-group {
-		margin-bottom: 1rem;
+		/* margin-bottom: 1rem; */
 	}
 	label {
 		display: block;
-		margin-bottom: 0.5rem;
+		/* margin-bottom: 0.5rem; */
 		font-weight: bold;
 	}
 

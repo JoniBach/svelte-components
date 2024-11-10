@@ -31,8 +31,8 @@ export const load: Load = async ({ fetch, params }) => {
 			: {};
 
 		// Process each showcase item to extract default props
-		showcaseItems = components.showcase.map((item) => {
-			const showcaseProps = item.props.reduce((acc, { prop, example: defaultValue }) => {
+		showcaseItems = components?.showcase?.map((item) => {
+			const showcaseProps = item?.props?.reduce((acc, { prop, example: defaultValue }) => {
 				acc[prop] = defaultValue;
 				return acc;
 			}, {});
@@ -43,7 +43,7 @@ export const load: Load = async ({ fetch, params }) => {
 		});
 
 		// Extract additional layout values
-		const { label, nav: group, groups: menuGroup } = components;
+		const { label, nav: group, groups: menuGroup, library } = components;
 
 		loading = false;
 
@@ -58,7 +58,8 @@ export const load: Load = async ({ fetch, params }) => {
 			group,
 			menuGroup,
 			error,
-			showcase: showcaseItems
+			showcase: showcaseItems,
+			library
 		};
 	} catch (err) {
 		console.error('Error fetching components:', err);

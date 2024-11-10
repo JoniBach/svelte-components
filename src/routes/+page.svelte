@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import DemoCard from '$lib/components/demo/DemoCard.svelte';
+	import DemoContent from '$lib/components/demo/DemoContent.svelte';
 
 	export let data;
 
@@ -28,7 +29,6 @@
 			loading = false;
 		}
 	});
-	$: label = components?.title;
 	$: group = components?.nav;
 	$: menuGroup = components?.groups;
 
@@ -36,7 +36,7 @@
 </script>
 
 {#if menuGroup && menuGroup.length}
-	<Navbar {label} {group}>
+	<Navbar label={library} {group}>
 		<Button label="Theme" on:click={() => changeTheme()} />
 	</Navbar>
 	<div class="page">
@@ -44,7 +44,9 @@
 			{#if !loading}
 				{#if showcase.length}
 					{#each showcase as item}
-						{#if item}
+						{#if item && item.variant && library}
+							<DemoContent {library} {...item} />
+						{:else if item}
 							<div class="demo-card size-{item.size}">
 								<DemoCard
 									title={item.name}
@@ -77,25 +79,29 @@
 	.page-body {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--spacing-large); /* space between each card */
+		gap: var(--spacing-large);
 		margin: var(--spacing-large);
 		width: var(--page-width);
 		justify-content: center;
+		max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
 	}
 
 	.demo-card {
 		box-sizing: border-box;
 		width: 100%;
-		max-width: calc(((var(--page-width) - var(--spacing-large)) / 3) * 1);
 
 		&.size-1 {
-			max-width: calc(((var(--page-width) - var(--spacing-large)) / 3) * 1);
+			max-width: calc(
+				(((var(--page-width) - var(--spacing-large)) / 3) * 1) - var(--spacing-large) * 1
+			);
 		}
 		&.size-2 {
-			max-width: calc(((var(--page-width) - var(--spacing-large)) / 3) * 2);
+			max-width: calc(
+				(((var(--page-width) - var(--spacing-large)) / 3) * 2) - var(--spacing-large) * 1
+			);
 		}
 		&.size-3 {
-			max-width: calc(((var(--page-width)) / 3) * 3);
+			max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
 		}
 	}
 </style>

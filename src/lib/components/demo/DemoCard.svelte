@@ -115,8 +115,6 @@
 		</div>
 	</div>
 	<div class="demo-card-body">
-		<slot />
-
 		{#if component && component.name}
 			{#if activeFeature === 'live'}
 				{#if component?.props}
@@ -187,5 +185,6 @@
 		width: 100%;
 		height: 100%;
 		align-content: center;
+		justify-items: center;
 	}
 </style>
