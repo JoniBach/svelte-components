@@ -13,12 +13,8 @@
 	$: components = data.components;
 	$: loading = true;
 
-	$: componentName = data.componentName;
-	$: groupName = data.groupName;
-	$: component = data.component;
 	$: showcase = data.showcase;
 
-	$: props = data.props;
 	$: library = data.library;
 
 	onMount(async () => {

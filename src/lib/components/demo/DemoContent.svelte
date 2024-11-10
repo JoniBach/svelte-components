@@ -10,8 +10,10 @@
 	export let note = '';
 	export let library = '';
 	export let link = '';
+	export let href = '';
 	export let actions = false;
 	export let border = false;
+	export let code = null;
 
 	let value = 'npm';
 </script>
@@ -30,6 +32,9 @@
 			{/if}
 			{#if note}
 				<p class="getting-started-note">{note}</p>
+			{/if}
+			{#if code}
+				<Input {...code} />
 			{/if}
 			<div class="getting-started-actions">
 				{#if actions}
@@ -57,6 +62,25 @@
 				{#if link}
 					<Button on:click={(e) => goto(e.detail.href)} href={link} variant="solid" color="primary">
 						Get Started <svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							width="16"
+							height="16"
+							fill="currentColor"
+							><path d="M0 0h24v24H0z" fill="none" /><path
+								d="M12 20l-1.41-1.41L16.17 13H4v-2h12.17l-5.58-5.59L12 4l8 8z"
+							/></svg
+						>
+					</Button>
+				{/if}
+				{#if href}
+					<Button
+						on:click={(e) => (window.location.href = href)}
+						href={link}
+						variant="solid"
+						color="primary"
+					>
+						go now <svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
 							width="16"

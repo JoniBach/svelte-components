@@ -13,7 +13,7 @@
 	});
 </script>
 
-<div class="input-group">
+<div class="input-group" style="width: {field.width ? field.width : 'auto'}">
 	<!-- label -->
 	{#if field.label}
 		<label for={field.name}>{field.label}</label>

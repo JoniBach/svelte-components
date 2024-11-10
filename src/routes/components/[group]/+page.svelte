@@ -3,10 +3,6 @@
 	import DemoCard from '$lib/components/demo/DemoCard.svelte';
 	import { onMount } from 'svelte';
 	export let data;
-
-	onMount(() => {
-		console.log('data', data);
-	});
 </script>
 
 <div class="page">
