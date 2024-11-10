@@ -6,6 +6,7 @@ export const load: Load = async ({ fetch, params }) => {
 	let component = null;
 	let props = {};
 	let error = null;
+	let showcaseItems = [];
 
 	try {
 		// Fetch components data
@@ -15,6 +16,7 @@ export const load: Load = async ({ fetch, params }) => {
 		// Get component name and group from params
 		const componentName = params.component;
 		const groupName = params.group;
+		const showcase = components.showcase;
 
 		// Find the specific component and default props
 		component = components.groups
@@ -27,6 +29,18 @@ export const load: Load = async ({ fetch, params }) => {
 					return acc;
 				}, {})
 			: {};
+
+		// Process each showcase item to extract default props
+		showcaseItems = components.showcase.map((item) => {
+			const showcaseProps = item.props.reduce((acc, { prop, example: defaultValue }) => {
+				acc[prop] = defaultValue;
+				return acc;
+			}, {});
+			return {
+				...item,
+				showcaseProps
+			};
+		});
 
 		// Extract additional layout values
 		const { label, nav: group, groups: menuGroup } = components;
@@ -43,7 +57,8 @@ export const load: Load = async ({ fetch, params }) => {
 			label,
 			group,
 			menuGroup,
-			error
+			error,
+			showcase: showcaseItems
 		};
 	} catch (err) {
 		console.error('Error fetching components:', err);

@@ -13,6 +13,83 @@
             "href": "/components"
         }
     ],
+    "showcase": [
+        {
+            "group": "forms",
+            "name": "Button",
+            "size": "1",
+            "props": [
+                {
+                    "prop": "label",
+                    "type": "string",
+                    "default": "\"\"",
+                    "example": "Submit"
+                },
+                {
+                    "prop": "variant",
+                    "type": "string",
+                    "default": "\"default\"",
+                    "example": "outlined"
+                },
+                {
+                    "prop": "color",
+                    "type": "string",
+                    "default": "\"\"",
+                    "example": "primary"
+                }
+            ]
+        },
+        {
+            "group": "forms",
+            "name": "Button",
+            "size": "2",
+            "props": [
+                {
+                    "prop": "label",
+                    "type": "string",
+                    "default": "\"\"",
+                    "example": "Submit"
+                },
+                {
+                    "prop": "variant",
+                    "type": "string",
+                    "default": "\"default\"",
+                    "example": "outlined"
+                },
+                {
+                    "prop": "color",
+                    "type": "string",
+                    "default": "\"\"",
+                    "example": "primary"
+                }
+            ]
+        },
+        {
+            "group": "forms",
+            "name": "Button",
+            "size": "3",
+            "props": [
+                {
+                    "prop": "label",
+                    "type": "string",
+                    "default": "\"\"",
+                    "example": "Submit"
+                },
+                {
+                    "prop": "variant",
+                    "type": "string",
+                    "default": "\"default\"",
+                    "example": "outlined"
+                },
+                {
+                    "prop": "color",
+                    "type": "string",
+                    "default": "\"\"",
+                    "example": "primary"
+                }
+            ]
+        }
+    ],
     "groups": [
         {
             "label": "Charts",

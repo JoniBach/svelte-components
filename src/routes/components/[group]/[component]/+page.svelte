@@ -24,6 +24,7 @@
 			loading = false;
 		}
 	});
+	$: console.log('data', data);
 </script>
 
 {#if !loading}
