@@ -6,12 +6,10 @@
 
 	export let data;
 
-	$: components = data.components;
+	$: components = data?.components;
 	$: loading = true;
-
-	$: showcase = data.showcase;
-
-	$: library = data.library;
+	$: showcase = data?.showcase;
+	$: library = data?.library;
 
 	onMount(async () => {
 		try {
@@ -21,6 +19,7 @@
 			loading = false;
 		}
 	});
+
 	$: group = components?.nav;
 	$: menuGroup = components?.groups;
 
@@ -29,10 +28,10 @@
 	const content = [
 		{
 			variant: true,
-			title: 'Gettin Started',
+			title: 'Getting Started',
 			subtitle: 'with KonUI! 🚀',
 			content:
-				'KonUI is a collection of accessible, reusable, and customizable components for SvelteKit. Each is a complete component that can be dropped into your application. ',
+				'KonUI is a collection of accessible, reusable, and customizable components for SvelteKit. Each is a complete component that can be dropped into your application.',
 			note: 'Note: KonUI is currently in alpha and under active development. We do not recommend using it in production applications just yet.',
 			border: true,
 			actions: true
@@ -48,7 +47,7 @@
 			variant: true,
 			subtitle: 'Step 2 - Get the stylesheet',
 			content:
-				'download this stylesheet and import it into the root +layout.svelte file in your project',
+				'Download this stylesheet and import it into the root +layout.svelte file in your project',
 			border: true,
 			actions: false,
 			code: {
@@ -56,7 +55,7 @@
 					variant: 'json',
 					name: 'json',
 					label: 'Json',
-					placeholder: 'Enter your json',
+					placeholder: 'Enter your JSON',
 					valid: [],
 					width: '100%'
 				},
@@ -68,7 +67,7 @@
 			variant: true,
 			subtitle: 'Step 3 - Plug in the theme',
 			content:
-				'Now you have SCSS in your project you can import the initTheme() function from the library and call it in the +layout.svelte file',
+				'Now that you have SCSS in your project, you can import the initTheme() function from the library and call it in the +layout.svelte file.',
 			border: true,
 			actions: false,
 			code: {
@@ -76,21 +75,21 @@
 					variant: 'json',
 					name: 'json',
 					label: 'Json',
-					placeholder: 'Enter your json',
+					placeholder: 'Enter your JSON',
 					valid: [],
 					width: '100%'
 				},
 				value: `import '../global.scss';
 import { initTheme } from '$lib';
-// Call the function from the script tag , ideally in your parent +layout.svelte file
+// Call the function from the script tag, ideally in your parent +layout.svelte file
 initTheme();`
 			}
 		},
 		{
 			variant: true,
-			subtitle: 'Step 4 - Lets try a <Button /> ',
+			subtitle: 'Step 4 - Try a <Button /> ',
 			content:
-				'How about we try and change the theme of the entire appllication using one of our shiny new buttons? Simply import the Button and changeTheme() toggle function from the Library and use them in your app',
+				'How about we try and change the theme of the entire application using one of our shiny new buttons? Simply import the Button and changeTheme() toggle function from the library and use them in your app.',
 			border: true,
 			actions: false,
 			code: {
@@ -98,7 +97,7 @@ initTheme();`
 					variant: 'json',
 					name: 'json',
 					label: 'Json',
-					placeholder: 'Enter your json',
+					placeholder: 'Enter your JSON',
 					valid: [],
 					width: '100%'
 				},
@@ -115,7 +114,7 @@ initTheme();`
 		}
 	];
 
-	const value = data.components?.groups.flatMap((group) =>
+	const value = data?.components?.groups.flatMap((group) =>
 		group.components.map((component) => ({
 			label: group.label,
 			...component,
@@ -125,7 +124,7 @@ initTheme();`
 
 	const table = {
 		label: 'Components List',
-		value, // Pass the array of data
+		value,
 		group: [
 			{
 				variant: 'text',
@@ -140,13 +139,13 @@ initTheme();`
 			{
 				variant: 'text',
 				name: 'statement',
-				label: 'import'
+				label: 'Import'
 			}
 		]
 	};
 
 	$: console.log(
-		data.components?.groups.flatMap((group) =>
+		data?.components?.groups.flatMap((group) =>
 			group.components.map((component) => ({
 				label: group.label,
 				statement: `import ${component.name} from '$lib/components/${group.label}/${component.name}.svelte';`,

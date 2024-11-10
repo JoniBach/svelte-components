@@ -16,6 +16,18 @@
 	export let code = null;
 
 	let value = 'npm';
+	let copyMessage = ''; // State for showing "Copied to clipboard"
+
+	function handleCopy() {
+		// Copy text to clipboard
+		navigator.clipboard.writeText(`${value} install -D ${library} scss`);
+		// Show message
+		copyMessage = 'Copied to clipboard';
+		// Reset message after 1.5 seconds
+		setTimeout(() => {
+			copyMessage = '';
+		}, 1500);
+	}
 </script>
 
 <div class="demo-content-container">
@@ -57,15 +69,20 @@
 							]
 						}}
 					/>
-					<Button label="{value} install -D {library}" variant="outlined" color="primary" />
+					<Button
+						label={copyMessage ? 'Copied!' : `${value} install -D ${library} scss`}
+						variant="outlined"
+						color="primary"
+						on:click={handleCopy}
+					/>
 				{/if}
 				{#if link}
 					<Button on:click={(e) => goto(e.detail.href)} href={link} variant="solid" color="primary">
 						Get Started <svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
-							width="16"
-							height="16"
+							width="11"
+							height="11"
 							fill="currentColor"
 							><path d="M0 0h24v24H0z" fill="none" /><path
 								d="M12 20l-1.41-1.41L16.17 13H4v-2h12.17l-5.58-5.59L12 4l8 8z"
@@ -75,12 +92,12 @@
 				{/if}
 				{#if href}
 					<Button
-						on:click={(e) => (window.location.href = href)}
+						on:click={() => (window.location.href = href)}
 						href={link}
 						variant="solid"
 						color="primary"
 					>
-						go now <svg
+						Go Now <svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
 							width="16"
@@ -105,7 +122,7 @@
 <style lang="scss">
 	.border {
 		border-bottom: 1px solid var(--color-border);
-		margin-top: var(--spacing-mediumn);
+		margin-top: var(--spacing-medium);
 		margin-bottom: var(--spacing-xl);
 		width: 100%;
 	}

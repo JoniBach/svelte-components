@@ -17,8 +17,8 @@
         {
             "variant": true,
             "title": "Fail faster & succeed sooner...",
-            "subtitle": "with KonUI! comming soon to Svelte",
-            "content": "We are developing KonUI to be the fastest collection of UI components for Svelte applications. It is designed to help you quickly build and prototype your mission. KonUI is still under active development and we dont currently reccomened for production use. But be sure to check back in the New Year (2025) for the first stable release.",
+            "subtitle": "with KonUI! Coming soon to Svelte",
+            "content": "We are developing KonUI to be the fastest collection of UI components for Svelte applications. It is designed to help you quickly build and prototype your mission. KonUI is still under active development, and we don't currently recommend it for production use. But be sure to check back in the New Year (2025) for the first stable release.",
             "note": "Note: KonUI is currently in alpha and under active development. We do not recommend using it in production applications just yet.",
             "link": "/components",
             "border": true,
@@ -26,7 +26,7 @@
         },
         {
             "variant": true,
-            "subtitle": "Dont build tables... Generate them! Then edit each row on the fly."
+            "subtitle": "Don’t build tables... Generate them! Then edit each row on the fly."
         },
         {
             "name": "Table",
@@ -36,13 +36,13 @@
                 {
                     "prop": "label",
                     "type": "string",
-                    "default": "\"\"",
+                    "default": "",
                     "example": "User Data"
                 },
                 {
                     "prop": "value",
                     "type": "any[]",
-                    "default": "[]",
+                    "default": [],
                     "example": [
                         {
                             "name": "John Doe",
@@ -57,7 +57,7 @@
                 {
                     "prop": "group",
                     "type": "any[]",
-                    "default": "[]",
+                    "default": [],
                     "example": [
                         {
                             "name": "name",
@@ -81,14 +81,14 @@
         },
         {
             "variant": true,
-            "content": "Creating truly useful and versatile tables can come at a huge cost. It can be a real nightmare - both to build up front and to to maintain later. KonUI's table component is generated ground up from a single JSON object. Each column is mapped from your configuration and each cell pulls data from your source. Conditionally render rows based on conditions that you set. Each row can turn into an embedded form in one click of a button so that your users can easily edit data on the fly.",
+            "content": "Creating truly useful and versatile tables can come at a huge cost. It can be a real nightmare - both to build upfront and to maintain later. KonUI's table component is generated from a single JSON object. Each column is mapped from your configuration and each cell pulls data from your source. Conditionally render rows based on conditions that you set. Each row can turn into an embedded form in one click, allowing your users to easily edit data on the fly.",
             "note": "Note: We are working hard to get this feature ready to use! We do not recommend using it in production applications just yet.",
             "link": "/components/forms/Table",
             "border": true
         },
         {
             "variant": true,
-            "subtitle": "Own the full form! Generate, validate and conditionally render fields from JSON"
+            "subtitle": "Own the full form! Generate, validate, and conditionally render fields from JSON"
         },
         {
             "name": "Form",
@@ -98,7 +98,7 @@
                 {
                     "prop": "group",
                     "type": "any[]",
-                    "default": "[]",
+                    "default": [],
                     "example": [
                         {
                             "name": "username",
@@ -115,7 +115,7 @@
                 {
                     "prop": "value",
                     "type": "object",
-                    "default": "{}",
+                    "default": {},
                     "example": {
                         "username": "johndoe",
                         "password": "123456"
@@ -137,14 +137,14 @@
         },
         {
             "variant": true,
-            "content": "Just like your tables, your forms will be generated ground up from a JSON configuration file. Each field is mapped from an array of objects. In them, you can specify a whole variety of input variants from the regular text inputs to options. Use our powerful conditions engine to hide or show fields based on the data in your value object. p.s. You can use our conditions engine to set field validation too!",
+            "content": "Just like your tables, your forms will be generated from a JSON configuration file. Each field is mapped from an array of objects. In them, you can specify a variety of input variants, from regular text inputs to options. Use our powerful conditions engine to hide or show fields based on the data in your value object. PS: You can use our conditions engine to set field validation too!",
             "note": "Note: We are working hard to get this feature ready to use! We do not recommend using it in production applications just yet.",
             "link": "/components/forms/Form",
             "border": true
         },
         {
             "variant": true,
-            "subtitle": "Qhickly visualise your data with our collection of charts"
+            "subtitle": "Quickly visualize your data with our collection of charts"
         },
         {
             "name": "PieChart",
@@ -154,7 +154,7 @@
                 {
                     "prop": "data",
                     "type": "any[]",
-                    "default": "[]",
+                    "default": [],
                     "example": [
                         {
                             "label": "Apples",
@@ -169,13 +169,16 @@
                 {
                     "prop": "title",
                     "type": "string",
-                    "default": "\"\"",
+                    "default": "",
                     "example": "Fruit Distribution"
                 },
                 {
                     "prop": "accessor",
                     "type": "{ value: string; label: string }",
-                    "default": "{ \"value\": \"\", \"label\": \"\" }",
+                    "default": {
+                        "value": "",
+                        "label": ""
+                    },
                     "example": {
                         "value": "value",
                         "label": "label"
@@ -184,13 +187,13 @@
                 {
                     "prop": "width",
                     "type": "string",
-                    "default": "\"400\"",
+                    "default": "400",
                     "example": "200"
                 },
                 {
                     "prop": "height",
                     "type": "string",
-                    "default": "\"400\"",
+                    "default": "400",
                     "example": "300"
                 }
             ]
@@ -203,7 +206,7 @@
                 {
                     "prop": "data",
                     "type": "any[]",
-                    "default": "[]",
+                    "default": [],
                     "example": [
                         {
                             "name": "A",
@@ -218,25 +221,28 @@
                 {
                     "prop": "title",
                     "type": "string",
-                    "default": "\"\"",
+                    "default": "",
                     "example": "Bar Chart"
                 },
                 {
                     "prop": "xLabel",
                     "type": "string",
-                    "default": "\"\"",
+                    "default": "",
                     "example": "X Axis"
                 },
                 {
                     "prop": "yLabel",
                     "type": "string",
-                    "default": "\"\"",
+                    "default": "",
                     "example": "Y Axis"
                 },
                 {
                     "prop": "accessor",
                     "type": "{ x: string, y: string }",
-                    "default": "{ \"x\": \"\", \"y\": \"\" }",
+                    "default": {
+                        "x": "",
+                        "y": ""
+                    },
                     "example": {
                         "x": "name",
                         "y": "value"
@@ -245,20 +251,20 @@
                 {
                     "prop": "width",
                     "type": "string",
-                    "default": "\"800\"",
+                    "default": "800",
                     "example": "400"
                 },
                 {
                     "prop": "height",
                     "type": "string",
-                    "default": "\"400\"",
+                    "default": "400",
                     "example": "300"
                 }
             ]
         },
         {
             "variant": true,
-            "content": "There are many tools on the market that can help you visualise your data. It's so important to take time to choose the right one. While you go through the process of selecting the right one for your project, why not give our range a try. From pies to bars, we have a range of charts to get you off the ground in no time. All our charts can be generated using your JSON configuration and data. Each is powered by D3.js, a powerful and performative vis library. Harness it's power with minimal startup time and effort.",
+            "content": "There are many tools on the market that can help you visualize your data. It's important to take time to choose the right one. While selecting the right one for your project, why not give our range a try? From pies to bars, we have a range of charts to get you off the ground in no time. All our charts can be generated using your JSON configuration and data. Each is powered by D3.js, a powerful visualization library. Harness its power with minimal setup time and effort.",
             "note": "Note: We are working hard to get this feature ready to use! We do not recommend using it in production applications just yet.",
             "link": "/components/charts",
             "border": true
@@ -275,19 +281,19 @@
                 {
                     "prop": "label",
                     "type": "string",
-                    "default": "\"\"",
+                    "default": "",
                     "example": "Action Group"
                 },
                 {
                     "prop": "id",
                     "type": "string",
-                    "default": "\"\"",
+                    "default": "",
                     "example": "action-group"
                 },
                 {
                     "prop": "group",
                     "type": "any[]",
-                    "default": "[]",
+                    "default": [],
                     "example": [
                         {
                             "label": "Save",
@@ -304,25 +310,25 @@
                 {
                     "prop": "variant",
                     "type": "string",
-                    "default": "\"default\"",
+                    "default": "default",
                     "example": "outlined"
                 },
                 {
                     "prop": "gap",
                     "type": "string",
-                    "default": "\"small\"",
+                    "default": "small",
                     "example": "medium"
                 },
                 {
                     "prop": "size",
                     "type": "string",
-                    "default": "\"small\"",
+                    "default": "small",
                     "example": "medium"
                 },
                 {
                     "prop": "align",
                     "type": "'left' | 'center' | 'right'",
-                    "default": "\"center\"",
+                    "default": "center",
                     "example": "right"
                 }
             ]
@@ -335,7 +341,7 @@
                 {
                     "prop": "group",
                     "type": "any[]",
-                    "default": "[]",
+                    "default": [],
                     "example": [
                         {
                             "label": "Section 1",
@@ -350,8 +356,8 @@
                 {
                     "prop": "variant",
                     "type": "'single' | 'multiple'",
-                    "default": "'single'",
-                    "example": "'single'"
+                    "default": "single",
+                    "example": "single"
                 }
             ]
         },
@@ -382,7 +388,7 @@
         },
         {
             "variant": true,
-            "content": "KonUI hosts a wide range of components for displaying content, providing feedback and handling a whole variety of your users interractions. Simply import our style sheet and call our theming functions at the root of your application to gain platform wide light & dark modes. Copy our template into your own sheet and add your own variables to easily own your own brand. We are working hard to ensure that all our components can be setup quicly and promote the elevation of your business logic to the highest levels. Our aim is to make multi item components easy to configure so that you can focus on the important stuff. At the moment we are still in the development phase and we do not recommend using KonUI in production applications just yet. However if you'd like to try out some of our components, please check out our getting started guide.",
+            "content": "KonUI hosts a wide range of components for displaying content, providing feedback, and handling various user interactions. Simply import our stylesheet and call our theming functions at the root of your application to enable platform-wide light & dark modes. Copy our template into your own stylesheet and add your variables to easily customize your brand. We aim to make multi-item components easy to configure so you can focus on the important aspects. KonUI is still in development, and we do not recommend using it in production applications yet. If you'd like to try out some components, check out our getting started guide.",
             "link": "/components"
         }
     ],
