@@ -7,6 +7,7 @@ export const load: Load = async ({ fetch, params }) => {
 	let props = {};
 	let error = null;
 	let showcaseItems = [];
+	let groupItems = [];
 
 	try {
 		// Fetch components data
@@ -18,17 +19,37 @@ export const load: Load = async ({ fetch, params }) => {
 		const groupName = params.group;
 		const showcase = components.showcase;
 
-		// Find the specific component and default props
-		component = components.groups
-			.flatMap((group) => group.components)
-			.find((comp) => comp.name === componentName);
+		// Find the specific component and default props if componentName is provided
+		if (componentName) {
+			component = components.groups
+				.flatMap((group) => group.components)
+				.find((comp) => comp.name === componentName);
 
-		props = component
-			? component.props.reduce((acc, { prop, example: defaultValue }) => {
-					acc[prop] = defaultValue;
-					return acc;
-				}, {})
-			: {};
+			props = component
+				? component.props.reduce((acc, { prop, example: defaultValue }) => {
+						acc[prop] = defaultValue;
+						return acc;
+					}, {})
+				: {};
+		}
+
+		// If groupName exists, process all items in the group
+		if (groupName) {
+			const group = components.groups.find((g) => g.id === groupName);
+
+			if (group) {
+				groupItems = group.components.map((comp) => {
+					const groupProps = comp.props.reduce((acc, { prop, example: defaultValue }) => {
+						acc[prop] = defaultValue;
+						return acc;
+					}, {});
+					return {
+						...comp,
+						showcaseProps: groupProps
+					};
+				});
+			}
+		}
 
 		// Process each showcase item to extract default props
 		showcaseItems = components?.showcase?.map((item) => {
@@ -54,6 +75,7 @@ export const load: Load = async ({ fetch, params }) => {
 			groupName,
 			component,
 			props,
+			groupItems, // New group items data
 			label,
 			group,
 			menuGroup,
