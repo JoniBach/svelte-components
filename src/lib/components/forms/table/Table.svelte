@@ -16,7 +16,7 @@
 
 	// Reactive sorting
 	$: sortedRows =
-		!!value && !!value?.legnth
+		!!value && !!value?.length
 			? sortOrder === 'reset'
 				? [...value]
 				: [...value].sort((a, b) => {
