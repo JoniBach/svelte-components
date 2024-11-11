@@ -7,7 +7,6 @@
 	export let group;
 	export let form = false;
 
-	$: console.log(value);
 	let sortedRows = [...value];
 	let selectedRowIndex = null;
 	let selectedRow = {};

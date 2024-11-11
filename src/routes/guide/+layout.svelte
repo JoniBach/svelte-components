@@ -69,7 +69,6 @@
 		const filePaths = Object.keys(componentModules);
 		components = formatComponents(filePaths);
 		components = elevateSingleComponent(components); // Apply the promotion logic
-		console.log(components); // For debugging purposes
 	});
 </script>
 

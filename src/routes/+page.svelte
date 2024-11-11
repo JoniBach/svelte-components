@@ -27,8 +27,6 @@
 	});
 	$: group = components?.nav;
 	$: menuGroup = components?.groups;
-
-	$: console.log('data', data);
 </script>
 
 {#if menuGroup && menuGroup.length}

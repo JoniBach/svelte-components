@@ -23,8 +23,6 @@
 	$: group = components?.nav;
 	$: menuGroup = components?.groups;
 
-	$: console.log('data', data);
-
 	const content = [
 		{
 			variant: true,
@@ -143,16 +141,6 @@ initTheme();`
 			}
 		]
 	};
-
-	$: console.log(
-		data?.components?.groups.flatMap((group) =>
-			group.components.map((component) => ({
-				label: group.label,
-				statement: `import ${component.name} from '$lib/components/${group.label}/${component.name}.svelte';`,
-				...component
-			}))
-		)
-	);
 </script>
 
 {#if !loading && menuGroup && menuGroup.length}

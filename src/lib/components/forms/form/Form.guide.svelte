@@ -3,8 +3,6 @@
 
 	let value = {};
 
-	$: console.log(value);
-
 	const props = [
 		{
 			label: '!!!',

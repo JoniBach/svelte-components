@@ -29,17 +29,6 @@
 	function showLive() {
 		activeFeature = 'live';
 	}
-
-	// $: console.log({
-	// 	component,
-	// 	props,
-	// 	library,
-	// 	componentName,
-	// 	groupName,
-	// 	componentsDirectory,
-	// 	title,
-	// 	path
-	// });
 </script>
 
 <div class="demo-card-container">

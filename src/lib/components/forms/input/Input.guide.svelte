@@ -16,8 +16,6 @@
 			}
 		]
 	};
-
-	$: console.log(errors, value);
 </script>
 
 <Input {field} {errors} bind:value />
