@@ -1,6 +1,7 @@
 import { sveltePreprocess } from 'svelte-preprocess';
-import vercel from '@sveltejs/adapter-vercel';
+// import vercel from '@sveltejs/adapter-vercel';
 
+import adapter from '@sveltejs/adapter-auto';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sveltePreprocess({
@@ -13,7 +14,8 @@ const config = {
 	}),
 
 	kit: {
-		adapter: vercel()
+		// adapter: vercel()
+		adapter: adapter()
 	}
 };
 
