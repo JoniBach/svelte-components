@@ -1,55 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import * as monaco from 'monaco-editor';
 
 	export let field = { name: 'jsonField', placeholder: 'Edit JSON here...', disabled: false };
 	export let value: any = ''; // Allow any type but convert to string for the editor
 
-	let editorContainer: HTMLDivElement;
-	let editorInstance: monaco.editor.IStandaloneCodeEditor;
+	let textareaContent: string = '';
+	let isValidJSON = true;
 
+	// Initialize the textarea with the stringified value
 	onMount(() => {
-		const initialValue = stringifyValue(value);
-		const language = detectLanguage(initialValue);
-
-		createEditor(initialValue, language);
-
-		return () => {
-			if (editorInstance) {
-				editorInstance.dispose();
-			}
-		};
+		textareaContent = stringifyValue(value);
+		isValidJSON = isJSON(textareaContent);
 	});
 
-	function createEditor(initialValue: string, language: string) {
-		editorInstance = monaco.editor.create(editorContainer, {
-			value: initialValue,
-			language: language,
-			theme: 'vs-light',
-			automaticLayout: true,
-			minimap: { enabled: false },
-			readOnly: field.disabled // Disable editing based on the disabled prop
-		});
-
-		editorInstance.onDidChangeModelContent(() => {
-			if (!field.disabled) {
-				// Prevent changes when disabled
-				const editorContent = editorInstance.getValue();
-				value = parseValue(editorContent);
-				updateLanguage();
-			}
-		});
-	}
-
-	function detectLanguage(content: string): string {
-		try {
-			JSON.parse(content);
-			return 'json';
-		} catch (e) {
-			return 'javascript';
-		}
-	}
-
+	// Convert object to JSON string for initial textarea value
 	function stringifyValue(val: any): string {
 		if (typeof val === 'object') {
 			try {
@@ -62,36 +26,61 @@
 		return String(val);
 	}
 
-	function parseValue(content: string): any {
+	// Check if a string is valid JSON
+	function isJSON(content: string): boolean {
 		try {
-			return JSON.parse(content);
+			JSON.parse(content);
+			return true;
 		} catch (e) {
-			console.warn('Parsing as string due to invalid JSON:', content);
-			return content; // Return as string if not valid JSON
+			return false;
 		}
 	}
 
-	function updateLanguage() {
-		if (editorInstance && editorInstance.getModel()) {
-			const currentLanguage = editorInstance.getModel().getLanguageId();
-			const detectedLanguage = detectLanguage(editorInstance.getValue());
+	// Update JSON content and validate it
+	function handleInput(event: Event) {
+		if (!field.disabled) {
+			textareaContent = (event.target as HTMLTextAreaElement).value;
+			isValidJSON = isJSON(textareaContent);
 
-			if (currentLanguage !== detectedLanguage) {
-				monaco.editor.setModelLanguage(editorInstance.getModel(), detectedLanguage);
+			if (isValidJSON) {
+				value = JSON.parse(textareaContent);
+			} else {
+				value = textareaContent;
 			}
 		}
 	}
 </script>
 
-<div bind:this={editorContainer} class="editor-container"></div>
+<!-- Display JSON content in a textarea -->
+<div class="editor-container">
+	<textarea
+		bind:value={textareaContent}
+		placeholder={field.placeholder}
+		disabled={field.disabled}
+		class:is-invalid={!isValidJSON}
+		on:input={handleInput}
+	></textarea>
+</div>
 
 <style>
 	.editor-container {
-		height: 100px; /* Set height as needed */
-		border-radius: var(--spacing-small);
-		overflow: hidden;
 		position: relative;
 	}
 
-	/* No additional greying-out styles are applied */
+	textarea {
+		width: 100%;
+		height: 100px; /* Adjust height as needed */
+		border-radius: var(--spacing-small);
+		color: var(--color-text);
+		background-color: var(--color-background);
+		border: 1px solid #ddd;
+		padding: 8px;
+		font-family: monospace;
+		resize: vertical;
+		box-sizing: border-box;
+	}
+
+	/* Add styling to indicate invalid JSON */
+	textarea.is-invalid {
+	}
 </style>

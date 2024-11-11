@@ -52,9 +52,11 @@
 <style>
 	.page {
 		display: flex;
-		height: 100vh;
+		max-height: 100vh;
 	}
 	.page-body {
-		margin: var(--spacing-large);
+		overflow-y: scroll;
+		width: 100%;
+		/* margin: var(--spacing-large); */
 	}
 </style>

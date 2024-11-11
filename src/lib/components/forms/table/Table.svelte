@@ -7,6 +7,7 @@
 	export let group;
 	export let form = false;
 
+	$: console.log(value);
 	let sortedRows = [...value];
 	let selectedRowIndex = null;
 	let selectedRow = {};
@@ -16,7 +17,7 @@
 
 	// Reactive sorting
 	$: sortedRows =
-		sortOrder === 'reset'
+		value && sortOrder === 'reset'
 			? [...value]
 			: [...value].sort((a, b) => {
 					if (!sortColumn) return 0;

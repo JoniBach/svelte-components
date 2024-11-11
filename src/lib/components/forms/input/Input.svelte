@@ -4,18 +4,21 @@
 	export let errors = []; // Validation errors array
 
 	let DynamicComponent;
-	$: dynamicUrl = `./variants/${field.variant.charAt(0).toUpperCase() + field.variant.slice(1)}.input.svelte`;
+	$: dynamicUrl =
+		!!field?.variant &&
+		`./variants/${field.variant.charAt(0).toUpperCase() + field.variant.slice(1)}.input.svelte`;
 
-	$: import(dynamicUrl).then((res) => {
-		if (res.default) {
-			DynamicComponent = res.default;
-		}
-	});
+	$: dynamicUrl &&
+		import(dynamicUrl).then((res) => {
+			if (res.default) {
+				DynamicComponent = res.default;
+			}
+		});
 </script>
 
-<div class="input-group" style="width: {field.width ? field.width : 'auto'}">
+<div class="input-group" style="width: {field?.width ? field.width : 'auto'}">
 	<!-- label -->
-	{#if field.label}
+	{#if !!field && field?.label}
 		<label for={field.name}>{field.label}</label>
 	{/if}
 

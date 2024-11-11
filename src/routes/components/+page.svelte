@@ -179,27 +179,7 @@ initTheme();`
 		flex-wrap: wrap;
 		gap: var(--spacing-large);
 		margin: var(--spacing-large);
-		width: var(--page-width);
 		justify-content: center;
 		max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
-	}
-
-	.demo-card {
-		box-sizing: border-box;
-		width: 100%;
-
-		&.size-1 {
-			max-width: calc(
-				(((var(--page-width) - var(--spacing-large)) / 3) * 1) - var(--spacing-large) * 1
-			);
-		}
-		&.size-2 {
-			max-width: calc(
-				(((var(--page-width) - var(--spacing-large)) / 3) * 2) - var(--spacing-large) * 1
-			);
-		}
-		&.size-3 {
-			max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
-		}
 	}
 </style>
