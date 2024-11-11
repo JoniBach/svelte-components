@@ -5,7 +5,7 @@
 	export let component: { props: any[]; name: string } = { props: [], name: '' };
 	export let componentName: string = '';
 	export let groupName: string = '';
-	export let componentsDirectory: string = '../';
+	export let componentsDirectory: string = '..';
 	export let library: string = '';
 	export let props = {};
 </script>
