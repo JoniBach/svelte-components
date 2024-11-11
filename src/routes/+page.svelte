@@ -66,18 +66,17 @@
 
 <style lang="scss">
 	.page {
-		display: flex;
 		justify-content: center;
+		margin: 0 auto;
+		max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
 	}
 
 	.page-body {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--spacing-large);
-		margin: var(--spacing-large);
-		width: var(--page-width);
 		justify-content: center;
-		max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
+		margin: var(--spacing-large);
 	}
 
 	.demo-card {

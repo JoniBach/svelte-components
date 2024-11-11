@@ -158,16 +158,16 @@ initTheme();`
 
 <style lang="scss">
 	.page {
-		display: flex;
 		justify-content: center;
+		margin: 0 auto;
+		max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
 	}
 
 	.page-body {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--spacing-large);
-		margin: var(--spacing-large);
 		justify-content: center;
-		max-width: calc((((var(--page-width)) / 3) * 3) - var(--spacing-large) * 2);
+		margin: var(--spacing-large);
 	}
 </style>
