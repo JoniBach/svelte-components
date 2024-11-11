@@ -17,14 +17,16 @@
 
 <div class="tabs">
 	<div class="tab-headers">
-		{#each group as tab}
-			<div
-				class="tab-header {tab.id === active ? 'active' : ''}"
-				on:click={() => selectTab(tab.id)}
-			>
-				{tab.label}
-			</div>
-		{/each}
+		{#if !!group?.length}
+			{#each group as tab}
+				<div
+					class="tab-header {tab.id === active ? 'active' : ''}"
+					on:click={() => selectTab(tab.id)}
+				>
+					{tab.label}
+				</div>
+			{/each}
+		{/if}
 	</div>
 </div>
 <div class="tab-content">

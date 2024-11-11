@@ -27,14 +27,16 @@
 </script>
 
 <div class="accordion">
-	{#each group as section, index}
-		<Drawer active={$activeSections.includes(index)}>
-			<Button on:click={() => toggleSection(index)} slot="handle">{section.label}</Button>
-			<div>
-				{section.content}
-			</div>
-		</Drawer>
-	{/each}
+	{#if !!group?.length}
+		{#each group as section, index}
+			<Drawer active={$activeSections.includes(index)}>
+				<Button on:click={() => toggleSection(index)} slot="handle">{section.label}</Button>
+				<div>
+					{section.content}
+				</div>
+			</Drawer>
+		{/each}
+	{/if}
 </div>
 
 <style>

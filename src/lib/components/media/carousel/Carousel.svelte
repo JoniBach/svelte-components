@@ -2,7 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import './carousel.scss';
 
-	export let group: { id: string; url: string; label: string }[] = [];
+	export let group: { id?: string; url: string; label: string }[] = []; // Allow optional `id`
 	export let interval: number = 3000;
 	export let auto: boolean = true;
 	export let height: string = '300px';
@@ -43,7 +43,7 @@
 	onDestroy(() => stopAutoSlide());
 </script>
 
-{#if group.length > 0}
+{#if !!group?.length}
 	<div
 		class="carousel"
 		style="height: {height}; width: {width};"
@@ -51,7 +51,7 @@
 		on:mouseleave={startAutoSlide}
 	>
 		<div class="carousel-images" style="transform: translateX(-{currentIndex * 100}%)">
-			{#each group as image (image.id)}
+			{#each group as image, index (image.id || index)}
 				<div class="carousel-slide" style="min-width: 100%">
 					<img
 						class="carousel-image"

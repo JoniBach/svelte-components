@@ -19,15 +19,17 @@
 </script>
 
 <div class="toast-container">
-	{#each toasts as { id, message, type }}
-		<Dialog
-			label={message}
-			group={[{ id: 'clear', label: 'Ok', variant: 'outlined' }]}
-			color={type}
-			active={true}
-			on:clear={(e) => handleRemove(id)}
-		/>
-	{/each}
+	{#if !!toasts?.length}
+		{#each toasts as { id, message, type }}
+			<Dialog
+				label={message}
+				group={[{ id: 'clear', label: 'Ok', variant: 'outlined' }]}
+				color={type}
+				active={true}
+				on:clear={(e) => handleRemove(id)}
+			/>
+		{/each}
+	{/if}
 </div>
 
 <style>

@@ -16,20 +16,22 @@
 </script>
 
 <div class="button-group {variant} gap-{gap} ">
-	{#each group as prop, buttonIndex}
-		<Button
-			{size}
-			{...prop}
-			on:click={(event) =>
-				dispatch('click', {
-					buttonId: event.detail.buttonId,
-					buttonGroupId: id,
-					buttonIndex: event.detail.buttonIndex,
-					buttonGroupIndex: index
-				})}
-			index={buttonIndex}
-			{align}
-			href={prop.href}
-		/>
-	{/each}
+	{#if !!group?.length}
+		{#each group as prop, buttonIndex}
+			<Button
+				{size}
+				{...prop}
+				on:click={(event) =>
+					dispatch('click', {
+						buttonId: event.detail.buttonId,
+						buttonGroupId: id,
+						buttonIndex: event.detail.buttonIndex,
+						buttonGroupIndex: index
+					})}
+				index={buttonIndex}
+				{align}
+				href={prop.href}
+			/>
+		{/each}
+	{/if}
 </div>

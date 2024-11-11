@@ -4,10 +4,10 @@
 	import Dropdown from '$lib/components/navigation/dropdown/Dropdown.svelte';
 	export let group: any[] = [];
 
-	$: latest = group.length > 0 ? group[group.length - 1] : null;
+	$: latest = group?.length > 0 ? group[group.length - 1] : null;
 
-	$: activeVariants = Array.from(new Set(group.map((item) => item.variant)));
-	$: groupedVariants = activeVariants.map((variant) => {
+	$: activeVariants = Array.from(new Set(group?.map((item) => item.variant)));
+	$: groupedVariants = activeVariants?.map((variant) => {
 		return {
 			variant: variant,
 			group: group.filter((item) => item.variant === variant),
@@ -26,14 +26,16 @@
 	<div on:click={() => dispatch('click', latest)} class="alert variant-{latest.variant || 'info'}">
 		<p class="alert-text">{latest.label}</p>
 		<div class="alert-group">
-			{#each groupedVariants as variantGroup}
-				<Dropdown
-					group={variantGroup.group}
-					label="{variantGroup.count} {variantGroup.variant}"
-					anchor="right"
-					size="tiny"
-				/>
-			{/each}
+			{#if !!groupedVariants?.length}
+				{#each groupedVariants as variantGroup}
+					<Dropdown
+						group={variantGroup.group}
+						label="{variantGroup.count} {variantGroup.variant}"
+						anchor="right"
+						size="tiny"
+					/>
+				{/each}
+			{/if}
 			<button class="alert-text" on:click={handleClear}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

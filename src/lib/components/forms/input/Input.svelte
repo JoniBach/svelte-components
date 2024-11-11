@@ -17,25 +17,27 @@
 </script>
 
 <div class="input-group" style="width: {field?.width ? field.width : 'auto'}">
-	<!-- label -->
-	{#if !!field && field?.label}
-		<label for={field.name}>{field.label}</label>
-	{/if}
+	{#if field?.name}
+		<!-- label -->
+		{#if !!field && field?.label}
+			<label for={field.name}>{field.label}</label>
+		{/if}
 
-	<!-- input -->
-	{#if DynamicComponent}
-		<svelte:component this={DynamicComponent} {field} bind:value />
-	{:else}
-		<p>Not found</p>
-	{/if}
+		<!-- input -->
+		{#if DynamicComponent}
+			<svelte:component this={DynamicComponent} {field} bind:value />
+		{:else}
+			<p>Not found</p>
+		{/if}
 
-	<!-- errors -->
-	{#if errors && errors.length}
-		<div class="error-messages">
-			{#each errors as error}
-				<div class="error-message">{error}</div>
-			{/each}
-		</div>
+		<!-- errors -->
+		{#if errors && errors.length}
+			<div class="error-messages">
+				{#each errors as error}
+					<div class="error-message">{error}</div>
+				{/each}
+			</div>
+		{/if}
 	{/if}
 </div>
 
