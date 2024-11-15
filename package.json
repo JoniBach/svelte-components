@@ -1,6 +1,6 @@
 {
 	"name": "konui-svelte",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -29,7 +29,8 @@
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
+		"!dist/**/*.spec.*",
+		"src/global.scss"
 	],
 	"peerDependencies": {
 		"svelte": "^4.0.0"

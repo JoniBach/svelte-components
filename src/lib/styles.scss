@@ -1,0 +1,221 @@
+// global.scss
+
+// Theme Variables
+:root {
+	// Light Theme Colors (Default)
+	--color-background: #ffffff;
+	--color-neutral: #ccc;
+	--color-text: #000000;
+	--color-primary: #007bff;
+	--color-secondary: #ffb277;
+	--color-accent: #e74c3c;
+	--color-border: #dddddd;
+	--color-panel: #ddd;
+	--color-success: #4fc86b;
+	--color-warning: #f0c93b;
+	--color-danger: #ed6e7a;
+
+	--spacing-tiny: 4px;
+	--spacing-small: 8px;
+	--spacing-medium: 16px;
+	--spacing-large: 24px;
+	--spacing-xl: 32px;
+
+	--typography-tiny: 0.6rem;
+	--typography-small: 0.875rem;
+	--typography-medium: 1rem;
+	--typography-large: 1.25rem;
+	--typography-xl: 1.5rem;
+	--typography-extreme: 3rem;
+
+	--typography-font-family: 'Roboto', sans-serif;
+	--typography-font-size: 16px;
+	--typography-heading-size: 2em;
+	--typography-subheading-size: 1.5em;
+
+	--shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+	--shadow-large: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+	--border-width: 2px;
+	--page-width: 1000px;
+}
+
+// Dark Theme
+[data-theme='dark'] {
+	--color-background: #222222;
+	--color-neutral: #999;
+	--color-text: #ffffff;
+	--color-primary: #3498db;
+	--color-secondary: #aa65ff;
+	--color-accent: #e74c3c;
+	--color-border: #444444;
+	--color-panel: #333333;
+	--color-success: #28a745;
+	--color-warning: #e06827;
+	--color-danger: #dc3545;
+
+	--spacing-tiny: 4px;
+	--spacing-small: 8px;
+	--spacing-medium: 16px;
+	--spacing-large: 24px;
+	--spacing-xl: 32px;
+
+	--typography-tiny: 0.6rem;
+	--typography-small: 0.875rem;
+	--typography-medium: 1rem;
+	--typography-large: 1.25rem;
+	--typography-xl: 1.5rem;
+	--typography-extreme: 3rem;
+
+	--shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+	--shadow-large: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+	--typography-font-family: 'Roboto', sans-serif;
+	--typography-font-size: 16px;
+	--typography-heading-size: 2em;
+	--typography-subheading-size: 1.5em;
+
+	--border-width: 2px;
+	--page-width: 1000px;
+}
+
+// Base Styles
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+	line-height: 1.6;
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--typography-font-family);
+	font-size: var(--typography-font-size);
+	overflow-x: hidden;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-text);
+	margin-bottom: var(--spacing-medium);
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: var(--typography-heading-size);
+}
+
+h2 {
+	font-size: var(--typography-subheading-size);
+}
+
+p {
+	margin-bottom: var(--spacing-medium);
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: var(--color-accent);
+	}
+}
+.text {
+}
+
+// Button Styles
+.button {
+	color: var(--color-text);
+	background: transparent;
+	border: none;
+	padding: var(--spacing-small) var(--spacing-medium);
+	cursor: pointer;
+	border-radius: 4px;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease,
+		border 0.3s ease;
+
+	&:hover {
+		background-color: var(--color-accent);
+	}
+
+	&:disabled {
+		background-color: var(--color-secondary);
+		cursor: not-allowed;
+	}
+}
+
+// Form Elements
+input,
+select,
+textarea {
+	font-family: var(--typography-font-family);
+	padding: var(--spacing-small);
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+	transition: border-color 0.3s ease;
+
+	&:focus {
+		outline: none;
+		border-color: var(--color-primary);
+	}
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+	body {
+		font-size: 0.875rem;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	h2 {
+		font-size: 1.25em;
+	}
+
+	.container {
+		padding: 0 var(--spacing-small);
+	}
+
+	.flex-column {
+		flex-direction: column;
+	}
+}
+
+.demo-container {
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.demo-variant {
+	border: 1px solid #aaa;
+	padding: 20px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	&.flex {
+		display: flex;
+		gap: 10px;
+	}
+}

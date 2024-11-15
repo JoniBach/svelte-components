@@ -56,7 +56,7 @@ Import KonUI into your Svelte project:
 
    ```html
    <script>
-     import 'konui-svelte/styles.css';
+     import 'konui-svelte/styles.scss';
    </script>
    ```
 
