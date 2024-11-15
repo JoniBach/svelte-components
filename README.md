@@ -1,147 +1,187 @@
-# Comprehensive Svelte Component Library
+# KonUI: A Svelte Component Library
 
-Welcome to the **Comprehensive Svelte Component Library**! This library is designed to help you quickly build modern, responsive, and accessible web applications by providing a complete set of reusable, modular components. From layouts and forms to data visualization and animations, everything you need for a seamless development experience is here.
+⚠️ **Warning**: KonUI is currently in alpha and not recommended for production use. We are expecting to have a refined Beta available some time in the new year. Please expect missing features and significant changes.
 
-## Overview
-
-Building a fully-featured web application can be challenging, especially when aiming for reusability, modularity, and accessibility. This library is a one-stop solution that offers a wide variety of components, all crafted in Svelte, to make the development process smoother and more efficient. Below is a categorized breakdown of everything included in this library:
-
-### 1. Layout Components
-- **Grid System**: Create responsive, customizable layouts with our flexible grid (e.g., 12-column system).
-- **Container**: Wrap content in a consistent, centered container.
-- **Navbar, Sidebar, Footer**: Build complete navigation experiences with reusable headers, sidebars, and footers.
-- **Card, Tabs, Accordion**: Organize content beautifully with cards, tabs, and collapsible sections.
-- **Hero Section, Modal, Panel**: Highlight important content with hero banners, pop-up dialogs, and content panels.
-
-### 2. Form Components
-- **Input, Textarea, Checkbox, Radio Button**: Standard form components for gathering user input.
-- **Button, Button Group**: Buttons in different styles and sizes to trigger actions.
-- **Date Picker, File Upload, Slider**: Specialized form components to enhance user interaction.
-- **Form Validation**: Provide real-time validation and helpful error messages.
-
-### 3. Display Components
-- **Typography**: Pre-designed headings, paragraphs, and text elements for consistent typography.
-- **Avatar, Badge, Tooltip**: Add visuals and interactive elements to enhance user experience.
-- **Table, Progress Bar, Carousel**: Display complex information through data tables, progress indicators, and content sliders.
-- **Alert, Chip, Spinner**: Feedback elements for notifications, status updates, and loading states.
-
-### 4. Navigation Components
-- **Navbar, Tabs, Sidebar/Drawer**: Simplify application navigation.
-- **Breadcrumbs, Pagination**: Help users stay oriented and navigate through lists or hierarchies.
-- **Menu/Dropdown, Stepper**: Use interactive elements for navigation and multi-step processes.
-
-### 5. Feedback Components
-- **Toast, Modal, Snackbar**: Show alerts, confirmations, or information to users.
-- **Skeleton Loader**: Keep users engaged while content loads.
-- **Confirm Dialog**: Prompt users to confirm important actions.
-
-### 6. Media Components
-- **Image, Video, Audio**: Embed responsive media content.
-- **Carousel, Lightbox**: Showcase content interactively.
-
-### 7. Utility Components
-- **Portal, Tooltip, Popover**: Enhance layout flexibility and interaction.
-- **Scrollspy, Back to Top**: Guide user navigation based on scroll position.
-- **Clipboard**: Copy content with ease.
-
-### 8. Data Visualization Components
-- **Charts (Line, Bar, Pie, etc.)**: Display data visually using multiple chart types.
-- **Heatmap, Gauge, Map**: Visualize data density and metrics.
-- **Tree View**: Represent hierarchical data structures.
-
-### 9. Accessibility and Localization
-- **Accessible Modal, ARIA Attributes**: Ensure components are accessible to everyone.
-- **Localization Support**: Adapt content for different languages and regions.
-
-### 10. Theme and Style Utilities
-- **Theming Provider**: Global theming support (e.g., light/dark mode).
-- **CSS Utility Classes, Global Variables**: Quickly apply styling and design consistency.
-
-### 11. Advanced Components
-- **Virtual Scroller**: Handle large lists with infinite scroll.
-- **Data Table, Calendar, Markdown Renderer**: Build complex data-driven applications easily.
-- **Drag and Drop, Resizable/Draggable**: Add interaction capabilities to your UI.
-
-### 12. Animation Components
-- **Transitions, Parallax, Scroll Animations**: Use engaging animations to improve the user experience.
-
-## Features
-- **Modular and Reusable**: Each component is built to be easily reusable across different projects.
-- **Customization**: Every component can be easily customized to fit your application's style and requirements.
-- **Accessibility**: All components are built with accessibility in mind to ensure an inclusive experience for all users.
-- **Responsive Design**: Components are fully responsive to provide a seamless experience across devices.
-
-## Getting Started
-1. **Install the Library**: To get started, add the library to your project:
-   ```bash
-   npm install svelte-component-library
-   ```
-2. **Import Components**: Import the components you need into your Svelte application:
-   ```svelte
-   <script>
-     import { Navbar, Button, Modal } from 'svelte-component-library';
-   </script>
-
-   <Navbar />
-   <Button>Click Me</Button>
-   <Modal />
-   ```
-3. **Customize and Build**: Use the components, customize styles, and start building your application.
-
-## Documentation
-For full documentation, including examples and API references, visit our [documentation page](#).
-
-## Contributing
-We welcome contributions! If you'd like to add new components or improve existing ones, please check our [contributing guide](#).
-
-## License
-This library is licensed under the MIT License. See the [LICENSE](#) file for more details.
-
-## Feedback and Support
-If you have any questions, suggestions, or feedback, feel free to open an issue or join our community [discussion forum](#).
+Welcome to **KonUI**, your one-stop solution for building fast, responsive, and versatile UI components for **Svelte** applications. This library is designed to simplify development and empower you to focus on your application's core functionality. 🚀
 
 ---
 
-Thank you for using the **Comprehensive Svelte Component Library**! We can't wait to see what you'll build. 🚀
+## ⚠️ Missing Features
 
+- **User Accessibility**: Full accessibility support is not yet available.
+- **Event Handling**: Advanced event handling features are still in progress.
+- **Svelte 4 Compatibility**: Compatibility with Svelte 4 is not yet implemented.
 
-## Developing
+---
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 📚 About the Library
 
-```bash
-npm run dev
+**KonUI** provides a growing collection of reusable and customizable UI components, built specifically for **Svelte**. Each component is designed to:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- Reduce development time.
+- Improve application consistency.
+- Enable seamless customization and integration.
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+> **Note**: KonUI is currently in alpha and not recommended for production use.
 
-## Building
+### ⚡ Features
 
-To build your library:
+- **30+ Prebuilt Components**: From forms to charts, feedback to navigation.
+- **JSON-Driven Configuration**: Generate tables, forms, and charts dynamically from a single JSON object.
+- **Built-In Theming**: Quickly switch between light and dark modes or customize themes to match your brand.
+- **Powered by D3.js**: Interactive and data-driven visualizations with minimal configuration.
+- **Responsive Design**: Every component is designed to work across devices and screen sizes.
 
-```bash
-npm run package
-```
+> **Note**: This library is still under active development, and we recommend caution when using it in production applications.
 
-To create a production version of your showcase app:
+---
 
-```bash
-npm run build
-```
+## 📦 Installation
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
+Install KonUI from NPM:
 
 ```bash
-npm publish
+npm install konui-svelte
 ```
+
+> **Note**: KonUI is currently in alpha. Please do not use it in production environments.
+
+---
+
+## 🔧 Getting Started
+
+Import KonUI into your Svelte project:
+
+1. Import the global styles into your application:
+
+   ```html
+   <script>
+     import 'konui-svelte/styles.css';
+   </script>
+   ```
+
+2. Use components in your Svelte files:
+
+   ```svelte
+   <script>
+     import { Button, Table } from 'konui-svelte';
+   </script>
+
+   <Button label="Click Me!" />
+   <Table
+     label="User Data"
+     value={[{ name: 'John Doe', email: 'john@example.com' }]}
+     group={[{ name: 'name', label: 'Name', variant: 'text' }, { name: 'email', label: 'Email', variant: 'email' }]}
+   />
+   ```
+
+> **Note**: Please note that this library is in alpha, and we do not recommend using it in production just yet.
+
+---
+
+## 🌟 Highlights
+
+### 1. **Form & Table Generation**
+
+Define your form or table layout with JSON, and KonUI generates it for you:
+
+```svelte
+<Table
+  label="User List"
+  value=[
+    { name: "Alice", email: "alice@example.com" },
+    { name: "Bob", email: "bob@example.com" }
+  ]
+  group=[
+    { name: "name", label: "Name", variant: "text" },
+    { name: "email", label: "Email", variant: "email" }
+  ]
+/>
+```
+
+> **Note**: This component is part of an alpha release. Avoid using it in production.
+
+### 2. **Charts**
+
+Effortlessly create charts with minimal configuration:
+
+```svelte
+<PieChart
+  data=[
+    { label: "Apples", value: 40 },
+    { label: "Oranges", value: 30 }
+  ]
+  title="Fruit Distribution"
+/>
+```
+
+> **Note**: Charts are still in development. We do not recommend using them in production environments at this time.
+
+### 3. **Customizable Buttons & Inputs**
+
+Easily customize button styles and input configurations:
+
+```svelte
+<Button label="Save" variant="solid" color="success" />
+<Input field={{ name: "email", label: "Email", variant: "email" }} value="user@example.com" />
+```
+
+> **Note**: KonUI is in alpha and should not be used in production.
+
+---
+
+## 🔍 Documentation
+
+Explore the full documentation and examples at **[svelte-face-processing-2.vercel.app](https://svelte-face-processing-2.vercel.app)**.
+
+> **Note**: KonUI is under alpha development and not yet ready for production use.
+
+### Component Groups
+
+- **Forms**: Input, Button, Form, Table.
+- **Charts**: PieChart, BarChart, Heatmap, LineChart.
+- **Navigation**: Navbar, Sidebar, Breadcrumbs.
+- **Feedback**: Toast, Alert, Dialog.
+- **Media**: Audio, Carousel.
+- **Content Display**: Accordion, Modal, Card.
+
+Each component comes with a clear API, examples, and customization options.
+
+---
+
+## 🛠️ Development Status
+
+**Alpha Version**: KonUI is under active development and not recommended for production use yet. The first stable release is planned for **early 2025**. Stay tuned for updates!
+
+> **Note**: This library is in alpha. Please avoid using it in any production environment.
+
+---
+
+## 🤝 Contribution
+
+We welcome contributions from the community. Feel free to:
+
+- Submit issues.
+- Suggest new components or features.
+- Open pull requests.
+
+### Repository
+
+**[GitHub Repo](https://github.com/your-repo-link)**
+
+> **Note**: KonUI is in alpha, and contributions are welcome to help us make it production-ready.
+
+---
+
+## 📄 License
+
+KonUI is licensed under the **MIT License**.
+
+---
+
+## 🚀 Get Started Today!
+
+Start building faster and smarter with KonUI. Visit **[svelte-face-processing-2.vercel.app](https://svelte-face-processing-2.vercel.app)** for a live showcase of all components!
+
+> **Note**: KonUI is in alpha. We do not recommend using it in production just yet.
+
