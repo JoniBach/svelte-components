@@ -78,7 +78,7 @@
 					valid: [],
 					width: '100%'
 				},
-				value: `import '../global.scss';
+				value: `import "konui-svelte/global.scss';
 import { initTheme } from '$lib';
 // Call the function from the script tag, ideally in your parent +layout.svelte file
 initTheme();`
