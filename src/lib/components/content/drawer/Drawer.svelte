@@ -16,7 +16,7 @@
 		};
 	}
 
-	const SLOTS = $$props.$$slots;
+	const SLOTS = $$slots;
 </script>
 
 {#if SLOTS.handle}
