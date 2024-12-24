@@ -33,7 +33,7 @@
 		"src/global.scss"
 	],
 	"peerDependencies": {
-		"svelte": "^4.0.0"
+		"svelte": "^5.15.0"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -51,7 +51,7 @@
 		"prettier-plugin-svelte": "^3.1.2",
 		"publint": "^0.2.0",
 		"sass": "^1.80.6",
-		"svelte": ">=4.0.0 <6.0.0",
+		"svelte": "^5.15.0",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^6.0.3",
 		"typescript": "^5.0.0",
