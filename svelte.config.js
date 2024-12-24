@@ -7,7 +7,8 @@ const config = {
 	preprocess: sveltePreprocess({
 		scss: {
 			// Remove `sass` import and ensure this section is configured correctly
-			api: 'modern-compiler'
+			api: 'modern-compiler',
+			includePaths: ['src']
 		},
 		// Optionally, enable sourceMap if you need debugging information for styles
 		sourceMap: true

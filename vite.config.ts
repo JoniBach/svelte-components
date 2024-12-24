@@ -7,6 +7,14 @@ export default defineConfig({
 		sveltekit(),
 		dynamicImport() // Add the plugin here
 	],
+	css: {
+		preprocessorOptions: {
+			scss: {
+				// Automatically include global.scss in all components
+				additionalData: `@import './src/global.scss';`
+			}
+		}
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}

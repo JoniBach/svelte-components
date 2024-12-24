@@ -20,7 +20,7 @@
 
 	function handleCopy() {
 		// Copy text to clipboard
-		navigator.clipboard.writeText(`${value} install -D ${library} scss`);
+		navigator.clipboard.writeText(`${value} install -D ${library} scss sass-embedded`);
 		// Show message
 		copyMessage = 'Copied to clipboard';
 		// Reset message after 1.5 seconds
@@ -70,7 +70,7 @@
 						}}
 					/>
 					<Button
-						label={copyMessage ? 'Copied!' : `${value} install -D ${library} scss`}
+						label={copyMessage ? 'Copied!' : `${value} install -D ${library} scss sass-embedded`}
 						variant="outlined"
 						color="primary"
 						on:click={handleCopy}

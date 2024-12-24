@@ -37,7 +37,7 @@
 		{
 			variant: true,
 			subtitle: 'Step 1 - Download KonUI',
-			content: 'npm install konui-svelte scss',
+			content: 'npm install konui-svelte scss sass-embedded',
 			border: true,
 			actions: false
 		},
@@ -45,7 +45,7 @@
 			variant: true,
 			subtitle: 'Step 2 - Get the stylesheet',
 			content:
-				'Download this stylesheet and import it into the root +layout.svelte file in your project',
+				'Download this stylesheet and import it into the root +layout.svelte file in your project. Or import our stylesheet from the package.',
 			border: true,
 			actions: false,
 			code: {
@@ -57,7 +57,8 @@
 					valid: [],
 					width: '100%'
 				},
-				value: `import '../global.scss';`
+				value: `import "konui-svelte/global.scss";
+`
 			},
 			href: 'https://github.com/JoniBach/svelte-components/blob/main/src/global.scss'
 		},
